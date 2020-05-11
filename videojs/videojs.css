@@ -1,0 +1,17 @@
+/*
+전체를 다루는 코드
+.vstyle.video-js{
+  color:#00ff00;
+}
+*/
+
+/*
+이런 식으로 각각의 element에 대해
+색상 등의 스타일을 적용할 수 있다.
+*/
+.vstyle .vjs-big-play-button,
+.vstyle .vjs-volume-level,
+.vstyle .vjs-play-progress,
+.vstyle .vjs-slider-bar{
+  background:#00ff00;
+}

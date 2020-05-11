@@ -1,0 +1,28 @@
+<head>
+  <!-- 기본 css 먼저 불러오고 -->
+  <link href="https://vjs.zencdn.net/7.7.6/video-js.css" rel="stylesheet" />
+  <!-- 그 담에 내가 정의한 css 불러오고 -->
+  <link href="./videojs.css" rel="stylesheet" />
+  <title>Videojs-sample</title>
+</head>
+
+<body>
+  <!-- html5 비디오태그에 해당하는 설정은 여기서 해도 무방. -->
+  <video
+    id="sample-video"
+    class="video-js"
+    controls
+    preload="auto"
+    width="640"
+    height="264"
+    poster="ddiyong.jpeg"
+    data-setup="{}"
+  >
+    <!-- src에 내가 넣고싶은 영상 위치 넣고 -->
+    <source src="sample.mp4" type="video/mp4" />
+  </video>
+  <!-- 기본 js 먼저 불러오고 -->
+  <script src="https://vjs.zencdn.net/7.7.6/video.js"></script>
+  <!-- 그 담에 내가 정의한 js 불러오면 됨 -->
+  <script src='./videojs.js'></script>
+</body>
