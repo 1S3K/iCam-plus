@@ -1,0 +1,23 @@
+<div id="timeStampInputs">
+    Enter the timestamp here! 
+    <input type="number" id="timeStamp" placeholder="0"/>
+    <button id="timeStampBtn">Click here to play the video at the timestamp!</button>
+</div>
+
+<video id="example_video_7" class="video-js vjs-default-skin" controls preload="auto" width="640" height="264" data-setup="{}">
+        <source src="FeedingPlatypus.mp4" type="video/mp4">S
+        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+</video>    
+
+<script>
+$(document).ready(function () {
+
+        var myPlayer3 = videojs('example_video_7');
+        
+        $("#timeStampBtn").mousedown(function(){
+            var time = $("#timeStamp").val();
+            myPlayer3.currentTime(time);
+            myPlayer3.play();
+        });
+    });
+</script>

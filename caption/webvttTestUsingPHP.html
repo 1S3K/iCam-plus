@@ -1,4 +1,5 @@
 <head>
+  <meta charset="utf8">
   <style>
     video::cue {
       background-color: lightgray;
@@ -10,9 +11,9 @@
   <body>
     <video autoplay loop controls
     width="500"> 
-        <source src="../videojs/sample.mp4" type="video/mp4" />
+        <source src="sample.mp4" type="video/mp4" />
 
-        <track kind="subtitles" src="../videojs/subtitle_kr.vtt" srclang="kr" label="Korean" default>
+        <track kind="subtitles" src="subtitle_kr.vtt" srclang="kr" label="Korean" default>
     </video>
     <div style="margin:10px">
       <form method="GET" action="saveQuestion.php">
