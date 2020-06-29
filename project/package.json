@@ -1,0 +1,29 @@
+{
+  "name": "icamplus",
+  "version": "1.0.0",
+  "description": "better icampus",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node src/app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KangJunewoo/iCam-plus.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KangJunewoo/iCam-plus/issues"
+  },
+  "homepage": "https://github.com/KangJunewoo/iCam-plus#readme",
+  "dependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/node": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4",
+    "pug": "^3.0.0"
+  }
+}
