@@ -1,2 +1,4 @@
-client - server - mongodb 기반. axios로 통신.
-
+규모가 크지 않으므로
+client-server 나누지 말고 project 하나로 통합.
+node에 express 기반, 뷰엔진은 pug로 돌리고
+mongodb + (가능하면) socketio 적용하는 식으로 ㄱㄱ.
