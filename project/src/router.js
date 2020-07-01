@@ -1,28 +1,16 @@
 import express from "express";
+import { home, intro, functions, prototype, result, credit } from "./controller";
 
 export const router = express.Router();
 
+router.get('/', home);
 
-router.get('/', (req, res) => {
-    res.render("home");
-});
+router.get('/intro', intro);
 
-router.get('/intro', (req, res) => {
-    res.render("intro");
-});
+router.get('/functions', functions);
 
-router.get('/function', (req, res) => {
-    res.render("function");
-});
+router.get('/prototype', prototype);
 
-router.get('/prototype', (req, res) => {
-    res.render("prototype");
-});
+router.get('/result', result);
 
-router.get('/result', (req, res) => {
-    res.render("result");
-});
-
-router.get("/credit", (req, res) => {
-    res.render("credit");
-});
+router.get("/credit", credit);
