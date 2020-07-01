@@ -5,7 +5,7 @@ import logger from "morgan";
 import helmet from "helmet";
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
-
+import { router } from "./router";
 
 const app = express();
 
@@ -18,8 +18,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(logger('dev'));
 
-app.get('/', (req,res)=>{
-  res.render("player");
-});
+app.use("/", router);
 
 export default app;
