@@ -4,8 +4,7 @@
   "description": "better icampus",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --exec babel-node src/app"
+    "start": "nodemon --exec babel-node src/app --delay 1"
   },
   "repository": {
     "type": "git",
