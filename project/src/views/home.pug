@@ -1,277 +1,293 @@
 doctype html
-head
-  meta(charset='utf-8')
-  link(rel='apple-touch-icon' sizes='76x76' href='assets/img/apple-icon.png')
-  link(rel='icon' type='image/png' sizes='96x96' href='assets/img/favicon.png')
-  meta(http-equiv='X-UA-Compatible' content='IE=edge,chrome=1')
-  title iCam-plus&#x1F4A1;
-  meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport')
-  meta(name='viewport' content='width=device-width')
-  link(href='bootstrap3/css/bootstrap.min.css' rel='stylesheet')
-  link(href='assets/css/gsdk.css' rel='stylesheet')
-  link(href='assets/css/demo.css' rel='stylesheet')
-  script(src='https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js')
-  // Fonts and icons
-  link(href='http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet')
-  link(href='https://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans:400,300' rel='stylesheet' type='text/css')
-  link(href='assets/css/pe-icon-7-stroke.css' rel='stylesheet')
-style.
-  pre.prettyprint{
-  background-color: #eee;
-  border: 0px;
-  margin-bottom: 0;
-  margin-top: 20px;
-  padding: 20px;
-  text-align: left;
-  }
-  .atv, .str{
-  color: #05AE0E;
-  }
-  .tag, .pln, .kwd{
-  color: #3472F7;
-  }
-  .atn{
-  color: #2C93FF;
-  }
-  .pln{
-  color: #333;
-  }
-  .com{
-  color: #999;
-  }
-  .space-top{
-  margin-top: 50px;
-  }
-  .btn-primary .caret{
-  border-top-color: #3472F7;
-  color: #3472F7;
-  }
-  .area-line{
-  border: 1px solid #999;
-  border-left: 0;
-  border-right: 0;
-  color: #666;
-  display: block;
-  margin-top: 20px;
-  padding: 8px 0;
-  text-align: center;
-  }
-  .area-line a{
-  color: #666;
-  }
-  .container-fluid{
-  padding-right: 15px;
-  padding-left: 15px;
-  }
-  .table-shopping .td-name{
-  min-width: 130px;
-  }
-nav.navbar.navbar-default.navbar-transparent.navbar-fixed-top(role='navigation')
-  .container
-    // Brand and toggle get grouped for better mobile display
-    .navbar-header
-      button#menu-toggle.navbar-toggle(type='button')
-        span.sr-only Toggle navigation
-        span.icon-bar.bar1
-        span.icon-bar.bar2
-        span.icon-bar.bar3
-      a(href='http://www.creative-tim.com')
-        .logo-container
-          .logo
-            img(src='assets/img/skku.jpg' alt='성균관대학교')
-          .brand
-            | Sungkyunkwan University
-    // Collect the nav links, forms, and other content for toggling
-    .collapse.navbar-collapse(data-nav-image='assets/img/thumb.jpg')
-      ul.nav.navbar-nav.navbar-right
-        li
-          a#issueButton.btn.btn-simple.btn-neutral(target='_blank' href='https://github.com/timcreative/get-shit-done-pro/issues') Have an issue?
-    // /.navbar-collapse
-  // /.container-fluid
-.wrapper
-  .parallax
-    .parallax-image
-      img(src='assets/img/header (3).jpg')
-    .motto.square
-      div(style='color:green') iCamplus
-      h4(style='color: black;') &#xC544;&#xC774;&#xCEA0;&#xD37C;&#xC2A4; + Q&amp;A&#x1F4A1;
-      h6(style='color: black;') 2020 &#xCF54;&#xB525; by &#xBE0C;&#xC2E4;&#xACE8;&#xD50C;&#xB808;&#xC774;&#xC5B4;
-    h3.text-white Components Description
-  .main
-    .section
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    link(rel='apple-touch-icon', sizes='76x76', href='assets/img/apple-icon.png')
+    link(rel='icon', type='image/png', sizes='96x96', href='assets/img/favicon.png')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    title iCam-plus💡
+    meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0', name='viewport')
+    meta(name='viewport', content='width=device-width')
+    link(href='bootstrap3/css/bootstrap.min.css', rel='stylesheet')
+    link(href='assets/css/gsdk.css', rel='stylesheet')
+    link(href='assets/css/demo.css', rel='stylesheet')
+    script(src='https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js')
+    // Fonts and icons
+    link(href='http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans:400,300', rel='stylesheet', type='text/css')
+    link(href='assets/css/pe-icon-7-stroke.css', rel='stylesheet')
+    style.
+      pre.prettyprint {
+      background-color: #eee;
+      border: 0px;
+      margin-bottom: 0;
+      margin-top: 20px;
+      padding: 20px;
+      text-align: left;
+      }
+      .atv,
+      .str {
+      color: #05AE0E;
+      }
+      .tag,
+      .pln,
+      .kwd {
+      color: #3472F7;
+      }
+      .atn {
+      color: #2C93FF;
+      }
+      .pln {
+      color: #333;
+      }
+      .com {
+      color: #999;
+      }
+      .space-top {
+      margin-top: 50px;
+      }
+      .btn-primary .caret {
+      border-top-color: #3472F7;
+      color: #3472F7;
+      }
+      .area-line {
+      border: 1px solid #999;
+      border-left: 0;
+      border-right: 0;
+      color: #666;
+      display: block;
+      margin-top: 20px;
+      padding: 8px 0;
+      text-align: center;
+      }
+      .area-line a {
+      color: #666;
+      }
+      .container-fluid {
+      padding-right: 15px;
+      padding-left: 15px;
+      }
+      .table-shopping .td-name {
+      min-width: 130px;
+      }
+  body
+    nav.navbar.navbar-default.navbar-transparent.navbar-fixed-top(role='navigation')
       .container
-        .row
-          .col-md-2
-            .fixed-section
-              ul
-                li
-                  a(href='#intro') &#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xC18C;&#xAC1C;
-                li
-                  a(href='#functions') iCam-plus&#xC758; &#xAE30;&#xB2A5;&#xB4E4;
-                li
-                  a(href='#prototype') iCam-plus &#xB370;&#xBAA8; &#xC2DC;&#xC5F0;
-                li
-                  a(href='#result') &#xACB0;&#xACFC;&#xBB3C;
-                li
-                  a(href='#credit') &#xBE0C;&#xC2E4;&#xACE8;&#xD50C;&#xB808;&#xC774;&#xC5B4;&#xD300;
-          .col-md-8.col-md-offset-1
-            .tim-container(style='min-height: 2000px;')
-              // License Row
-              #intro.tim-row.tim-row-first
-                h2.text-center &#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xC18C;&#xAC1C;
-                legend
-                p
-                  | &#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xC18C;&#xAC1C; &#xB0B4;&#xC6A9;
-              // buttons row
-              #functions.tim-row
-                h2 iCam-plus&#xC758; &#xAE30;&#xB2A5;&#xB4E4; 
-                legend
-                h4 Colors
-                p
-                  | &#xAE30;&#xB2A5; &#xB0B4;&#xC6A9;
-              // end row
-              // checkbox row
-              #prototype.tim-row
-                h2  &#xB370;&#xBAA8; &#xC2DC;&#xC5F0; 
-                legend
-                p
-                  | &#xB370;&#xBAA8; &#xC2DC;&#xC5F0; &#xB0B4;&#xC6A9;. &#xC774;&#xAC74; &#xB530;&#xB85C; &#xB9C1;&#xD06C;&#xB85C; &#xBE84;&#xAE4C; &#xC0DD;&#xAC01;&#xC911;.
-              // end row
-              // radio row
-              #result.tim-row
-                h2  &#xACB0;&#xACFC;&#xBB3C; 
-                legend
-                p
-                  | &#xACB0;&#xACFC;&#xBB3C; &#xB0B4;&#xC6A9;&#xB0B4;&#xC6A9;
-              // end row
-              // switches row
-              #credits.tim-row
-                h2  &#xBE0C;&#xC2E4;&#xACE8;&#xD50C;&#xB808;&#xC774;&#xC5B4;&#xD300;
-                legend
-                p
-                  | &#xAC15;&#xC900;&#xC6B0; &#xAE40;&#xD76C;&#xB3D9; &#xAE40;&#xD0DC;&#xD604; &#xC1A1;&#xC9C0;&#xD6C8;
-                  br
-                  |             For github, please go here: 
-                  a(href='https://github.com/KangJunewoo/iCam-plus') &#xC544;&#xC774;&#xCEA0;&#xD50C;&#xB7EC;&#xC2A4;
-                  | .
-              // end row
-            // end container
-  footer.footer.footer-transparent
-    .container
-      nav.pull-left
-        ul
-          li
-            a(href='http://www.creative-tim.com/product/get-shit-done-pro')
-              | Get Shit Done Pro
-          li
-            a(href='http://www.creative-tim.com')
-              | Creative Tim
-          li
-            a(href='http://blog.creative-tim.com')
-              | Blog
-      .social-area.pull-right
-        a.btn.btn-social.btn-twitter.btn-simple(href='https://twitter.com/CreativeTim')
-          i.fa.fa-twitter
-        a.btn.btn-social.btn-facebook.btn-simple(href='https://www.facebook.com/CreativeTim')
-          i.fa.fa-facebook-square
-        a.btn.btn-social.btn-google.btn-simple(href='https://plus.google.com/+CreativetimPage')
-          i.fa.fa-google-plus
-      .copyright
-        | &copy; 2016 Creative Tim, made with love
-// Modal Core
-#myModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true')
-  .modal-dialog
-    .modal-content
-      .modal-header
-        button.close(type='button' data-dismiss='modal' aria-hidden='true') &times;
-        h4#myModalLabel.modal-title Modal title
-      .modal-body
-        | Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
-      .modal-footer
-        button.btn.btn-default.btn-simple(type='button' data-dismiss='modal') Close
-        button.btn.btn-info.btn-simple(type='button') Save
-// jQuery and Bootstrap core files
-script(src='assets/js/jquery.js' type='text/javascript')
-script(src='assets/js/jquery-ui.custom.min.js' type='text/javascript')
-script(src='bootstrap3/js/bootstrap.min.js' type='text/javascript')
-// Plugins
-script(src='assets/js/gsdk-checkbox.js')
-script(src='assets/js/gsdk-morphing.js')
-script(src='assets/js/gsdk-radio.js')
-script(src='assets/js/gsdk-bootstrapswitch.js')
-script(src='assets/js/bootstrap-select.js')
-script(src='assets/js/bootstrap-datepicker.js')
-script(src='assets/js/chartist.min.js')
-script(src='assets/js/jquery.tagsinput.js')
-script(type='text/javascript' src='https://maps.googleapis.com/maps/api/js')
-// Get Shit Done Kit PRO Core javascript
-script(src='assets/js/get-shit-done.js')
-// Get Shit Done Kit PRO methods used for demo purpose
-script(src='assets/js/demo.js')
-script.
-  var transparent = true;
-  var header_height;
-  var fixed_section;
-  var floating = false;
-  $().ready(function(){
-  suggestions_distance = $("#suggestions").offset();
-  header_height = $('.parallax').outerHeight() + 20;
-  pay_height = $('.fixed-section').outerHeight();
-  fixed_section = $('.fixed-section');
-  initMorphingButtons();
-  initDemoChartist();
-  initGoogleMaps();
-  if($(document).width() > 768){
-  activateScrollCheck();
-  }
-  });
-  $( "#slider-range" ).slider({
-  range: true,
-  min: 0,
-  max: 500,
-  values: [ 75, 300 ],
-  });
-  $( "#slider-default" ).slider({
-  value: 70,
-  orientation: "horizontal",
-  range: "min",
-  animate: true
-  });
-  $('.radio').on('toggle', function() { });
-  function activateScrollCheck(){
-  $(window).on('scroll',function(){
-  checkScrollForPresentationNavbar();
-  });
-  }
-  var checkScrollForPresentationNavbar = debounce(function() {
-  if($(this).scrollTop() > 470 ) {
-  if(transparent) {
-  transparent = false;
-  $('nav[role="navigation"]').removeClass('navbar-transparent').addClass('navbar-small');
-  $('#issueButton').addClass('btn-info').removeClass('btn-neutral');
-  }
-  } else {
-  if( !transparent ) {
-  transparent = true;
-  $('nav[role="navigation"]').addClass('navbar-transparent').removeClass('navbar-small');
-  $('#issueButton').addClass('btn-neutral').removeClass('btn-info');
-  }
-  }
-  if($(this).scrollTop() > header_height ) {
-  if(!floating) {
-  floating = true;
-  fixed_section.addClass('float');
-  }
-  } else {
-  if( floating ) {
-  floating = false;
-  fixed_section.removeClass('float');
-  }
-  }
-  }, 4);
-// If you are using TypeKit.com uncomment this code otherwise you can delete it
-//
-  <script src="https://use.typekit.net/[your kit code here].js"></script>
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>
-// If you have retina @2x images on your server which can be sent to iPhone/iPad/MacRetina, please uncomment the next line, otherwise you can delete it
-// <script src="assets/js/retina.min.js"></script>
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button#menu-toggle.navbar-toggle(type='button')
+            span.sr-only Toggle navigation
+            span.icon-bar.bar1
+            span.icon-bar.bar2
+            span.icon-bar.bar3
+          a(href='http://www.creative-tim.com')
+            .logo-container
+              .logo
+                img(src='assets/img/skku.png', alt='Creative Tim Logo')
+              .brand
+                | Sungkyunkwan University
+        // Collect the nav links, forms, and other content for toggling
+        .collapse.navbar-collapse(data-nav-image='assets/img/thumb.jpg')
+          ul.nav.navbar-nav.navbar-right
+            li
+              a#issueButton.btn.btn-simple.btn-neutral(target='_blank', href='https://github.com/timcreative/get-shit-done-pro/issues') Have an issue?
+        // /.navbar-collapse
+        // /.container-fluid
+    .wrapper
+      .parallax
+        .parallax-image
+          img(src='assets/img/header (3).jpg')
+        .motto
+          div(style='color:green') iCamplus
+          h4(style='color: black;') 아이캠퍼스 + Q&A💡
+          h6(style='color: black;') 2020 코딥 by 브실골플레이어
+        h3.text-white Components Description
+      .main
+        .section
+          .container
+            .row
+              .col-md-2
+                .fixed-section
+                  ul
+                    li
+                      a(href='#intro') 프로젝트 소개
+                    li
+                      a(href='#functions') iCam-plus의 기능들
+                    li
+                      a(href='#prototype') iCam-plus 데모 시연
+                    li
+                      a(href='#result') 결과물
+                    li
+                      a(href='#credits') 브실골플레이어팀
+              .col-md-8.col-md-offset-1
+                .tim-container(style='min-height: 2000px;')
+                  // intro Row
+                  #intro.tim-row.tim-row-first
+                    h2.text-center 프로젝트 소개
+                    legend
+                    p
+                      | 프로젝트 소개 내용내용
+                  // end row
+                  // functions row
+                  #functions.tim-row
+                    h2 iCam-plus의 기능들 
+                    legend
+                    h4 Colors
+                    p
+                      | 기능 내용
+                  // end row
+                  // prototype row
+                  #prototype.tim-row
+                    h2  데모 시연 
+                    legend
+                    p
+                      | 데모 시연 내용. 이건 따로 링크로 뺄까 생각중.
+                  // end row
+                  // result row
+                  #result.tim-row
+                    h2  결과물 
+                    legend
+                    p
+                      | 결과물 내용내용
+                  // end row
+                  // credits row
+                  #credits.tim-row
+                    h2  브실골플레이어팀
+                    legend
+                    p
+                      | 강준우 김희동 김태현 송지훈
+                      br
+                      |                     For github, please go here: 
+                      a(href='https://github.com/KangJunewoo/iCam-plus') 아이캠플러스
+                      | .
+                  // end row
+                  // cards row : 진짜 왜그런진 모르겠는데 얘를 없애면 js가 작동되지 않는다. display:none으로 해놓았으나 없애진 말것.
+                  #cards-row.tim-row
+                    .card.card-background
+                      #map.map(style='display:none')
+                  // end row
+                  // end container
+      footer.footer.footer-transparent
+        .container
+          nav.pull-left
+            ul
+              li
+                a(href='http://www.creative-tim.com/product/get-shit-done-pro')
+                  | Get Shit Done Pro
+              li
+                a(href='http://www.creative-tim.com')
+                  | Creative Tim
+              li
+                a(href='http://blog.creative-tim.com')
+                  | Blog
+          .social-area.pull-right
+            a.btn.btn-social.btn-twitter.btn-simple(href='https://twitter.com/CreativeTim')
+              i.fa.fa-twitter
+            a.btn.btn-social.btn-facebook.btn-simple(href='https://www.facebook.com/CreativeTim')
+              i.fa.fa-facebook-square
+            a.btn.btn-social.btn-google.btn-simple(href='https://plus.google.com/+CreativetimPage')
+              i.fa.fa-google-plus
+          .copyright
+            | © 2016 Creative Tim, made with love
+    // Modal Core
+    #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+            h4#myModalLabel.modal-title Modal title
+          .modal-body
+            | Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
+            | texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A
+            | small river named Duden flows by their place and supplies it with the necessary regelialia. It is a
+            | paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing
+            | has no control about the blind texts it is an almost unorthographic life One day however a small line of blind
+            | text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+          .modal-footer
+            button.btn.btn-default.btn-simple(type='button', data-dismiss='modal') Close
+            button.btn.btn-info.btn-simple(type='button') Save
+    // jQuery and Bootstrap core files
+    script(src='assets/js/jquery.js', type='text/javascript')
+    script(src='assets/js/jquery-ui.custom.min.js', type='text/javascript')
+    script(src='bootstrap3/js/bootstrap.min.js', type='text/javascript')
+    // Plugins
+    script(src='assets/js/gsdk-checkbox.js')
+    script(src='assets/js/gsdk-morphing.js')
+    script(src='assets/js/gsdk-radio.js')
+    script(src='assets/js/gsdk-bootstrapswitch.js')
+    script(src='assets/js/bootstrap-select.js')
+    script(src='assets/js/bootstrap-datepicker.js')
+    script(src='assets/js/chartist.min.js')
+    script(src='assets/js/jquery.tagsinput.js')
+    script(type='text/javascript', src='https://maps.googleapis.com/maps/api/js')
+    // Get Shit Done Kit PRO Core javascript
+    script(src='assets/js/get-shit-done.js')
+    // Get Shit Done Kit PRO methods used for demo purpose
+    script(src='assets/js/demo.js')
+    script.
+      var transparent = true;
+      var header_height;
+      var fixed_section;
+      var floating = false;
+      $().ready(function () {
+      suggestions_distance = $("#suggestions").offset();
+      header_height = $('.parallax').outerHeight() + 20;
+      pay_height = $('.fixed-section').outerHeight();
+      fixed_section = $('.fixed-section');
+      initMorphingButtons();
+      initDemoChartist();
+      initGoogleMaps();
+      if ($(document).width() > 768) {
+      activateScrollCheck();
+      }
+      });
+      $("#slider-range").slider({
+      range: true,
+      min: 0,
+      max: 500,
+      values: [75, 300],
+      });
+      $("#slider-default").slider({
+      value: 70,
+      orientation: "horizontal",
+      range: "min",
+      animate: true
+      });
+      $('.radio').on('toggle', function () { });
+      function activateScrollCheck() {
+      $(window).on('scroll', function () {
+      checkScrollForPresentationNavbar();
+      });
+      }
+      var checkScrollForPresentationNavbar = debounce(function () {
+      if ($(this).scrollTop() > 470) {
+      if (transparent) {
+      transparent = false;
+      $('nav[role="navigation"]').removeClass('navbar-transparent').addClass('navbar-small');
+      $('#issueButton').addClass('btn-info').removeClass('btn-neutral');
+      }
+      } else {
+      if (!transparent) {
+      transparent = true;
+      $('nav[role="navigation"]').addClass('navbar-transparent').removeClass('navbar-small');
+      $('#issueButton').addClass('btn-neutral').removeClass('btn-info');
+      }
+      }
+      if ($(this).scrollTop() > header_height) {
+      if (!floating) {
+      floating = true;
+      fixed_section.addClass('float');
+      }
+      } else {
+      if (floating) {
+      floating = false;
+      fixed_section.removeClass('float');
+      }
+      }
+      }, 4);
+    // If you are using TypeKit.com uncomment this code otherwise you can delete it
+    //
+      <script src="https://use.typekit.net/[your kit code here].js"></script>
+      <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    // If you have retina @2x images on your server which can be sent to iPhone/iPad/MacRetina, please uncomment the next line, otherwise you can delete it
+    // <script src="assets/js/retina.min.js"></script>
