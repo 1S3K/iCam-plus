@@ -21,7 +21,9 @@
     "@babel/preset-env": "^7.10.4",
     "babel-cli": "^6.26.0",
     "core-js": "^3.6.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "mongoose": "^5.9.21",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.4",
     "pug": "^3.0.0"
