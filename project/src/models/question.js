@@ -1,19 +1,13 @@
 import mongoose from "mongoose";
 
 const questionSchema = new mongoose.Schema({
-    _id: {
-        type: Number
-    },
     time: {
-        type: Date
+        type: Number
     },
     title: {
         type: String
     },
     content: {
-        type: String
-    },
-    author: {
         type: String
     }
 });

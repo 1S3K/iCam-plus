@@ -1,16 +1,12 @@
 import express from "express";
-import { home, intro, functions, prototype, result, credit } from "./controller";
+import { home, prototype, question, comment } from "./controller";
 
 export const router = express.Router();
 
 router.get('/', home);
 
-router.get('/intro', intro);
-
-router.get('/functions', functions);
-
 router.get('/prototype', prototype);
 
-router.get('/result', result);
+router.post('/question', question);
 
-router.get("/credit", credit);
+router.post('/comment', comment);

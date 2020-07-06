@@ -1,24 +1,27 @@
+import Question from "./models/question"
+import Comment from "./models/comment"
+
 export const home = (req, res) => {
     res.render("home");
-};
-
-export const intro = (req, res) => {
-    res.render("intro");
-};
-
-export const functions = (req, res) => {
-    res.render("functions");
 };
 
 export const prototype = (req, res) => {
     res.render("prototype")
 };
 
-export const result = (req, res) => {
-    res.render("result");
+export const question = async (req, res) => {
+    const {
+        body: { time, title, content }
+      } = req;
+      
+      const newQuestion = await Question.create({
+          time,
+          title,
+          content
+      });
+      res.redirect("/prototype");
 };
 
-export const credit = (req, res) => {
-    res.render("credit");
+export const comment = (req, res) => {
+    res.render("home")
 };
-

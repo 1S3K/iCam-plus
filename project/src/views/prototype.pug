@@ -66,6 +66,14 @@ html
           #question_bottom
             button.question_button 질문하기
             button.comment_button 과제 및 평가
+      form(action="/question", method="post")
+        input(type="text", placeholder="시간", name="time", required=true)
+        input(type="text", placeholder="제목", name="title", required=true)
+        textarea(name="content", placeholder="내용", required=true)
+        input(type="submit", value="작성하기")    
+
+
+    
     // 기본 js 먼저 불러오고
     script(src='https://vjs.zencdn.net/7.7.6/video.js')
     // 그 담에 내가 정의한 js 불러오면 됨
