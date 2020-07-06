@@ -2,17 +2,17 @@ html
   head
     link(href='https://vjs.zencdn.net/7.7.6/video-js.css', rel='stylesheet')
     // 그 담에 내가 정의한 css 불러오고
-    link(href='/main.css', rel='stylesheet')
-    title iCam-plus prototype
+    link(href='./main.css', rel='stylesheet')
+    title Videojs-sample
   body
     .main_container
       .left_container
         #player_header
           p.player_header_title   무슨 강의 > 강의 이름 ~~~~  
           button.extend_tab_button  확장 버튼 
-        video#sample-video.video-js(controls='', preload='auto', poster='/ddiyong.jpeg', data-setup='{}')
+        video#sample-video.video-js(controls='', preload='auto', poster='ddiyong.jpeg', data-setup='{}')
           // src에 내가 넣고싶은 영상 위치 넣고
-          source(src='/sample.mp4', type='video/mp4')
+          source(src='sample.mp4', type='video/mp4')
       .right_container
         #index_bar
           select#class_index_selector
@@ -69,6 +69,6 @@ html
     // 기본 js 먼저 불러오고
     script(src='https://vjs.zencdn.net/7.7.6/video.js')
     // 그 담에 내가 정의한 js 불러오면 됨
-    script(src='/js/videojs.js')
-    script(src='/js/jquery-3.5.1.js')
-    script(src='/js/source.js')
+    script(src='./js/videojs.js')
+    script(src='./js/jquery-3.5.1.js')
+    script(src='./js/source.js')
