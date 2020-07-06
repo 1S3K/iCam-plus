@@ -80,17 +80,19 @@ html(lang='en')
             span.icon-bar.bar1
             span.icon-bar.bar2
             span.icon-bar.bar3
-          a(href='http://www.creative-tim.com')
+          a(href='http://www.skku.edu')
             .logo-container
               .logo
-                img(src='assets/img/skku.png', alt='Creative Tim Logo')
+                img(src='assets/img/skku.png', alt='SKKU Logo')
               .brand
                 | Sungkyunkwan University
         // Collect the nav links, forms, and other content for toggling
         .collapse.navbar-collapse(data-nav-image='assets/img/thumb.jpg')
           ul.nav.navbar-nav.navbar-right
             li
-              a#issueButton.btn.btn-simple.btn-neutral(target='_blank', href='https://github.com/timcreative/get-shit-done-pro/issues') Have an issue?
+              a#issueButton.btn.btn-simple.btn-neutral(target='_blank', href='https://icampus.skku.edu')
+                | 기존
+                | 아이캠퍼스 바로가기
         // /.navbar-collapse
         // /.container-fluid
     .wrapper
@@ -125,41 +127,126 @@ html(lang='en')
                   #intro.tim-row.tim-row-first
                     h2.text-center 프로젝트 소개
                     legend
+                    //
+                      <img src="assets/img/online_edu.png" alt="online edu" class="rounded"
+                      style="width:auto;height:auto;max-width:150px;max-height: 150px;float: right;">
                     p
-                      | 프로젝트 소개 내용내용
+                      | 최근 코로나19 바이러스 사태로 인해, 우리 학교를 포함한 모든 교육기관은
+                      | 현재 온라인 강의를 진행하고 있습니다.
+                      | 기존의 수업방식과 다르기에 현재의
+                      | 학습 방식이 익숙하지 않을 뿐더러 과제 부여 및 시험 평가 방법, 질의와 답
+                      | 변을 포함한 학습자와 교수자 간의 소통의 어려움 등 많은 불편을 겪고 있습
+                      | 니다.
+                    br
+                    br
+                    blockquote.blockquote.text-right
+                      p.mb-0 이러닝의 장점에도 불구하고 현실에서 이러닝의 실제 만족도 높지 않게 나오 는 주된 이유는 충분한 질문과 토론이 불가능하기 때문이다.
+                      footer.blockquote-footer
+                        | 구희진･박영택, 
+                        cite(title='Source Title')
+                          | SERVQUAL을 이용한 이러닝 학습자가 만족도 평가에 관한 연구
+                    br
+                    br
+                    p
+                      | 위 연구에서 제시하는 바와 같이 현재 문제점 중 하나는 온라인 강의의 질문
+                      | 방식입니다. 지금의 아이캠퍼스는 동영상으로 수업을 진행하고 수업 도중 질
+                      | 문에 대한 부분은 강의가 모두 끝난 이후 문의게시판 혹은 교수자에게 이메
+                      | 일을 전송하게 됩니다. 또는 수업 중간에 동영상을 정지하고 질문을 작성한
+                      | 다음 다시 수업을 들어야 합니다. 이후 교수자는 학습자들의 질문에 대해 각
+                      | 각의 내용을 확인하고 학습자에게 답변을 전달하고 있습니다.
+                      | 이러한 과정은 오프라인 강의에 비해 교수자와 학습자 모두에게 불필요한 시
+                      | 간을 소비하고 학습 이외의 온라인 강의의 구조적인 문제로 인해 집중을 방
+                      | 해하는 결과를 야기합니다. 추가로 오프라인 강의의 경우, 학습자는 타 학습
+                      | 자의 질문을 통해 본인이 미처 생각하지 못했던 부분을 생각할 수 있습니다.
+                    br
+                    p
+                      | 물론 학교에서도 위와 같은 문제 때문에 Webex를 이용하여 이러한 문제를
+                      | 해결하고자 하지만 시간의 제약을 받지 않는 온라인 강의의 장점을 살리지
+                      | 못 하고, 화상 강의를 참여하기 위해 학습자 개개인이 준비해야하는 과정과
+                      | 비용이 증가하는 점에서 단점이 명확히 존재합니다. 또한 강의를 저장하는
+                      | 경우에 단순히 영상을 저장한 것이기에 강의 간에 있었던 교수자와 학습자
+                      | 간의 소통을 텍스트로 기록하지 못 하게 됩니다.
+                    br
+                    p
+                      | 저희는 이러한 문제를 해결하기 위해 아이캠퍼스의 스트리밍 플레이어가 단
+                      | 순히 영상을 재생하는 데에서 벗어나, “학습”이라는 관점에 집중해서 기능이
+                      | 적용된다면 교수자와 학습자 모두의 만족도를 보다 향상시킬 수 있을 것으로
+                      | 기대합니다.
+                    br
+                    p
+                      | 학습자는 수업에 대한 몰입을 방해받지 않고, 질문과 토론을 할 수 있으며,
+                      | 교수자는 다른 매체를 통한 답변이 아닌 스트리밍 플레이어 속에서 답변을
+                      | 입력하여 이와 같은 일련의 학습과정을 양방향으로 행할 수 있는 사용자 참
+                      | 여형 스트리밍 플레이어를 만들고자 합니다.
                   // end row
                   // functions row
                   #functions.tim-row
                     h2 iCam-plus의 기능들 
                     legend
-                    h4 Colors
                     p
-                      | 기능 내용
+                      | 기능 정리해서 추가 ㄱㄱ
                   // end row
                   // prototype row
                   #prototype.tim-row
                     h2  데모 시연 
                     legend
-                    p
-                      | 데모 시연 내용. 이건 따로 링크로 뺄까 생각중.
+                    button.btn.btn-primary(onclick="location.href = '/prototype' ") 데모를 보러 갑시다!
                   // end row
                   // result row
                   #result.tim-row
                     h2  결과물 
                     legend
                     p
-                      | 결과물 내용내용
+                      | 여기다 캡처화면 정도 넣으면 될려나? 아니면 사용법을 넣을까?
                   // end row
                   // credits row
                   #credits.tim-row
                     h2  브실골플레이어팀
                     legend
-                    p
-                      | 강준우 김희동 김태현 송지훈
-                      br
-                      |                     For github, please go here: 
-                      a(href='https://github.com/KangJunewoo/iCam-plus') 아이캠플러스
-                      | .
+                    .table-responsive
+                      table.table
+                        thead
+                          tr
+                            th 이름
+                            th 역할
+                            th 담당
+                            th.text-right 한마디
+                        tbody
+                          tr
+                            td 강준우
+                            td 팀장
+                            td 백+프론트 통합
+                            td.td-actions.text-right
+                              button.btn.btn-info.btn-simple.btn-xs(type='button', rel='tooltip', title='우와아아아아아아')
+                                i.fa.fa-user
+                          tr
+                            td 김희동
+                            td 팀원
+                            td 일정조율, 백엔드 + DB 담당
+                            td.td-actions.text-right
+                              button.btn.btn-info.btn-simple.btn-xs(type='button', rel='tooltip', title='희동한마디')
+                                i.fa.fa-user
+                          tr
+                            td 김태현
+                            td 팀원
+                            td 프론트엔드 구현
+                            td.td-actions.text-right
+                              button.btn.btn-info.btn-simple.btn-xs(type='button', rel='tooltip', title='태현한마디')
+                                i.fa.fa-user
+                          tr
+                            td 송지훈
+                            td 팀원
+                            td 프로느엔드 구현
+                            td.td-actions.text-right
+                              button.btn.btn-info.btn-simple.btn-xs(type='button', rel='tooltip', title='지훈한마디')
+                                i.fa.fa-user
+                          tr
+                            td 한옥영
+                            td 지도교수
+                            td 성심성의를 담아 지도
+                            td.td-actions.text-right
+                              button.btn.btn-info.btn-simple.btn-xs(type='button', rel='tooltip', title='보람찼습니다^^')
+                                i.fa.fa-user
                   // end row
                   // cards row : 진짜 왜그런진 모르겠는데 얘를 없애면 js가 작동되지 않는다. display:none으로 해놓았으나 없애진 말것.
                   #cards-row.tim-row
