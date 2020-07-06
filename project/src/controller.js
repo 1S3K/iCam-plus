@@ -5,8 +5,13 @@ export const home = (req, res) => {
     res.render("home");
 };
 
-export const prototype = (req, res) => {
-    res.render("prototype")
+export const prototype = async (req, res) => {
+    try {
+        const questions = await Question.find({}).sort({time : 1});
+        res.render("prototype", {questions});
+    } catch (error) {
+        res.render("prototype", {questions : []});
+    }
 };
 
 export const question = async (req, res) => {
