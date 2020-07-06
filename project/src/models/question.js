@@ -1,8 +1,6 @@
 import mongoose from "mongoose";
-import { intro } from "../controller";
-import { isInteger } from "core-js/fn/number";
 
-const commentSchema = new mongoose.Schema({
+const questionSchema = new mongoose.Schema({
     _id: {
         type: Number
     },

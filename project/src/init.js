@@ -1,6 +1,7 @@
 import app from "./app";
 import "./db";
 import "./models/question";
+import "./models/comment";
 
 const PORT = 3000;
 
