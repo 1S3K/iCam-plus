@@ -1,9 +1,10 @@
 import mongoose from "mongoose"
 
-mongoose.connect("mongodb://localhost:27017/icamplus",
+mongoose.connect("mongodb+srv://admin:admin123@firstexample-l3dig.mongodb.net/icamplus?retryWrites=true&w=majority",
     {
         useNewUrlParser: true,
-        useFindAndModify: false
+        useFindAndModify: false,
+        useUnifiedTopology: true
     }
 );
 
