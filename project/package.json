@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "better icampus",
   "scripts": {
-    "start": "nodemon --exec babel-node src/init.js --delay 1"
+    "start": "nodemon --exec babel-node src/init.js"
   },
   "repository": {
     "type": "git",
@@ -20,8 +20,10 @@
     "@babel/node": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
     "babel-cli": "^6.26.0",
+    "cookie-parser": "^1.4.5",
     "core-js": "^3.6.5",
     "express": "^4.17.1",
+    "helmet": "^3.23.3",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.4",
     "pug": "^3.0.0"
