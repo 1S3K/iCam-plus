@@ -1,0 +1,152 @@
+<head>
+  <!-- 기본 css 먼저 불러오고 -->
+  <link href="https://vjs.zencdn.net/7.7.6/video-js.css" rel="stylesheet" />
+
+  <!-- 그 담에 내가 정의한 css 불러오고 -->
+  <link href="./videojs.css" rel="stylesheet" />
+  <script src="./js/jquery-3.5.1.js "></script>
+  <script src="./js/videojs.js"> </script>
+  <script src="./js/source.js"></script>
+  <title>Videojs-sample</title>
+</head>
+
+<div class = "main_container">
+
+
+  <div class = "left_container">
+
+    <div id = "player_header">
+      <p class = "player_header_title">  무슨 강의 > 강의 이름 ~~~~  </p>
+      <button class = "extend_tab_button" > 확장 버튼 </button> 
+    </div>
+    <video
+    id="sample-video"
+    class="video-js"
+    controls
+    preload="auto"
+
+    poster="ddiyong.jpeg"
+    data-setup="{}"
+  >
+    <!-- src에 내가 넣고싶은 영상 위치 넣고 -->
+    <source src="sample.mp4" type="video/mp4" />
+  </video>
+
+  </div>
+
+
+  <div class = "right_container">
+
+    <div id = "index_bar">
+      <select id ="class_index_selector">
+        <option selected>현재 : 1강 - OT</option>
+        <option>2강 - 강의 제목</option>
+        <option>3강 - 강의 제목</option>
+        <option>4강 - 강의 제목</option>
+      </select>
+
+      <button id="goto_IndexButton"> ></button>
+
+    </div>
+
+    <div id="select_Button_bar">
+      <button class="index_button">질문하기</button>
+      <button class="index_button">과제 및 평가</button>
+    </div>
+
+    <div id="question_container">
+
+
+
+
+
+      <div id="main_question"> 
+
+        <div id="question_bar"> 
+          <a href ="" class="time_stamp">05:33</a>
+          <div class="question_title"> 질문 내용 여기에1</div>
+
+        </div>
+
+        <div id="question_bar"> 
+          <a href ="" class="time_stamp">05:33</a>
+          <div class="question_title"> 질문 내용 여기에2</div>
+
+        </div>
+
+
+
+        <div id="question_bar_opened"> 
+          <div class="question_header"> 
+            <a href ="" class="time_stamp">09:12</a>
+            <div class="question_title">질문 내용 여기에3</div>
+          </div>
+
+          <div class = "question_container">
+            <div id ="question_person">
+              <p><br>질문자 : 강준우</p>
+            </div>
+
+            <div id ="question_text">
+              <p style="word-break:break-all">
+                <br>
+                질문 내용~~~ 이해가 안돼요~~~~~
+                질문 내용~~~ 이해가 안돼요~~~~~질문 내용~~~ 이해가 안돼요~~ 이해가 안돼요~~~~~질문 내용~~~ 이해가 안돼요~~~~~질문 내용~~~ 이해가 안돼요~~~~~질문 내용
+
+              </p>
+            </div>
+
+            <div id ="question_professor">
+              <p><br><br> 답변자 : 김재현(교수)</p>
+            </div>
+            
+            <div id ="answer_text">
+              <p style="word-break:break-all">
+                <br><br>
+                이건
+                이렇게
+                하세요
+                ~~~~~~~~~~
+                @@@@@@@@@@@@@@@@
+              </p>
+            </div>
+            
+          </div>
+
+
+        </div>
+
+
+        <div id="question_bar"> 
+          <a href ="" class="time_stamp">12:09</a>
+          <div class="question_title"> 질문 내용 여기에4</div>
+        </div>
+
+
+
+
+      </div>
+
+      <div id="question_bottom">
+        <button class="question_button">질문하기</button>
+        <button class="comment_button">과제 및 평가</button>
+      </div>
+
+    </div>
+
+
+    
+
+    
+  </div>
+</div>
+
+
+
+
+
+  <!-- 기본 js 먼저 불러오고 -->
+  <script src="https://vjs.zencdn.net/7.7.6/video.js"></script>
+  <!-- 그 담에 내가 정의한 js 불러오면 됨 -->
+  <script src='./videojs.css'></script>
+</body>
