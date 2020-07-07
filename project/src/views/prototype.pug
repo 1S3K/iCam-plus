@@ -49,10 +49,7 @@ html
               #question_bar
                 a.time_stamp(onclick='setTime(this);') #{parseInt(q.time/60) < 10 ? `0${parseInt(q.time/60)}` : parseInt(q.time/60)}:#{q.time%60}
                 .question_title #{q.title}
-              #question_bar_opened
-                .question_header
-                  a.time_stamp(onclick='setTime(this);') #{parseInt(q.time/60) < 10 ? `0${parseInt(q.time/60)}` : parseInt(q.time/60)}:#{q.time%60}
-                  .question_title #{q.title}
+                button.expand_button
                 .question_container
                   #question_person
                     p
@@ -76,6 +73,7 @@ html
                       |                 하세요
                       |                 ~~~~~~~~~~
                       |                 @@@@@@@@@@@@@@@@
+
           #question_bottom
             button.question_button(onclick="loadQuestionForm();") 질문하기
             button.comment_button 과제 및 평가
