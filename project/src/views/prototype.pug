@@ -77,7 +77,7 @@ html
                       |                 ~~~~~~~~~~
                       |                 @@@@@@@@@@@@@@@@
           #question_bottom
-            button.question_button(onclick="loadQuestionFrom();") 질문하기
+            button.question_button(onclick="loadQuestionForm();") 질문하기
             button.comment_button 과제 및 평가
 
       // 질문하기
@@ -93,15 +93,15 @@ html
             .modal__title
               .title__time
                 span.time__label 시간
-                input#questionFormMin(type='text' placeholder='0' name='minute' required='true')
+                input#questionFormMin(type='text' name='minute' required='true')
                 label.minute__label(for='questionFormMin') 분
-                input#questionFormSec(type='text' placeholder='0' name='second' required='true')
+                input#questionFormSec(type='text' name='second' required='true')
                 label.second__label(for='questionFormSec') 초
               .title__title
                 label.title__label(for='q__title') 제목
-                input#q__title(type='text')
+                input#q__title(type='text' name='title')
             .modal__contents
-              textarea#textarea__contents(name='contents')
+              textarea#textarea__contents(name='content')
             .modal__footer
               button.submitBtn(type='submit' value='작성하기')
                 | 작성하기
@@ -119,9 +119,9 @@ html
             .modal__title
               .title__time
                 span.time__label 시간
-                input#questionFormMin(type='text' placeholder='0' name='minute' required='true')
+                input#questionFormMin(type='text' name='minute' required='true')
                 label.minute__label(for='questionFormMin') 분
-                input#questionFormSec(type='text' placeholder='0' name='second' required='true')
+                input#questionFormSec(type='text' name='second' required='true')
                 label.second__label(for='questionFormSec') 초
               .title__title
                 label.title__label(for='q__title') 제목
@@ -139,14 +139,6 @@ html
         var player = videojs('sample-video');
         player.currentTime(time);
         player.play();
-      }
-      function loadQuestionFrom() {
-        var player = videojs('sample-video');
-        var min = parseInt(player.currentTime()/60);
-        var sec = parseInt(player.currentTime()%60);
-
-        document.getElementById('questionFormMin').value = min;
-        document.getElementById('questionFormSec').value = sec;
       }
     // 기본 js 먼저 불러오고
     script(src='https://vjs.zencdn.net/7.7.6/video.js')

@@ -8,6 +8,12 @@ const close = document.querySelectorAll(".close");
 
 question_button.onclick = function () {
   modal.style.display = "block";
+  var player = videojs('sample-video');
+  var min = parseInt(player.currentTime()/60);
+  var sec = parseInt(player.currentTime()%60);
+
+  document.getElementById('questionFormMin').value = min;
+  document.getElementById('questionFormSec').value = sec;
 };
 
 comment_button.onclick = function () {
