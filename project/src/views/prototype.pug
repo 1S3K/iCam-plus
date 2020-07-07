@@ -42,6 +42,9 @@ html
           button.index_button 과제 및 평가
         #question_container
           #main_question
+            //- a.btn.btn-info(href='#demo', data-toggle='collapse') 이 코드 잘 적용하면
+            //-   #demo.collapse
+            //-     | collpase 가능하지 않을까
             each q in questions
               #question_bar
                 a.time_stamp(onclick='setTime(this);') #{parseInt(q.time/60) < 10 ? `0${parseInt(q.time/60)}` : parseInt(q.time/60)}:#{q.time%60}
