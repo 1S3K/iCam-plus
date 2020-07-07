@@ -19,3 +19,28 @@ $(document).on("click",".extend_tab_button", function() {
 
   
 });
+
+
+$(document).on("click",".expand_button", function() {
+
+  if( $(this).parent().attr("id") == "question_bar")
+  {
+
+    $(this).parent().attr("id","question_bar_opened");
+
+  }
+
+  else
+  {
+    $(this).parent().attr("id","question_bar");
+  }
+
+
+
+
+
+  
+
+  
+});
+
