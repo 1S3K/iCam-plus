@@ -3,6 +3,7 @@ html
     link(href='https://vjs.zencdn.net/7.7.6/video-js.css', rel='stylesheet')
     // 그 담에 내가 정의한 css 불러오고
     link(href='/main.css', rel='stylesheet')
+    link(href='/modal.css', rel='stylesheet')
     title iCam-plus prototype
   body
     .main_container
@@ -97,11 +98,21 @@ html
           #question_bottom
             button.question_button 질문하기
             button.comment_button 과제 및 평가
-      form(action="/question", method="post")
-        input(type="text", placeholder="시간", name="time", required=true)
-        input(type="text", placeholder="제목", name="title", required=true)
-        textarea(name="content", placeholder="내용", required=true)
-        input(type="submit", value="작성하기")    
+      //- form(action="/question", method="post")
+      //-   input(type="text", placeholder="시간", name="time", required=true)
+      //-   input(type="text", placeholder="제목", name="title", required=true)
+      //-   textarea(name="content", placeholder="내용", required=true)
+      //-   input(type="submit", value="작성하기")
+      form.modal-form(action='#' method='POST')
+        .modal
+          .modal-container
+            .form-title &#xC9C8;&#xBB38;&#xC791;&#xC131;&#xD558;&#xAE30;
+            .time
+              input.minute(type='text' ,='' placeholder='분' name='minute' required='true')
+              input.second(type='text' ,='' placeholder='초' name='second' required='true')
+            input.title(type='text' ,='' placeholder='제목' name='title' required='true')
+            textarea.contents(name='content' placeholder='내용' cols='30' rows='10')
+            input.submit(type='submit' value='작성하기')    
 
     script.
       function setTime(obj) {
@@ -118,3 +129,4 @@ html
     script(src='/js/videojs.js')
     script(src='/js/jquery-3.5.1.js')
     script(src='/js/source.js')
+    script(src='/js/modal.js')
