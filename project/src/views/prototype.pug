@@ -28,11 +28,11 @@ html
           #main_question
             each q in questions
               #question_bar
-                button.time_stamp(onclick='setTime(#{q.time});') #{parseInt(q.time/60) < 10 ? `0${parseInt(q.time/60)}` : parseInt(q.time/60)}:#{q.time%60}
+                a.time_stamp(onclick='setTime(this);') #{parseInt(q.time/60) < 10 ? `0${parseInt(q.time/60)}` : parseInt(q.time/60)}:#{q.time%60}
                 .question_title #{q.title}
               #question_bar_opened
                 .question_header
-                  a.time_stamp(onclick='setTime(#{q.time});') #{parseInt(q.time/60) < 10 ? `0${parseInt(q.time/60)}` : parseInt(q.time/60)}:#{q.time%60}
+                  a.time_stamp(onclick='setTime(this);') #{parseInt(q.time/60) < 10 ? `0${parseInt(q.time/60)}` : parseInt(q.time/60)}:#{q.time%60}
                   .question_title #{q.title}
                 .question_container
                   #question_person
@@ -104,9 +104,13 @@ html
         input(type="submit", value="작성하기")    
 
     script.
-      function setTime(time) {
-        var sampleVideo = document.getElementById("sample-video");
-        sampleVideo.currentTime = parseInt(time);
+      function setTime(obj) {
+        var value = obj.innerText;
+        var timeList = value.split(':');
+        var time = timeList[0]*60 + timeList[1];
+        var player = videojs('sample-video');
+        player.currentTime(time);
+        player.play();
       }
     // 기본 js 먼저 불러오고
     script(src='https://vjs.zencdn.net/7.7.6/video.js')
