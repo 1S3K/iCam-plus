@@ -3,7 +3,7 @@ html(lang='en')
   head
     meta(charset='utf-8')
     link(rel='apple-touch-icon', sizes='76x76', href='assets/img/apple-icon.png')
-    link(rel='icon', type='image/ico', sizes='96x96', href='/favicon.ico')
+    link(rel='icon', type='image/png', sizes='96x96', href='assets/img/favicon.png')
     meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
     title iCam-plus💡
     meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0', name='viewport')
@@ -114,16 +114,20 @@ html(lang='en')
                     li
                       a(href='#intro') 프로젝트 소개
                     li
-                      a(href='#functions') iCam-plus의 기능들
+                      a(href='#originalicampus') 기존 아이캠퍼스 분석
                     li
-                      a(href='#prototype') iCam-plus 데모 시연
+                      a(href='#functions') 기능 설명
                     li
-                      a(href='#result') 결과물
+                      a(href='#prototype') 데모 시연
+                    li
+                      a(href='#effect') 기대효과
+                    li
+                      a(href='#tech') 기술스택
                     li
                       a(href='#credits') 브실골플레이어팀
               .col-md-8.col-md-offset-1
                 .tim-container(style='min-height: 2000px;')
-                  // intro Row
+                  // 프로젝트 소개 시작
                   #intro.tim-row.tim-row-first
                     h2.text-center 프로젝트 소개
                     legend
@@ -178,94 +182,189 @@ html(lang='en')
                       | 교수자는 다른 매체를 통한 답변이 아닌 스트리밍 플레이어 속에서 답변을
                       | 입력하여 이와 같은 일련의 학습과정을 양방향으로 행할 수 있는 사용자 참
                       | 여형 스트리밍 플레이어를 만들고자 합니다.
-                  // end row
-                  // functions row
-                  #functions.tim-row
-                    h2 iCam-plus의 기능들 
+                  // 프로젝트 소개 끝
+                  // 기존 아이캠퍼스 분석 시작
+                  #originalicampus.tim-row
+                    h2  기존 아이캠퍼스 분석 
                     legend
-                    p
-                      | 기능 정리해서 추가 ㄱㄱ
-                  // end row
-                  // prototype row
+                    p 분석분석
+                  // 기존 아이캠퍼스 분석 끝
+                  // 기능설명 시작
+                  #functions.tim-row
+                    h2 기능 설명 
+                    legend
+                    h2(style='color: red;') 프론트 완성되는대로 여기에 캡처와 함께 사용법까지 넣을 예정
+                    h4 1. 동영상 타임스탬프
+                    p 온라인 강의 수강 중 질문 발생 시 영상에 타임스탬프를 남겨 실시간 질의응답 가능
+                    h4 2. 과제 및 평가
+                    ul
+                      li 타임스탬프 생성 시, 질문 작성 공간 생성
+                      li 학습자는 작성 시간, 작성자, 질문 내용의 형식에 맞춰 질문 작성
+                      li 작성한 영상의 타임스탬프를 기준으로 –10초 ~ +10초 범위의 질문들이 영상 우측 상단에 생성
+                      li 학습자 간의 질문 공유로, 상호 토론하는 느낌 제공
+                    h4 3. 질문 검색 기능
+                    p 궁금한 부분에 대해 단어 검색 기능 제공, 해당 단어가 포함된 질문이 있을 시 확인 가능
+                    h4 4. 퀴즈 및 토론 부여
+                    ul
+                      li 교수자는 학생들의 질문과 피드백을 통해 강의 내용을 보충
+                      li 플레이어 상에 퀴즈와 토론 과제 등을 부여 가능
+                      li 학습자에게 실제로 소통하는 느낌 제공
+                    h4 5. 질문리스트 확인
+                    p 교수자는 학생들이 질문한 내용을 정리하여 스크립트 형태로 확인 가능
+                  // 기능설명 끝
+                  // 데모시연 시작
                   #prototype.tim-row
                     h2  데모 시연 
                     legend
                     button.btn.btn-primary(onclick="location.href = '/prototype' ") 데모를 보러 갑시다!
-                  // end row
-                  // result row
-                  #result.tim-row
-                    h2  결과물 
+                  // 데모시연 끝
+                  // 기대 효과 시작
+                  #effect.tim-row
+                    h2  기대효과 
                     legend
-                    p
-                      | 여기다 캡처화면 정도 넣으면 될려나? 아니면 사용법을 넣을까?
-                  // end row
-                  // credits row
+                    h4 학습자 측면
+                    ul
+                      li 학습자에게
+                      li 도움될
+                      li 내용들
+                    h4 교수자 측면
+                    ul
+                      li 교수자에게
+                      li 도움될
+                      li 내용들
+                  // 기대효과 끝
+                  // 기술스택 시작
+                  #tech.tim-row
+                    h2  기술스택 
+                    legend
+                    h2(style='color:red') 일단 로고만 카드에 넣어놨는데, 구현 캡처까지 해서 카드 내부에서 쭉쭉 넘길 수 있게 하면 어떨까 싶음.
+                    h4 Front-End
+                    .card.card-product
+                      .image
+                        img(src='assets/img/htmlcssjs.png', alt='')
+                      br
+                      legend
+                      .content
+                        h4.content.text-center
+                          | HTML & CSS & Javascript
+                        p.description
+                          | 설명설명
+                    br
+                    h4 Back-End
+                    .card.card-product
+                      .image
+                        img(src='assets/img/node-express-mongo.png')
+                      br
+                      legend
+                      .content
+                        h4.content.text-center
+                          | Nodejs & Express & MongoDB
+                        p.description
+                          | 설명설명
+                  br
+                  h4 Deploy
+                  .card.card-product
+                    .image
+                      img(src='assets/img/aws.png', alt='')
+                    br
+                    legend
+                    .content
+                      h4.content.text-center
+                        | AWS EC2 & Route 53
+                      p.description
+                        | 설명설명
+                  br
+                  // 기술스택 끝
+                  // 브실골플레이어팀 시작
                   #credits.tim-row
                     h2  브실골플레이어팀
                     legend
-                    .table-responsive
-                      table.table
-                        thead
-                          tr
-                            th 이름
-                            th 역할
-                            th 담당
-                            th.text-right 한마디
-                        tbody
-                          tr
-                            td 강준우
-                            td 팀장
-                            td 백+프론트 통합
-                            td.td-actions.text-right
-                              button.btn.btn-info.btn-simple.btn-xs(type='button', rel='tooltip', title='우와아아아아아아')
-                                i.fa.fa-user
-                          tr
-                            td 김희동
-                            td 팀원
-                            td 일정조율, 백엔드 + DB 담당
-                            td.td-actions.text-right
-                              button.btn.btn-info.btn-simple.btn-xs(type='button', rel='tooltip', title='희동한마디')
-                                i.fa.fa-user
-                          tr
-                            td 김태현
-                            td 팀원
-                            td 프론트엔드 구현
-                            td.td-actions.text-right
-                              button.btn.btn-info.btn-simple.btn-xs(type='button', rel='tooltip', title='태현한마디')
-                                i.fa.fa-user
-                          tr
-                            td 송지훈
-                            td 팀원
-                            td 프로느엔드 구현
-                            td.td-actions.text-right
-                              button.btn.btn-info.btn-simple.btn-xs(type='button', rel='tooltip', title='지훈한마디')
-                                i.fa.fa-user
-                          tr
-                            td 한옥영
-                            td 지도교수
-                            td 성심성의를 담아 지도
-                            td.td-actions.text-right
-                              button.btn.btn-info.btn-simple.btn-xs(type='button', rel='tooltip', title='보람찼습니다^^')
-                                i.fa.fa-user
-                  // end row
+                    .row
+                      .col-md-5
+                        .img-container
+                          img.img-rounded(src='https://avatars2.githubusercontent.com/u/29622782?s=460&v=4')
+                        .space-50
+                      .col-md-5.col-md-offset-1
+                        h1.text-center
+                          | 강준우
+                          small.subtitle 팀장
+                        hr
+                        p 소개소개.
+                        p 한마디한마디.
+                    br
+                    .row
+                      .col-md-5
+                        .img-container
+                          img.img-rounded(src='https://avatars0.githubusercontent.com/u/59307414?s=400&u=17aa102a5fabc27c120755ccec0983cde69fb1fe&v=4')
+                        .space-50
+                      .col-md-5.col-md-offset-1
+                        h1.text-center
+                          | 김희동
+                          small.subtitle 백엔드
+                        hr
+                        p 소개소개.
+                        p 한마디한마디.
+                    .row
+                      .col-md-5
+                        .img-container
+                          img.img-rounded(src='https://avatars3.githubusercontent.com/u/61109660?s=400&u=ec8fe509b882073575edca6f849c4b5f2bb602eb&v=4')
+                        .space-50
+                      .col-md-5.col-md-offset-1
+                        h1.text-center
+                          | 김태현
+                          small.subtitle 프론트엔드
+                        hr
+                        p 소개소개.
+                        p 한마디한마디.
+                    br
+                    .row
+                      .col-md-5
+                        .img-container
+                          img.img-rounded(src='https://avatars1.githubusercontent.com/u/60260284?s=400&v=4')
+                        .space-50
+                      br
+                      .col-md-5.col-md-offset-1
+                        h1.text-center
+                          | 송지훈
+                          small.subtitle 프론트엔드
+                        hr
+                        p 소개소개.
+                        p 한마디한마디.
+                    br
+                    .row
+                      .col-md-5
+                        .img-container
+                          img.img-rounded(src='https://canvas.skku.edu/images/thumbnails/60812/XmyrYskv4vQSkHhHx5KFFF9fxyUKiz1tQBxBa5vj')
+                        .space-50
+                      .col-md-5.col-md-offset-1
+                        h1.text-center
+                          | 한옥영
+                          small.subtitle 지도교수
+                        hr
+                        p 소개소개.
+                        p 한마디한마디.
+                  // 브실골플레이어팀 끝
                   // cards row : 진짜 왜그런진 모르겠는데 얘를 없애면 js가 작동되지 않는다. display:none으로 해놓았으나 없애진 말것.
                   #cards-row.tim-row
                     .card.card-background
                       #map.map(style='display:none')
                   // end row
                   // end container
-      footer.footer.footer-transparent
-        .container
-          nav.pull-left
-            ul
-              li
-                a(href='https://www.skku.edu/')
-                  | SKKU
-              li
-                a(href='https://github.com/KangJunewoo/iCam-plus')
-                  | Github Link
-          .copyright
-            | © 2020 브실골플레이어, all rights reserved.
+    footer.footer.footer-transparent
+      .container
+        nav.pull-left
+          ul
+            li
+              a(href='https://www.skku.edu/')
+                | SKKU
+            li
+              a(href='http://cihe.webziggy.co.kr/')
+                | 대학혁신과공유센터
+            li
+              a(href='https://github.com/KangJunewoo/iCam-plus')
+                | Github Link
+        .copyright
+          | © 2020 브실골플레이어, all rights reserved.
     // Modal Core
     #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
       .modal-dialog
