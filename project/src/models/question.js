@@ -1,6 +1,9 @@
 import mongoose from "mongoose";
 
 const questionSchema = new mongoose.Schema({
+    lecture: {
+        type: String
+    },
     time: {
         type: Number
     },
@@ -8,6 +11,9 @@ const questionSchema = new mongoose.Schema({
         type: String
     },
     content: {
+        type: String
+    },
+    author: {
         type: String
     }
 });
