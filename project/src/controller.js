@@ -16,15 +16,16 @@ export const prototype = async (req, res) => {
 
 export const question = async (req, res) => {
     const {
-        body: { time, title, content }
-      } = req;
-      
-      const newQuestion = await Question.create({
-          time,
-          title,
-          content
-      });
-      res.redirect("/prototype");
+        body: { minute, second, title, content }
+    } = req;
+    
+    var time = parseInt(minute*60)+parseInt(second);
+    const newQuestion = await Question.create({
+        time:time,
+        title,
+        content
+    });
+    res.redirect("/prototype");
 };
 
 export const comment = (req, res) => {

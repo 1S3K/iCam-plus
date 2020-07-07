@@ -58,43 +58,6 @@ html
                       |                 하세요
                       |                 ~~~~~~~~~~
                       |                 @@@@@@@@@@@@@@@@
-            //- #question_bar
-            //-   a.time_stamp(href='') 05:33
-            //-   .question_title  질문 내용 여기에1
-            //- #question_bar
-            //-   a.time_stamp(href='') 05:33
-            //-   .question_title  질문 내용 여기에2
-            //- #question_bar_opened
-            //-   .question_header
-            //-     a.time_stamp(href='') 09:12
-            //-     .question_title 질문 내용 여기에3
-            //-   .question_container
-            //-     #question_person
-            //-       p
-            //-         br
-            //-         | 질문자 : 강준우
-            //-     #question_text
-            //-       p(style='word-break:break-all')
-            //-         br
-            //-         |                 질문 내용~~~ 이해가 안돼요~~~~~
-            //-         |                 질문 내용~~~ 이해가 안돼요~~~~~질문 내용~~~ 이해가 안돼요~~ 이해가 안돼요~~~~~질문 내용~~~ 이해가 안돼요~~~~~질문 내용~~~ 이해가 안돼요~~~~~질문 내용
-            //-     #question_professor
-            //-       p
-            //-         br
-            //-         br
-            //-         |  답변자 : 김재현(교수)
-            //-     #answer_text
-            //-       p(style='word-break:break-all')
-            //-         br
-            //-         br
-            //-         |                 이건
-            //-         |                 이렇게
-            //-         |                 하세요
-            //-         |                 ~~~~~~~~~~
-            //-         |                 @@@@@@@@@@@@@@@@
-            //- #question_bar
-            //-   a.time_stamp(href='') 12:09
-            //-   .question_title  질문 내용 여기에4
           #question_bottom
             button.question_button 질문하기
             button.comment_button 과제 및 평가
@@ -103,7 +66,7 @@ html
       //-   input(type="text", placeholder="제목", name="title", required=true)
       //-   textarea(name="content", placeholder="내용", required=true)
       //-   input(type="submit", value="작성하기")
-      form.modal-form(action='#' method='POST')
+      form.modal-form(action='/question' method='POST')
         .modal
           .modal-container
             .form-title &#xC9C8;&#xBB38;&#xC791;&#xC131;&#xD558;&#xAE30;
@@ -118,7 +81,7 @@ html
       function setTime(obj) {
         var value = obj.innerText;
         var timeList = value.split(':');
-        var time = timeList[0]*60 + timeList[1];
+        var time = parseInt(timeList[0])*60 + parseInt(timeList[1]);
         var player = videojs('sample-video');
         player.currentTime(time);
         player.play();
