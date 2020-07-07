@@ -18,12 +18,13 @@ export const question = async (req, res) => {
     const {
         body: { minute, second, title, content }
     } = req;
-    
+    var author = "김희동";
     var time = parseInt(minute*60)+parseInt(second);
     const newQuestion = await Question.create({
         time:time,
         title,
-        content
+        content,
+        author:author
     });
     res.redirect("/prototype");
 };
