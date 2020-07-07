@@ -1,7 +1,13 @@
-const questionBtn = document.querySelector(".question_button");
 const modal = document.querySelector(".modal");
 
-questionBtn.addEventListener("click", function (event) {
-  console.log("clicked");
+const question_button = document.querySelector(".question_button");
+
+const span = document.querySelector(".close");
+
+question_button.onclick = function () {
   modal.style.display = "block";
-});
+};
+
+span.onclick = function () {
+  modal.style.display = "none";
+};
