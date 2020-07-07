@@ -59,20 +59,16 @@ html
                       |                 ~~~~~~~~~~
                       |                 @@@@@@@@@@@@@@@@
           #question_bottom
-            button.question_button 질문하기
+            button.question_button(onclick="loadQuestionFrom();") 질문하기
             button.comment_button 과제 및 평가
-      //- form(action="/question", method="post")
-      //-   input(type="text", placeholder="시간", name="time", required=true)
-      //-   input(type="text", placeholder="제목", name="title", required=true)
-      //-   textarea(name="content", placeholder="내용", required=true)
-      //-   input(type="submit", value="작성하기")
+
       form.modal-form(action='/question' method='POST')
         .modal
           .modal-container
             .form-title &#xC9C8;&#xBB38;&#xC791;&#xC131;&#xD558;&#xAE30;
             .time
-              input.minute(type='text' ,='' placeholder='분' name='minute' required='true')
-              input.second(type='text' ,='' placeholder='초' name='second' required='true')
+              input#questionFormMin.minute(type='text' ,='' placeholder='분' name='minute' required='true')
+              input#questionFormSec.second(type='text' ,='' placeholder='초' name='second' required='true')
             input.title(type='text' ,='' placeholder='제목' name='title' required='true')
             textarea.contents(name='content' placeholder='내용' cols='30' rows='10')
             input.submit(type='submit' value='작성하기')    
@@ -85,6 +81,14 @@ html
         var player = videojs('sample-video');
         player.currentTime(time);
         player.play();
+      }
+      function loadQuestionFrom() {
+        var player = videojs('sample-video');
+        var min = parseInt(player.currentTime()/60);
+        var sec = parseInt(player.currentTime()%60);
+
+        document.getElementById('questionFormMin').value = min;
+        document.getElementById('questionFormSec').value = sec;
       }
     // 기본 js 먼저 불러오고
     script(src='https://vjs.zencdn.net/7.7.6/video.js')
