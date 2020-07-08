@@ -161,7 +161,7 @@ html(lang='en')
                           | headingThree
                         #collapseThree.collapse(aria-labelledby='headingThree', data-parent='#accordionExample')
                           | collapseThree
-                    h4 포스트 코로나
+                    h4 포스트 코로나 🙄
                     p
                       | 최근 코로나19 바이러스 사태로 인해, 우리 학교를 포함한 모든 교육기관은
                       | 현재 온라인 강의를 진행하고 있습니다.
@@ -176,7 +176,7 @@ html(lang='en')
                         cite(title='Source Title')
                           | SERVQUAL을 이용한 이러닝 학습자가 만족도 평가에 관한 연구
                     br
-                    h4 소통의 문제
+                    h4 소통의 문제 😥
                     p
                       | 위 연구에서 제시하는 바와 같이 현재 문제점 중 하나는 온라인 강의의 질의응답 방식입니다.
                       | 현재 아이캠퍼스에서 학생이 질문이 있을 때, 그것을 교수자와 소통하는 방법은
@@ -193,7 +193,7 @@ html(lang='en')
                       | 또한 존재합니다.
                     br
                     br
-                    h4 성균관대학교의 대처 - WebEx 실시간 강의
+                    h4 성균관대학교의 대처 - WebEx 실시간 강의 💻
                     p
                       | 학교에선 Webex 등 실시간 강의를 이용해 위와 같은 문제를 해결하고자 했으나 
                       strong
@@ -204,7 +204,7 @@ html(lang='en')
                       | 또 다른 문제점을 안고 있습니다.
                     br
                     br
-                    h4 iCam-plus가 착안한 점
+                    h4 iCam-plus가 착안한 점 💡
                     p
                       | 저희는 이러한 문제를 해결하기 위해 아이캠퍼스의 스트리밍 플레이어가 단순히
                       | 영상을 재생하는 데에서 벗어나, 
@@ -283,7 +283,7 @@ html(lang='en')
                         .space-50
                       .col-md-4.col-md-offset-1
                         h4.text-center
-                          strong(style='color:red') 이렇게 복잡할 수가!
+                          strong(style='color:red') 이렇게 복잡할 수가! 🙀
                           hr
                           p 이는 너무나 비효율적이라고 판단하여, iCam-plus에서는 이 과정을 획기적으로 줄였습니다.
                     br
@@ -340,43 +340,41 @@ html(lang='en')
                   #tech.tim-row
                     h2  기술스택 
                     legend
-                    // TODO : 구조도로 수정 예정
-                    h4 Front-End
+                    // TODO : 세부구현표
                     .card.card-product
                       .image
-                        img(src='assets/img/htmlcssjs.png', alt='')
-                      br
-                      legend
+                        img(src='assets/img/tech.png', alt='')
                       .content
                         h4.content.text-center
-                          | HTML & CSS & Javascript
+                          | http://www.comedu.org
                         p.description
-                          | 설명설명
-                    br
-                    h4 Back-End
-                    .card.card-product
-                      .image
-                        img(src='assets/img/node-express-mongo.png')
-                      br
-                      legend
-                      .content
+                          | URL에 해당합니다. 모든 작업을 마친 후 url을 달아 접속 가능하도록 구현했습니다.
+                        br
                         h4.content.text-center
-                          | Nodejs & Express & MongoDB
+                          | Amazon EC2 & MongoDB Atlas
                         p.description
-                          | 설명설명
-                  br
-                  h4 Deploy
-                  .card.card-product
-                    .image
-                      img(src='assets/img/aws.png', alt='')
-                    br
-                    legend
-                    .content
-                      h4.content.text-center
-                        | AWS EC2 & Route 53
-                      p.description
-                        | 설명설명
-                  br
+                          | 클라우드에 해당합니다. 데이터와 서버를 클라우드에 두어 어디서든 접속 가능하도록 구현했습니다.
+                        br
+                        h4.content.text-center
+                          | 세부 구현
+                        table.table
+                          thead
+                            tr
+                              th 기술명
+                              th 설명
+                            tr
+                              td HTML & CSS & JavaScript
+                              td 프론트엔드 스택입니다.
+                            tr
+                              td Node.js + Express
+                              td 백엔드 기술스택입니다.
+                            tr
+                              td MongoDB
+                              td 데이터베이스입니다.
+                            tr
+                              td Pug, Mongoose
+                              td 프론트 - 백, 백 - DB를 연결해주는 모듈입니다.
+
                   // 기술스택 끝
                   // 브실골플레이어팀 시작
                   #credits.tim-row
