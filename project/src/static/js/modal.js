@@ -9,7 +9,8 @@ const close = document.querySelectorAll(".close");
 question_button.onclick = function () {
   modal.style.display = "block";
   var player = videojs('sample-video');
-
+  
+  player.pause();
   localStorage.setItem("time", videojs('sample-video').currentTime());
 
   var min = parseInt(player.currentTime()/60);
