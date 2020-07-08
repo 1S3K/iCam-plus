@@ -12,130 +12,91 @@
 .vstyle .vjs-big-play-button,
 .vstyle .vjs-volume-level,
 .vstyle .vjs-play-progress,
-.vstyle .vjs-slider-bar{
-  background:rgb(135,180,23) 
+.vstyle .vjs-slider-bar {
+  background: rgb(135, 180, 23);
   /* 성대 색 ..? ㅎ... */
 }
 
-body{
-  margin-left : 0;
-  margin-top : 10;
+body {
+  margin-left: 0;
+  margin-top: 10;
 }
 
-
-
-.main_container
-{
-  display:inline-block;
+.main_container {
+  display: inline-block;
 }
-
-
-
 
 /* LEFT CONTAINER (플레이어 부분) */
 
-
-
-.left_container
-{
-  width: 70vw;
+.left_container {
+  width: 97vw;
   height: 100vh;
-  float:left;
-
+  float: left;
 }
 
-  #player_header
-  {
-    display:inline-block;
-    width:100%;
-    height:5%;
-    background-color: rgb(244,244,244);
-    border : 1px rgb(135,180,23) solid;
-    background:rgb(135,180,23) ;
+#player_header {
+  display: inline-block;
+  width: 100%;
+  height: 5%;
+  background-color: rgb(244, 244, 244);
+  border: 1px rgb(135, 180, 23) solid;
+  background: rgb(135, 180, 23);
+}
 
-  }
+.player_header_title {
+  width: 50%;
+  margin-left: 30;
+  margin-top: 14;
+  float: left;
+  color: white;
+  font-size: 1.2em;
+  background-color: rgb(135, 180, 23);
+  opacity: 0.7;
+}
+.extend_tab_button {
+  margin-top: 16;
+  margin-right: 16;
+  width: 10%;
+  float: right;
+}
 
+#sample-video {
+  border: 1px rgb(135, 180, 23) solid;
 
-      .player_header_title
-      {
-        width:50%;
-        margin-left : 30;
-        margin-top : 14;
-        float:left;
-        color : white;
-        font-size: 1.2em;
-        background-color:rgb(135,180,23) ;
-        opacity: 0.7;
-        
-      }
-      .extend_tab_button
-      {
-         margin-top : 16;
-         margin-right : 16;
-         width:10%;
-         float:right;
-      }
+  width: 100%;
+  height: 95%;
+}
 
-  #sample-video
-  {
-    border : 1px rgb(135,180,23) solid;
-
-    width:100%;
-    height:95%;
-  }
-
-
-  #index_bar
-  {
-    height:5%;
-    width:100%;
-    border: solid 1px #707070;
-    background-color: rgba(153, 196, 85, 0.62);
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#index_bar {
+  height: 5%;
+  width: 100%;
+  border: solid 1px #707070;
+  background-color: rgba(153, 196, 85, 0.62);
+}
 
 /* RIGHT CONTAINER (확장탭 부분( */
 
-
-
-
-.right_container
-{
-  /*display:none;*/ 
+.right_container {
+  /*display:none;*/
   /*   
       처음 실행 했을 때에는 오른쪽 컨테이너가 보이면 안됨
       버튼 눌렀을 시에 오른쪽 컨테이너 출몰 하는 형식으로..?
   */
 
-  display:none;
-  width:27vw;
+  display: none;
+  width: 27vw;
   height: 100vh;
-  float :right;
+  float: right;
   border: solid 1px #707070;
   background-color: #e5e5e5;
-
 }
-
-
 
 select {
   width: 200px;
-  padding: .8em .5em;
+  padding: 0.8em 0.5em;
   font-family: inherit;
-  background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg) no-repeat 95% 50%;
+  background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg)
+    no-repeat 95% 50%;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -148,282 +109,226 @@ select::-ms-expand {
   display: none;
 }
 
-#class_index_selector
-{
+#class_index_selector {
   width: 381px;
   height: 34px;
   border: solid 1px #a8a8a8;
   background-color: #ffffff;
-  margin-left:34px;
-  margin-top:9px;
+  margin-left: 34px;
+  margin-top: 9px;
 
-  font-size:12px;
+  font-size: 12px;
 }
 
-
-#goto_IndexButton
-{
+#goto_IndexButton {
   width: 21.4px;
   height: 26px;
   background-color: #ffffff;
-  margin-top:12px;
-  margin-left:20px;
-  border : none
-
+  margin-top: 12px;
+  margin-left: 20px;
+  border: none;
 }
 
-
-#select_Button_bar
-{
-  height:5%;
-  width:100%;
-  
+#select_Button_bar {
+  height: 5%;
+  width: 100%;
 }
 
-  .index_button
-  {
-    background-color: rgba(64, 67, 74, 0.75);
-    width:49.55%;
+.index_button {
+  background-color: rgba(64, 67, 74, 0.75);
+  width: 49.55%;
 
-    border:none;
-    height:100%;
-    font-family: JejuGothicOTF;
-    font-size: 26px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.19;
-    letter-spacing: normal;
-    text-align: center;
-    color: #ffffff;
-  }
+  border: none;
+  height: 100%;
+  font-family: JejuGothicOTF;
+  font-size: 26px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.19;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
 
+.index_button:active,
+.index_button:focus,
+.index_button:hover {
+  background-color: #0f2b62;
+}
 
-  .index_button:active, .index_button:focus, .index_button:hover
-  {
-    background-color: #0f2b62;
-  }
+#question_container {
+  width: 100%;
+  height: 90%;
+  border: solid 1px #707070;
+  background-color: #e5e5e5;
+}
 
+#main_question {
+  width: 100%;
+  height: 96%;
+  overflow-x: scroll;
+}
 
+#question_bar {
+  width: 20vw;
+  height: 4vh;
+  padding: 0.8em 0.5em;
+  font-family: inherit;
+  background-color: white;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #999;
+  border-radius: 0px;
+  margin: 20px 3vw 20px;
+  border: solid 1px #707070;
+  background-color: #ffffff;
+  display: inline-block;
+  overflow-y: hidden;
+}
+#question_bar * {
+  display: inline;
+}
 
+.time_stamp {
+  width: 15%;
+  height: 100%;
+  font-size: 26px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.7;
+  letter-spacing: normal;
+  text-align: center;
+  color: #385fcb;
+  margin-left: 5px;
+}
 
-  #question_container
-  {
-    width:100%;
-    height:90%;
-    border: solid 1px #707070;
-    background-color: #e5e5e5;
-  }
+.question_title {
+  width: 80%;
+  height: 100%;
 
+  font-family: JejuGothicOTF;
+  font-size: 26px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.7;
+  letter-spacing: normal;
+  text-align: center;
+  color: #0d0d0d;
+  margin-left: 15px;
+}
 
-        #main_question
-        {
-          width:100%;
-          height:96%;
-          overflow-x:scroll;
-          
-          
-        }
+.expand_button {
+  background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg)
+    no-repeat;
+  border: none;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
 
+#question_bar_opened {
+  width: 20vw;
+  height: 30vh;
+  padding: 0.8em 0.5em;
+  font-family: inherit;
+  background-color: white;
 
-            #question_bar
-            {
-              width: 20vw;
-              height: 4vh;
-              padding: .8em .5em;
-              font-family: inherit;
-              background-color : white;
-              -webkit-appearance: none;
-              -moz-appearance: none;
-              appearance: none;
-              border: 1px solid #999;
-              border-radius: 0px;
-              margin: 20px 3vw  20px ;
-              border: solid 1px #707070;
-              background-color: #ffffff;
-              display:inline-block;
-              overflow-y:hidden;
-              
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #999;
+  border-radius: 0px;
+  margin: 20px 3vw 20px;
+  border: solid 1px #707070;
+  background-color: #ffffff;
+  display: block;
+}
+#question_bar_opened * {
+  display: inline;
+}
+.question_header {
+  width: 100%;
+  height: 20%;
+}
 
-            }
-                #question_bar *
-                {
-                  display:inline;
-                }
+.question_container {
+  width: 80%;
+  height: 400px;
+  display: block;
+}
 
-                .time_stamp
-                {
-                  width: 15%;
-                  height: 100%;
-                  font-size: 26px;
-                  font-weight: normal;
-                  font-stretch: normal;
-                  font-style: normal;
-                  line-height: 1.7;
-                  letter-spacing: normal;
-                  text-align: center;
-                  color: #385fcb;
-                  margin-left : 5px;
-             
-                  
+#question_person {
+  font-family: JejuGothicOTF;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: normal;
+  text-align: left;
+  color: #9f9e9e;
+}
 
+#question_text {
+  font-family: JejuGothicOTF;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+}
 
-                }
-                
-                .question_title
-                {
-                  width: 80%;
-                  height: 100%;
+#question_professor {
+  font-family: JejuGothicOTF;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: normal;
+  text-align: left;
+  color: #9f9e9e;
+}
 
-                  font-family: JejuGothicOTF;
-                  font-size: 26px;
-                  font-weight: normal;
-                  font-stretch: normal;
-                  font-style: normal;
-                  line-height: 1.7;
-                  letter-spacing: normal;
-                  text-align: center;
-                  color: #0d0d0d;
-                  margin-left:15px;
+#answer_text {
+  font-family: JejuGothicOTF;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+}
 
-                }
+#question_bottom {
+  width: 100%;
+  height: 4%;
+}
 
-
-                .expand_button
-                {
-
-                  background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg) no-repeat;
-                  border: none;
-                  width: 32px;
-                  height: 32px;
-                  cursor: pointer;
-                  margin-left:20px;
-                  margin-bottom:20px;
-                  
-                  
-                }
-
-
-              #question_bar_opened
-              {
-
-                width: 20vw;
-                height: 30vh;
-                padding: .8em .5em;
-                font-family: inherit;
-                background-color : white;
-
-
-               
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                appearance: none;
-                border: 1px solid #999;
-                border-radius: 0px;
-                margin: 20px 3vw  20px ;
-                border: solid 1px #707070;
-                background-color: #ffffff;
-                display:block;
-
-              }
-                    #question_bar_opened *
-                    {
-                      display:inline;
-                    }
-                    .question_header
-                    {
-                      width:100%;
-                      height:20%;
-                    }
-
-
-                    .question_container
-                    {
-                      
-                      width:80%;
-                      height:400px;
-                      display:block;
-                      
-                    }
-
-                        #question_person
-                        {
-                          font-family: JejuGothicOTF;
-                          font-size: 12px;
-                          font-weight: normal;
-                          font-stretch: normal;
-                          font-style: normal;
-                          line-height: 1.17;
-                          letter-spacing: normal;
-                          text-align: left;
-                          color: #9f9e9e;
-
-                        }
-
-                        #question_text
-                        {
-                          font-family: JejuGothicOTF;
-                          font-size: 12px;
-                          font-weight: normal;
-                          font-stretch: normal;
-                          font-style: normal;
-                          line-height: 1.17;
-                          letter-spacing: normal;
-                          text-align: left;
-                          color: #000000;
-                        }
-
-                        #question_professor
-                        {
-                          font-family: JejuGothicOTF;
-                          font-size: 12px;
-                          font-weight: normal;
-                          font-stretch: normal;
-                          font-style: normal;
-                          line-height: 1.17;
-                          letter-spacing: normal;
-                          text-align: left;
-                          color: #9f9e9e;
-                        }
-
-                        #answer_text
-                        {
-                          font-family: JejuGothicOTF;
-                          font-size: 12px;
-                          font-weight: normal;
-                          font-stretch: normal;
-                          font-style: normal;
-                          line-height: 1.17;
-                          letter-spacing: normal;
-                          text-align: left;
-                          color: #000000;
-                        }
-
-        #question_bottom
-        {
-
-          width:100%;
-          height:4%;
-        }
-
-            .question_button, .comment_button
-            {
-              border: solid 1px #707070;
-              background-color: #0f2b62;
-              width:49.5%;
-              height:100%;
-              font-family: JejuGothicOTF;
-              font-size: 16px;
-              font-weight: normal;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: 1.19;
-              letter-spacing: normal;
-              text-align: center;
-              color: #ffffff;
-            }
-
-
-
-
-
+.question_button,
+.comment_button {
+  border: solid 1px #707070;
+  background-color: #0f2b62;
+  width: 49.5%;
+  height: 100%;
+  font-family: JejuGothicOTF;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.19;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
