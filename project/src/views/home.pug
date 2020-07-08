@@ -17,10 +17,8 @@ html(lang='en')
     link(href='http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', rel='stylesheet')
     link(href='https://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans:400,300', rel='stylesheet', type='text/css')
     link(href='assets/css/pe-icon-7-stroke.css', rel='stylesheet')
+    // font-family : 'Gaegu', cursive; 어딘가에 적용 예정.
     style.
-      .body{
-        font-family:'Gaegu', cursive;
-      }
       pre.prettyprint {
       background-color: #eee;
       border: 0px;
@@ -140,76 +138,87 @@ html(lang='en')
                 .tim-container(style='min-height: 2000px;')
                   // 프로젝트 소개 시작
                   #intro.tim-row.tim-row-first
-                    h2.text-center 프로젝트 소개
+                    h2 프로젝트 소개
                     legend
-                    //
+                    // img를 넣는다면?
                       <img src="assets/img/online_edu.png" alt="online edu" class="rounded"
                       style="width:auto;height:auto;max-width:150px;max-height: 150px;float: right;">
+
+                    // collapse기능을 넣는다면?
+                      #accordionExample.accordion
+                      #headingOne
+                        button.btn.btn-danger.collapsed(type='button', data-toggle='collapse', data-target='#collapseOne', aria-expanded='false', aria-controls='collapseOne')
+                          | headingOne
+                        #collapseOne.collapse(aria-labelledby='headingOne', data-parent='#accordionExample')
+                          | collapseOne
+                      #headingTwo
+                        button.btn.btn-success.collapsed(type='button', data-toggle='collapse', data-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                          | headingTwo
+                        #collapseTwo.collapse(aria-labelledby='headingTwo', data-parent='#accordionExample')
+                          | collapseTwo
+                      #headingThree
+                        button.btn.btn-warning.collapsed(type='button', data-toggle='collapse', data-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+                          | headingThree
+                        #collapseThree.collapse(aria-labelledby='headingThree', data-parent='#accordionExample')
+                          | collapseThree
+                    h4 포스트 코로나 🙄
                     p
                       | 최근 코로나19 바이러스 사태로 인해, 우리 학교를 포함한 모든 교육기관은
                       | 현재 온라인 강의를 진행하고 있습니다.
-                      | 기존의 수업방식과 다르기에 현재의
-                      | 학습 방식이 익숙하지 않을 뿐더러 과제 부여 및 시험 평가 방법, 질의와 답
-                      | 변을 포함한 학습자와 교수자 간의 소통의 어려움 등 많은 불편을 겪고 있습
-                      | 니다.
+                      | 기존의 대면 수업방식과 다르기에 교수자와 학습자에게 많은 혼란이 가중되었고,
+                      | 특히 학습자와 교수자 간의 소통의 어려움 등이 많이 나타났습니다.
                     br
                     br
                     blockquote.blockquote.text-right
-                      p.mb-0 이러닝의 장점에도 불구하고 현실에서 이러닝의 실제 만족도 높지 않게 나오 는 주된 이유는 충분한 질문과 토론이 불가능하기 때문이다.
+                      p.mb-0 이러닝의 장점에도 불구하고 현실에서 이러닝의 실제 만족도 높지 않게 나오는 주된 이유는 충분한 질문과 토론이 불가능하기 때문이다.
                       footer.blockquote-footer
                         | 구희진･박영택, 
                         cite(title='Source Title')
                           | SERVQUAL을 이용한 이러닝 학습자가 만족도 평가에 관한 연구
                     br
-                    br
+                    h4 소통의 문제 😥
                     p
-                      | 위 연구에서 제시하는 바와 같이 현재 문제점 중 하나는 온라인 강의의 질문
-                      | 방식입니다. 지금의 아이캠퍼스는 동영상으로 수업을 진행하고 수업 도중 질
-                      | 문에 대한 부분은 강의가 모두 끝난 이후 문의게시판 혹은 교수자에게 이메
-                      | 일을 전송하게 됩니다. 또는 수업 중간에 동영상을 정지하고 질문을 작성한
-                      | 다음 다시 수업을 들어야 합니다. 이후 교수자는 학습자들의 질문에 대해 각
-                      | 각의 내용을 확인하고 학습자에게 답변을 전달하고 있습니다.
-                      | 이러한 과정은 오프라인 강의에 비해 교수자와 학습자 모두에게 불필요한 시
-                      | 간을 소비하고 학습 이외의 온라인 강의의 구조적인 문제로 인해 집중을 방
-                      | 해하는 결과를 야기합니다. 추가로 오프라인 강의의 경우, 학습자는 타 학습
-                      | 자의 질문을 통해 본인이 미처 생각하지 못했던 부분을 생각할 수 있습니다.
-                    br
+                      | 위 연구에서 제시하는 바와 같이 현재 문제점 중 하나는 온라인 강의의 질의응답 방식입니다.
+                      | 현재 아이캠퍼스에서 학생이 질문이 있을 때, 그것을 교수자와 소통하는 방법은
+                    ul
+                      li 문의게시판을 활용하는 방법
+                      li 교수자에게 메세지 혹은 이메일을 보내는 방법
                     p
-                      | 물론 학교에서도 위와 같은 문제 때문에 Webex를 이용하여 이러한 문제를
-                      | 해결하고자 하지만 시간의 제약을 받지 않는 온라인 강의의 장점을 살리지
-                      | 못 하고, 화상 강의를 참여하기 위해 학습자 개개인이 준비해야하는 과정과
-                      | 비용이 증가하는 점에서 단점이 명확히 존재합니다. 또한 강의를 저장하는
-                      | 경우에 단순히 영상을 저장한 것이기에 강의 간에 있었던 교수자와 학습자
-                      | 간의 소통을 텍스트로 기록하지 못 하게 됩니다.
+                      | 크게 두 가지가 있습니다. 이 경우 모두 
+                      strong
+                        | 강의를 들으면서 실시간으로 질문을 할 수 없는 
+                      | 문제점이 있습니다. 거기에 다른 학우들의 질문 또한 강의를 들으며 공유할 수 없기에 
+                      strong
+                        | 동료학습의 어려움 
+                      | 또한 존재합니다.
                     br
-                    p
-                      | 저희는 이러한 문제를 해결하기 위해 아이캠퍼스의 스트리밍 플레이어가 단
-                      | 순히 영상을 재생하는 데에서 벗어나, “학습”이라는 관점에 집중해서 기능이
-                      | 적용된다면 교수자와 학습자 모두의 만족도를 보다 향상시킬 수 있을 것으로
-                      | 기대합니다.
                     br
+                    h4 성균관대학교의 대처 - WebEx 실시간 강의 💻
                     p
-                      | 학습자는 수업에 대한 몰입을 방해받지 않고, 질문과 토론을 할 수 있으며,
-                      | 교수자는 다른 매체를 통한 답변이 아닌 스트리밍 플레이어 속에서 답변을
-                      | 입력하여 이와 같은 일련의 학습과정을 양방향으로 행할 수 있는 사용자 참
-                      | 여형 스트리밍 플레이어를 만들고자 합니다.
+                      | 학교에선 Webex 등 실시간 강의를 이용해 위와 같은 문제를 해결하고자 했으나 
+                      strong
+                        | 시간의 제약을 받지 않는 온라인 강의의 장점을 살리지 못하는 
+                      | 문제점이 있었습니다. 또한 webex는 
+                      strong
+                        | 영상과 질문을 동시에 저장하지 못하므로 
+                      | 또 다른 문제점을 안고 있습니다.
+                    br
+                    br
+                    h4 iCam-plus가 착안한 점 💡
+                    p
+                      | 저희는 이러한 문제를 해결하기 위해 아이캠퍼스의 스트리밍 플레이어가 단순히
+                      | 영상을 재생하는 데에서 벗어나, 
+                      strong
+                        | 대면강의의 장점인 실시간 Q&A와 동료학습을 포함한다면 
+                      | 교수자와 학습자 모두의 만족도를 보다 향상시킬 수 있을 것으로 보고 프로젝트를 시작했습니다.
+                    br
                   // 프로젝트 소개 끝
                   // 기존 아이캠퍼스 분석 시작
                   #originalicampus.tim-row
                     h2  기존 아이캠퍼스 분석 
                     legend
-                    h2(style='color:red') 내가 볼 땐 뭔가 좀 어설픈데.. 좋은 의견 있으면 알려줘
-                    .row
-                      .col-md-7
-                        .img-container
-                          img.img-rounded(src='assets/img/originalicampus/basic.png')
-                        .space-50
-                      .col-md-4.col-md-offset-1
-                        h4.text-center
-                          | 기존 플레이어
-                          hr
-                          p 현재 사용되는 아이캠퍼스의 플레이어입니다.
-                    br
+                    //- h2(style='color:red') 내가 볼 땐 뭔가 좀 어설픈데.. 좋은 의견 있으면 알려줘
+                    
                     .row
                       .col-md-7
                         .img-container
@@ -217,9 +226,9 @@ html(lang='en')
                         .space-50
                       .col-md-4.col-md-offset-1
                         h4.text-center
-                          | 커서올린 상태
+                          strong 기존 플레이어
                           hr
-                          p 재생, 일시정지, 배속 등이 지원되는 기본적인 플레이어 모습과 같습니다. 이 상황에서 질문을 해야 한다고 생각해봅시다.
+                          p 재생, 일시정지, 배속 등이 지원되는 기본적인 플레이어 모습과 같습니다. 학습자가 질문이 있는 상황을 가정해 봅시다.
                     br
                     .row
                       .col-md-7
@@ -228,7 +237,7 @@ html(lang='en')
                         .space-50
                       .col-md-4.col-md-offset-1
                         h4.text-center
-                          | 질문 step 1
+                          strong 질문 step 1
                           hr
                           p 문의게시판으로 갑니다
                     br
@@ -239,7 +248,7 @@ html(lang='en')
                         .space-50
                       .col-md-4.col-md-offset-1
                         h4.text-center
-                          | 질문 step 2
+                          strong 질문 step 2
                           hr
                           p 해당 내용 질문이 올라와있는지 보고, 없다면 글쓰기 버튼을 클릭합니다.
                     br
@@ -250,7 +259,7 @@ html(lang='en')
                         .space-50
                       .col-md-4.col-md-offset-1
                         h4.text-center
-                          | 질문 step 3
+                          strong 질문 step 3
                           hr
                           p 질문을 작성합니다.
                     br
@@ -261,7 +270,7 @@ html(lang='en')
                         .space-50
                       .col-md-4.col-md-offset-1
                         h4.text-center
-                          | 질문 step 4
+                          strong 질문 step 4
                           hr
                           p 교수자의 댓글이 달릴때까지 기다립니다. 교수자가 질문을 확인하면, 그에 대한 답변을 작성하고 학생이 볼때까지 기다립니다.
                     br
@@ -274,39 +283,42 @@ html(lang='en')
                         .space-50
                       .col-md-4.col-md-offset-1
                         h4.text-center
-                          | 이렇게 복잡할 수가!
+                          strong(style='color:red') 이렇게 복잡할 수가! 🙀
                           hr
                           p 이는 너무나 비효율적이라고 판단하여, iCam-plus에서는 이 과정을 획기적으로 줄였습니다.
                     br
+                  // TODO : 교수자 측면 : 문의게시판과 이메일에 글이 많이 쌓인 상황. 어디에 해당하는지 알기 어렵다.
+
                   // 기존 아이캠퍼스 분석 끝
                   // 기능설명 시작
                   #functions.tim-row
                     h2 기능 설명 
                     legend
-                    h2(style='color: red;') 프론트 완성되는대로 여기에 캡처와 함께 사용법까지 넣을 예정
-                    h4 1. 동영상 타임스탬프
-                    p 온라인 강의 수강 중 질문 발생 시 영상에 타임스탬프를 남겨 실시간 질의응답 가능
-                    h4 2. 과제 및 평가
+                    //- h2(style='color: red;') 프론트 완성되는대로 여기에 캡처와 함께 사용법까지 넣을 예정
+                    h4 1. 질문 작성
                     ul
-                      li 타임스탬프 생성 시, 질문 작성 공간 생성
-                      li 학습자는 작성 시간, 작성자, 질문 내용의 형식에 맞춰 질문 작성
-                      li 작성한 영상의 타임스탬프를 기준으로 –10초 ~ +10초 범위의 질문들이 영상 우측 상단에 생성
-                      li 학습자 간의 질문 공유로, 상호 토론하는 느낌 제공
-                    h4 3. 질문 검색 기능
-                    p 궁금한 부분에 대해 단어 검색 기능 제공, 해당 단어가 포함된 질문이 있을 시 확인 가능
-                    h4 4. 퀴즈 및 토론 부여
+                      li 플레이어 자체에서 질문하기 버튼을 누르면, 질문 모달이 띄워집니다.
+                      li 질문 모달에는 강의정보, 시간정보가 자동으로 들어갑니다.
+                      li 이에 학습자는 본인이 궁금한 내용 위주로만 입력하면 됩니다.
+                      li 질문을 입력하고 확인을 누르면, 해당 강의에 질문이 등록됩니다.
+                    br
+                    h4 2. 질문 검색
                     ul
-                      li 교수자는 학생들의 질문과 피드백을 통해 강의 내용을 보충
-                      li 플레이어 상에 퀴즈와 토론 과제 등을 부여 가능
-                      li 학습자에게 실제로 소통하는 느낌 제공
-                    h4 5. 질문리스트 확인
-                    p 교수자는 학생들이 질문한 내용을 정리하여 스크립트 형태로 확인 가능
+                      li 강의에 따른 질문 목록이 오른편에 출력됩니다.
+                      li 타임스탬프를 누르면 해당 강의 부분으로 이동합니다.
+                      li 교수자는 어떤 부분에서 궁금증이 생겼는지 바로 찾아볼 수 있고
+                      li 학습자는 다른 학우가 올린 질문과 답변을 확인하며 동료학습을 할 수 있습니다.
+                    br
+                    h4 3. 질문 답변
+                    ul
+                      li 교수자가 답변을 달게 되면, 실시간으로 반영됩니다.
+                      li 학습자는 답변을 읽어보며 해당 강의내용을 다시 들어볼 수 있어, 효율적인 학습이 가능합니다.
                   // 기능설명 끝
                   // 데모시연 시작
                   #prototype.tim-row
                     h2  데모 시연 
                     legend
-                    button.btn.btn-primary(onclick="location.href = '/prototype' ") 데모를 보러 갑시다!
+                    button.btn.btn-primary(onclick="location.href = '/prototype' ") iCam-plus 데모 시연
                   // 데모시연 끝
                   // 기대 효과 시작
                   #effect.tim-row
@@ -317,6 +329,7 @@ html(lang='en')
                       li 질문의 접근성 & 편의성 향상
                       li 동료학습 활성화
                       li 기타 장점 내용들
+                    br
                     h4 교수자 측면
                     ul
                       li 같은 강의내용에 대한 질문목록의 일목요연한 정리
@@ -327,43 +340,41 @@ html(lang='en')
                   #tech.tim-row
                     h2  기술스택 
                     legend
-                    h2(style='color:red') 일단 로고만 카드에 넣어놨는데, 구현 캡처까지 해서 카드 내부에서 쭉쭉 넘길 수 있게 하면 어떨까 싶음.
-                    h4 Front-End
+                    // TODO : 세부구현표
                     .card.card-product
                       .image
-                        img(src='assets/img/htmlcssjs.png', alt='')
-                      br
-                      legend
+                        img(src='assets/img/tech.png', alt='')
                       .content
                         h4.content.text-center
-                          | HTML & CSS & Javascript
+                          | http://www.comedu.org
                         p.description
-                          | 설명설명
-                    br
-                    h4 Back-End
-                    .card.card-product
-                      .image
-                        img(src='assets/img/node-express-mongo.png')
-                      br
-                      legend
-                      .content
+                          | URL에 해당합니다. 모든 작업을 마친 후 url을 달아 접속 가능하도록 구현했습니다.
+                        br
                         h4.content.text-center
-                          | Nodejs & Express & MongoDB
+                          | Amazon EC2 & MongoDB Atlas
                         p.description
-                          | 설명설명
-                  br
-                  h4 Deploy
-                  .card.card-product
-                    .image
-                      img(src='assets/img/aws.png', alt='')
-                    br
-                    legend
-                    .content
-                      h4.content.text-center
-                        | AWS EC2 & Route 53
-                      p.description
-                        | 설명설명
-                  br
+                          | 클라우드에 해당합니다. 데이터와 서버를 클라우드에 두어 어디서든 접속 가능하도록 구현했습니다.
+                        br
+                        h4.content.text-center
+                          | 세부 구현
+                        table.table
+                          thead
+                            tr
+                              th 기술명
+                              th 설명
+                            tr
+                              td HTML & CSS & JavaScript
+                              td 프론트엔드 스택입니다.
+                            tr
+                              td Node.js + Express
+                              td 백엔드 기술스택입니다.
+                            tr
+                              td MongoDB
+                              td 데이터베이스입니다.
+                            tr
+                              td Pug, Mongoose
+                              td 프론트 - 백, 백 - DB를 연결해주는 모듈입니다.
+
                   // 기술스택 끝
                   // 브실골플레이어팀 시작
                   #credits.tim-row
@@ -379,8 +390,7 @@ html(lang='en')
                           | 강준우
                           small.subtitle 팀장
                         hr
-                        p 소개소개.
-                        p 한마디한마디.
+                        p 플레이어 설명 페이지 구현과 프로젝트 배포를 담당했습니다.
                     br
                     .row
                       .col-md-5
@@ -392,8 +402,7 @@ html(lang='en')
                           | 김희동
                           small.subtitle 백엔드
                         hr
-                        p 소개소개.
-                        p 한마디한마디.
+                        p 플레이어의 백엔드 파트와 DB연동을 담당했습니다.
                     .row
                       .col-md-5
                         .img-container
@@ -404,8 +413,7 @@ html(lang='en')
                           | 김태현
                           small.subtitle 프론트엔드
                         hr
-                        p 소개소개.
-                        p 한마디한마디.
+                        p 플레이어의 각 기능들에 대한 디자인 + 프론트 구현을 담당했습니다.
                     br
                     .row
                       .col-md-5
@@ -418,8 +426,7 @@ html(lang='en')
                           | 송지훈
                           small.subtitle 프론트엔드
                         hr
-                        p 소개소개.
-                        p 한마디한마디.
+                        p 플레이어의 전체적인 디자인 + 프론트 구현을 담당했습니다.
                     br
                     .row
                       .col-md-5
@@ -431,8 +438,7 @@ html(lang='en')
                           | 한옥영
                           small.subtitle 지도교수
                         hr
-                        p 소개소개.
-                        p 한마디한마디.
+                        p 팀이 좋은 결과물을 낼 수 있도록 다방면의 피드백을 제공했습니다.
                   // 브실골플레이어팀 끝
                   // cards row : 진짜 왜그런진 모르겠는데 얘를 없애면 js가 작동되지 않는다. display:none으로 해놓았으나 없애진 말것.
                   #cards-row.tim-row
