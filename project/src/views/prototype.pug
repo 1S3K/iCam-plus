@@ -59,23 +59,22 @@ html
                     p(style='word-break:break-all')
                       br
                       |                 #{q.content}
-                  #question_professor
-                    p
-                      br
-                      br
-                      |  답변자 : 김재현(교수)
-                  #answer_text
-                    p(style='word-break:break-all')
-                      br
-                      br
-                      |                 이건
-                      |                 이렇게
-                      |                 하세요
-                      |                 ~~~~~~~~~~
-                      |                 @@@@@@@@@@@@@@@@
+                  each c in comments
+                    if `${c.question}` === `${q._id}`
+                      #question_professor
+                        p
+                          br
+                          br
+                          |  답변자 : #{c.author}
+                      #answer_text
+                        p(style='word-break:break-all')
+                          br
+                          |                 #{c.text}
                   #comment_container
-                      input#comment_container(type='text')
-                      button#comment_upload_button  작성하기; 
+                    form(action='/comment' method='post')
+                      input#questionIdValue(type="hidden" name="questionId" value=`${q._id}`)
+                      input#comment_container(type='text' name="text")
+                      button#comment_upload_button(type='submit')  작성하기;
 
           #question_bottom
             button.question_button(onclick="loadQuestionForm();") 질문하기

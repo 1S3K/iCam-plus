@@ -8,9 +8,10 @@ export const home = (req, res) => {
 export const prototype = async (req, res) => {
     try {
         const questions = await Question.find({}).sort({time : 1});
-        res.render("prototype", {questions});
+        const comments = await Comment.find({});
+        res.render("prototype", {questions, comments});
     } catch (error) {
-        res.render("prototype", {questions : []});
+        res.render("prototype", {questions : [], comments : []});
     }
 };
 
@@ -29,6 +30,17 @@ export const question = async (req, res) => {
     res.redirect("/prototype");
 };
 
-export const comment = (req, res) => {
-    res.render("home")
+export const comment = async (req, res) => {
+    const {
+        body: { questionId, text }
+    } = req;
+    var author = "한옥영 (교수)";
+    
+    const newComment = await Comment.create({
+        question: questionId,
+        text,
+        author:author
+    });
+
+    res.redirect("/prototype");
 };
