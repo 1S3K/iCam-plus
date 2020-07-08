@@ -1,5 +1,11 @@
 var is_hidden = 1;
 
+$(document).ready(function() { 
+  if (localStorage.getItem('time') != null) {
+    videojs('sample-video').currentTime(parseInt(localStorage.getItem('time')));
+  }
+});
+
 $(document).on("click", ".extend_tab_button", function () {
   if (is_hidden == 0) {
     // 보여지고 있을 때
@@ -15,6 +21,7 @@ $(document).on("click", ".extend_tab_button", function () {
 });
 
 $(document).on("click", ".expand_button", function () {
+  localStorage.setItem("time", videojs('sample-video').currentTime());
   if ($(this).parent().attr("id") == "question_bar") {
     $(this).parent().attr("id", "question_bar_opened");
   } else {

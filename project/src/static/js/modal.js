@@ -9,6 +9,9 @@ const close = document.querySelectorAll(".close");
 question_button.onclick = function () {
   modal.style.display = "block";
   var player = videojs('sample-video');
+
+  localStorage.setItem("time", videojs('sample-video').currentTime());
+
   var min = parseInt(player.currentTime()/60);
   var sec = parseInt(player.currentTime()%60);
 
@@ -17,6 +20,9 @@ question_button.onclick = function () {
 };
 
 comment_button.onclick = function () {
+
+  localStorage.setItem("time", videojs('sample-video').currentTime());
+
   answer.style.display = "block";
 };
 
