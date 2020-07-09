@@ -1,9 +1,11 @@
 import express from "express";
-import { home, prototype, question, comment } from "./controller";
+import { home, login, prototype, question, comment } from "./controller";
 
 export const router = express.Router();
 
 router.get('/', home);
+
+router.get('/login', login);
 
 router.get('/prototype', prototype);
 

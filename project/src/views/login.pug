@@ -1,0 +1,42 @@
+doctype html
+html(lang='ko')
+  head
+    meta(http-equiv='Pragma', content='no-cache')
+    meta(http-equiv='X-UA-Compatible', content='IE=Edge')
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='assets/css/skku.css', media='all')
+    title Sungkyunkwan University
+  body
+    #header
+      h1#logoKo.header_logo
+        img(src='assets/img/login-icamplus.png')
+    #login_wrapper
+      form(method='POST')
+        input#loginFormToken(type='hidden', name='login_form_token', value='4b77910111b37694d4a4b783378dc979405a76be5a1ca21fb7958daad70c5e56')
+        .loginForm
+          .loginBox
+            .inputText
+              input#userid(type='text', name='login_user_id', value='', autocomplete='off', placeholder='ID')
+            .inputText
+              input#password(type='password', name='login_user_password', autocomplete='new-password', placeholder='Password')
+          button#btnLoginBtn.loginBtn(type='button' onclick="location.href='/prototype';")
+            span#btnLogin LOGIN
+    .footerBtn
+      .btnLink
+        ul
+          li
+            a.banner(style="font-size:x-large;") Sample ID : test / Sample PW : test123
+        ul
+          li
+            a#register.banner(href='javascript:fnInsertPage()') 성균인 가입
+          li
+            a#findId.banner(href='javascript:fnFindPage()') ID 찾기
+          li
+            a#findPassword.banner(href='javascript:fnPWFindPage()') 비밀번호 찾기
+          li
+            a#withdrawal.banner(href='javascript:fnRetire()') 회원 탈퇴
+    // jQuery and Bootstrap core files
+    script(src='assets/js/jquery.js', type='text/javascript')
+    script(src='assets/js/jquery-ui.custom.min.js', type='text/javascript')
+    script(src='bootstrap3/js/bootstrap.min.js', type='text/javascript')
