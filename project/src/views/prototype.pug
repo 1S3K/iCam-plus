@@ -93,15 +93,15 @@ html
             .modal__title
               .title__time
                 span.time__label 시간
-                input#questionFormMin(type='text' name='minute' required='true')
+                input#questionFormMin(type='text', name='minute', required='true')
                 label.minute__label(for='questionFormMin') 분
-                input#questionFormSec(type='text' name='second' required='true')
+                input#questionFormSec(type='text', name='second', required='true')
                 label.second__label(for='questionFormSec') 초
               .title__title
                 label.title__label(for='q__title') 제목
-                input#q__title(type='text' name='title')
+                input#q__title(type='text', name='title', required='true')
             .modal__contents
-              textarea#textarea__contents(name='content')
+              textarea#textarea__contents(name='content', required='true')
             .modal__footer
               button.submitBtn(type='submit' value='작성하기')
                 | 작성하기
@@ -119,9 +119,9 @@ html
             .modal__title
               .title__time
                 span.time__label 시간
-                input#questionFormMin(type='text' name='minute' required='true')
+                input#questionFormMin(type='text', name='minute', required='true')
                 label.minute__label(for='questionFormMin') 분
-                input#questionFormSec(type='text' name='second' required='true')
+                input#questionFormSec(type='text', name='second', required='true')
                 label.second__label(for='questionFormSec') 초
               .title__title
                 label.title__label(for='q__title') 제목

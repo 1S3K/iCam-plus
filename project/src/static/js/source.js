@@ -34,11 +34,45 @@ $(document).on("click", ".expand_button", function () {
   }
 });
 
-
-
 $(".hover").mouseleave(
   function() {
     $(this).removeClass("hover");
   }
 );
 
+$('#questionFormMin').on('keyup', function() {
+  if (/\D/.test(this.value)) {
+      this.value = this.value.replace(/\D/g, '')
+      alert('숫자만 입력가능합니다.');
+  }
+  var player = videojs('sample-video');
+  var maxMin = parseInt(player.duration()/60);
+  
+  if (parseInt(this.value) > maxMin) {
+      this.value = maxMin;
+      alert('동영상 재생 시간을 벗어나는 값입니다.');
+  }
+});
+
+$('#questionFormSec').on('keyup', function() {
+  if (/\D/.test(this.value)) {
+      this.value = this.value.replace(/\D/g, '')
+      alert('숫자만 입력가능합니다.');
+  }
+  else if (parseInt(this.value) >= 60) {
+    this.value = 59;
+    alert('시간을 벗어나는 값입니다.');
+  }
+
+  var player = videojs('sample-video');
+  var maxMin = parseInt(player.duration()/60);
+  var runningTime = parseInt(player.duration());
+  var curMin = parseInt(document.getElementById('questionFormMin').value);
+
+  if ( curMin === maxMin) {
+    if (parseInt(this.value) + curMin * 60 > runningTime) {
+      this.value = runningTime - curMin * 60;
+      alert('동영상 재생 시간을 벗어나는 값입니다.');
+    }
+  }
+});
