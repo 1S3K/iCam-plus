@@ -11,8 +11,7 @@ html(lang='en')
     link(href='bootstrap3/css/bootstrap.min.css', rel='stylesheet')
     link(href='assets/css/gsdk.css', rel='stylesheet')
     link(href='assets/css/demo.css', rel='stylesheet')
-    link(href='https://fonts.googleapis.com/css2?family=Gaegu:wght@700&family=Noto+Sans+KR:wght@300&display=swap' rel='stylesheet')
-    script(src='https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js')
+    link(href='https://fonts.googleapis.com/css2?family=Gaegu:wght@700&display=swap' rel='stylesheet')
     // Fonts and icons
     link(href='http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', rel='stylesheet')
     link(href='https://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans:400,300', rel='stylesheet', type='text/css')
@@ -92,9 +91,8 @@ html(lang='en')
         .collapse.navbar-collapse(data-nav-image='assets/img/thumb.jpg')
           ul.nav.navbar-nav.navbar-right
             li
-              a#issueButton.btn.btn-simple.btn-neutral(target='_blank', href='https://icampus.skku.edu')
-                | 기존
-                | 아이캠퍼스 바로가기
+              a#issueButton.btn.btn-simple.btn-neutral(href='/prototype')
+                | 데모 시연 바로가기
         // /.navbar-collapse
         // /.container-fluid
     .wrapper
@@ -102,7 +100,7 @@ html(lang='en')
         .parallax-image
           img(src='assets/img/header.jpg')
         .motto
-          div(style='color:green') iCamplus
+          div(style="color:green; font-family:'Gaegu', cursive;") iCamplus
           h4(style='color: black;') 아이캠퍼스 + Q&A💡
           h6(style='color: black;') 2020 코딥 by 브실골플레이어
         h3.text-white Components Description
@@ -112,6 +110,7 @@ html(lang='en')
             .row
               .col-md-2
                 .fixed-section
+                  // TODO : 스크롤 효과는 구현했는데 해당 html마다 토글되게 하는건 방법을 잘 모르겠다.
                   ul
                     li
                       a(href='#intro') 프로젝트 소개
@@ -326,15 +325,13 @@ html(lang='en')
                     legend
                     h4 학습자 측면
                     ul
-                      li 질문의 접근성 & 편의성 향상
-                      li 동료학습 활성화
-                      li 기타 장점 내용들
+                      li 강의를 들으면서 바로바로 질문 등록을 가능하게 해, 질문의 편의성을 높였습니다.
+                      li 다른 학우들의 질문과 답변을 확인하며, 온라인 상에서도 동료학습을 활성화할 수 있습니다.
                     br
                     h4 교수자 측면
                     ul
-                      li 같은 강의내용에 대한 질문목록의 일목요연한 정리
-                      li 답변의 편의성
-                      li 기타 교수자 장점
+                      li 학생들에게 들어온 다양한 질문들에 대해, 어느 강의의 어느 부분에 해당하는 부분인지 일목요연하게 정리해줍니다.
+                      li 이메일, 문의게시판 등 여러 채널들을 돌아다닐 필요 없이, iCam-plus 플랫폼 내에서 답변을 편리하게 해줍니다.
                   // 기대효과 끝
                   // 기술스택 시작
                   #tech.tim-row
@@ -345,35 +342,48 @@ html(lang='en')
                       .image
                         img(src='assets/img/tech.png', alt='')
                       .content
-                        h4.content.text-center
-                          | http://www.comedu.org
-                        p.description
-                          | URL에 해당합니다. 모든 작업을 마친 후 url을 달아 접속 가능하도록 구현했습니다.
+                        table.table
+                          thead                          
+                            tr
+                              th(colspan='2').text-center 1단계 : 플레이어 만들기
+                            tr
+                              td HTML + CSS + JS
+                              td 
+                                ul
+                                  li iCam-plus 디자인에 들어간 3개 언어입니다. 
+                                  li HTML로 플레이어에 들어갈 내용의 뼈대를 잡고,
+                                  li CSS로 배치와 색을 입혀 꾸민 뒤,
+                                  li JS로 창을 띄우는 등의 기능을 구현했습니다.
+                            tr
+                              td Node.js + Express
+                              td
+                                ul
+                                  li iCam-plus를 서비스 할 수 있게 도와주는 프레임워크입니다.
+                                  li Node.js로 플레이어를 실제 서비스할 수 있는 환경을 만들었으며
+                                  li Express로 대문페이지와 로그인페이지, 플레이어 페이지를 각각 나누었습니다.
+                            tr
+                              td MongoDB
+                              td
+                                ul
+                                  li 플레이어에 들어갈 데이터를 담고 있는 데이터베이스입니다.
+                                  li 타임스탬프, 작성자, 답변자 등등의 정보들이 모두 데이터베이스 안에 들어있습니다.
                         br
-                        h4.content.text-center
-                          | Amazon EC2 & MongoDB Atlas
-                        p.description
-                          | 클라우드에 해당합니다. 데이터와 서버를 클라우드에 두어 어디서든 접속 가능하도록 구현했습니다.
-                        br
-                        h4.content.text-center
-                          | 세부 구현
                         table.table
                           thead
                             tr
-                              th 기술명
-                              th 설명
+                              th(colspan='2').text-center 2단계 : 플레이어를 전 세계로 서비스하기
                             tr
-                              td HTML & CSS & JavaScript
-                              td 프론트엔드 스택입니다.
+                              td Amazon EC2
+                              td
+                                ul
+                                  li 지원금을 사용해 아마존 회사의 컴퓨터를 1년간 빌렸습니다.
+                                  li 거기에 우리의 프로젝트 코드를 담고, 실행시켰습니다.
                             tr
-                              td Node.js + Express
-                              td 백엔드 기술스택입니다.
-                            tr
-                              td MongoDB
-                              td 데이터베이스입니다.
-                            tr
-                              td Pug, Mongoose
-                              td 프론트 - 백, 백 - DB를 연결해주는 모듈입니다.
+                              td Amazon Route53
+                              td
+                                ul
+                                  li www.comedu.org라는 주소를 1년간 구입해, 위의 컴퓨터에 등록했습니다.
+                                  li 따라서 우리의 서비스는 전 세계에서 접속 가능합니다 😉
 
                   // 기술스택 끝
                   // 브실골플레이어팀 시작
@@ -496,6 +506,8 @@ html(lang='en')
     script(src='assets/js/get-shit-done.js')
     // Get Shit Done Kit PRO methods used for demo purpose
     script(src='assets/js/demo.js')
+    script(src='assets/js/smooth_scroll.js')
+    script(src='https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js')
     script.
       var transparent = true;
       var header_height;
