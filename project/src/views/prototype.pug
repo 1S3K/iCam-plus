@@ -72,8 +72,8 @@ html
                           |                 #{c.text}
                   #comment_container
                     form(action='/comment' method='post')
-                      input#questionIdValue(type="hidden" name="questionId" value=`${q._id}`)
-                      input#comment_container(type='text' name="text")
+                      input#questionIdValue(type="hidden", name="questionId", value=`${q._id}`)
+                      input#comment_container(type='text', name="text", required='true')
                       button#comment_upload_button(type='submit')  작성하기;
 
           #question_bottom
