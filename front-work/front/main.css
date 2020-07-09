@@ -17,16 +17,9 @@
   /* 성대 색 ..? ㅎ... */
 }
 
-
-.preserve-3d {
-  transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
-}
-
-body{
-  margin-left : 0;
-  margin-top : 10;
-
+body {
+  margin-left: 0;
+  margin-top: 10;
 }
 
 .main_container {
@@ -44,7 +37,7 @@ body{
 #player_header {
   display: inline-block;
   width: 100%;
-  height: 5%;
+  height: 6%;
   background-color: rgb(244, 244, 244);
   border: 1px rgb(135, 180, 23) solid;
   background: rgb(135, 180, 23);
@@ -75,7 +68,7 @@ body{
 }
 
 #index_bar {
-  height: 5%;
+  height: 6%;
   width: 100%;
   border: solid 1px #707070;
   background-color: rgba(153, 196, 85, 0.62);
@@ -118,7 +111,7 @@ select::-ms-expand {
 
 #class_index_selector {
   width: 381px;
-  height: 34px;
+  height: 42px;
   border: solid 1px #a8a8a8;
   background-color: #ffffff;
   margin-left: 34px;
@@ -131,6 +124,7 @@ select::-ms-expand {
   width: 21.4px;
   height: 26px;
   background-color: #ffffff;
+
   margin-top:12px;
   margin-left:20px;
   border : none
@@ -186,8 +180,6 @@ select::-ms-expand {
           width:100%;
           height:96%;
           overflow-x:scroll;
-          
-          
         }
 
 
@@ -253,7 +245,6 @@ select::-ms-expand {
 
                 }
 
-
                 .expand_button
                 {
 
@@ -267,6 +258,7 @@ select::-ms-expand {
                   
                   
                 }
+
 
 
               #question_bar_opened
@@ -304,7 +296,6 @@ select::-ms-expand {
 
                     .question_container
                     {
-                      
                       width:80%;
                       height:400px;
                       display:block;
@@ -437,7 +428,6 @@ select::-ms-expand {
                         }
 
 
-
         #question_bottom
         {
 
@@ -460,13 +450,12 @@ select::-ms-expand {
               letter-spacing: normal;
               text-align: center;
               color: #ffffff;
-              margin-top: 12px;
-              margin-left: 20px;
-              border: none;
             }
 
-
-
+  margin-top: 12px;
+  margin-left: 20px;
+  border: none;
+}
 
 #select_Button_bar {
   height: 5%;
@@ -549,11 +538,11 @@ select::-ms-expand {
   height: 100%;
 
   font-family: JejuGothicOTF;
-  font-size: 26px;
+  font-size: 20px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.7;
+  line-height: 1.5;
   letter-spacing: normal;
   text-align: center;
   color: #0d0d0d;
@@ -595,6 +584,7 @@ select::-ms-expand {
   width: 100%;
   height: 20%;
 }
+
 
 .question_container {
   width: 80%;
