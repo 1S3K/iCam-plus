@@ -23,7 +23,7 @@ export const question = async (req, res) => {
     const {
         body: { minute, second, title, content }
     } = req;
-    var author = "김희동";
+    var author = "테스트 계정";
     var time = parseInt(minute*60)+parseInt(second);
 
     const newQuestion = await Question.create({
@@ -39,7 +39,7 @@ export const comment = async (req, res) => {
     const {
         body: { questionId, text }
     } = req;
-    var author = "한옥영 (교수)";
+    var author = "테스트 계정";
 
     const newComment = await Comment.create({
         question: questionId,
