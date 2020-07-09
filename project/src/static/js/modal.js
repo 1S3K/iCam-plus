@@ -20,12 +20,12 @@ question_button.onclick = function () {
   document.getElementById('questionFormSec').value = sec;
 };
 
-comment_button.onclick = function () {
+// comment_button.onclick = function () {
 
-  localStorage.setItem("time", videojs('sample-video').currentTime());
+//   localStorage.setItem("time", videojs('sample-video').currentTime());
 
-  answer.style.display = "block";
-};
+//   answer.style.display = "block";
+// };
 
 close[0].onclick = function () {
   modal.style.display = "none";
