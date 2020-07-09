@@ -17,10 +17,10 @@ html(lang='ko')
         .loginForm
           .loginBox
             .inputText
-              input#userid(type='text', name='login_user_id', value='', autocomplete='off', placeholder='ID')
+              input#userid(type='text', name='login_user_id', value='test', autocomplete='off', placeholder='ID' required)
             .inputText
-              input#password(type='password', name='login_user_password', autocomplete='new-password', placeholder='Password')
-          button#btnLoginBtn.loginBtn(type='button' onclick="location.href='/prototype';")
+              input#password(type='password', name='login_user_password', value='test123' autocomplete='new-password', placeholder='Password' required)
+          button#btnLoginBtn.loginBtn(type='button' onclick="login();")
             span#btnLogin LOGIN
     .footerBtn
       .btnLink
@@ -36,6 +36,13 @@ html(lang='ko')
             a#findPassword.banner(href='javascript:fnPWFindPage()') 비밀번호 찾기
           li
             a#withdrawal.banner(href='javascript:fnRetire()') 회원 탈퇴
+    script.
+      function login() {
+        if (document.getElementById('userid').value === 'test' && document.getElementById('password').value === 'test123')
+          location.href='/prototype';
+        else
+          alert('존재하지 않는 계정입니다.');
+      }
     // jQuery and Bootstrap core files
     script(src='assets/js/jquery.js', type='text/javascript')
     script(src='assets/js/jquery-ui.custom.min.js', type='text/javascript')
