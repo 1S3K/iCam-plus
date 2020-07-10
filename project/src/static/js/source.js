@@ -1,13 +1,13 @@
 var is_hidden = 1;
 
 $(document).ready(function() { 
+  $(".left_container").css("width", "70vw");
+  $(".right_container").css("display", "block");
+  is_hidden = 0;
+  
   if (localStorage.getItem('time') != null) {
     videojs('sample-video').currentTime(parseInt(localStorage.getItem('time')));
     videojs('sample-video').pause();
-
-    $(".left_container").css("width", "70vw");
-    $(".right_container").css("display", "block");
-    is_hidden = 0;
   }
 });
 
