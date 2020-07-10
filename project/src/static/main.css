@@ -391,9 +391,9 @@ select::-ms-expand {
                           border-style: solid;
                           border-width: 0;
                           content: "";
-                          height: 24px;
+                          width:fit-content;
                           position: absolute;
-                          width: 24px;
+                          
                         }
 
                         #comment_upload_button:before
@@ -559,8 +559,7 @@ select::-ms-expand {
 }
 
 #question_bar_opened {
-  width: 20vw;
-  height: 30vh;
+  width: 25vw;
   padding: 0.8em 0.5em;
   font-family: inherit;
   background-color: white;
@@ -570,10 +569,11 @@ select::-ms-expand {
   appearance: none;
   border: 1px solid #999;
   border-radius: 0px;
-  margin: 20px 3vw 20px;
+  margin: 10px;
   border: solid 1px #707070;
   background-color: #ffffff;
   display: block;
+  overflow:auto;
 }
 #question_bar_opened * {
   display: inline;
