@@ -4,6 +4,9 @@ const questionSchema = new mongoose.Schema({
     lecture: {
         type: Number
     },
+    quesType: {
+        type: Number
+    },
     time: {
         type: Number
     },
