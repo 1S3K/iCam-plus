@@ -138,7 +138,7 @@ html
         var time = parseInt(timeList[0])*60 + parseInt(timeList[1]);
         var player = videojs('sample-video');
         player.currentTime(time);
-        player.play();
+        player.pause();
       }
     // 기본 js 먼저 불러오고
     script(src='https://vjs.zencdn.net/7.7.6/video.js')
