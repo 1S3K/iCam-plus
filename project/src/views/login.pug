@@ -29,17 +29,17 @@ html(lang='ko')
             a.banner(style="font-size:x-large;") Sample ID : test / Sample PW : test123
         ul
           li
-            a#register.banner(href='javascript:fnInsertPage()') 성균인 가입
+            a#register.banner(onclick="alert('아직홈페이지와 연동이 되어 있지 않습니다.');") 성균인 가입
           li
-            a#findId.banner(href='javascript:fnFindPage()') ID 찾기
+            a#findId.banner(onclick="alert('아직홈페이지와 연동이 되어 있지 않습니다.');") ID 찾기
           li
-            a#findPassword.banner(href='javascript:fnPWFindPage()') 비밀번호 찾기
+            a#findPassword.banner(onclick="alert('아직홈페이지와 연동이 되어 있지 않습니다.');") 비밀번호 찾기
           li
-            a#withdrawal.banner(href='javascript:fnRetire()') 회원 탈퇴
+            a#withdrawal.banner(onclick="alert('아직홈페이지와 연동이 되어 있지 않습니다.');") 회원 탈퇴
     script.
       function login() {
         if (document.getElementById('userid').value === 'test' && document.getElementById('password').value === 'test123')
-          location.href='/prototype';
+          location.href='/prototype/1';
         else
           alert('존재하지 않는 계정입니다.');
       }
