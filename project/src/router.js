@@ -7,7 +7,8 @@ router.get('/', home);
 
 router.get('/login', login);
 
-router.get('/prototype', prototype);
+router.get('/prototype/1', prototype);
+router.get('/prototype/2', prototype);
 
 router.post('/question', question);
 
