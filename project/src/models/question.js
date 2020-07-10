@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const questionSchema = new mongoose.Schema({
     lecture: {
-        type: String
+        type: Number
     },
     time: {
         type: Number
