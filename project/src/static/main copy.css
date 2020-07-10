@@ -499,8 +499,8 @@ select::-ms-expand {
 }
 
 #question_bar {
-  width: 25vw;
-  height: 6vh;
+  width: 20vw;
+  height: 4vh;
   padding: 0.8em 0.5em;
   font-family: inherit;
   background-color: white;
@@ -509,7 +509,7 @@ select::-ms-expand {
   appearance: none;
   border: 1px solid #999;
   border-radius: 0px;
-  margin: 10px;
+  margin: 20px 3vw 20px;
   border: solid 1px #707070;
   background-color: #ffffff;
   display: inline-block;
@@ -520,11 +520,13 @@ select::-ms-expand {
 }
 
 .time_stamp {
-  width: 10%;
+  width: 15%;
   height: 100%;
+  font-size: 26px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
+  line-height: 1.7;
   letter-spacing: normal;
   text-align: center;
   color: #385fcb;
