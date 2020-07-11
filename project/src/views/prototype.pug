@@ -28,12 +28,12 @@ html
           button.extend_tab_button  확장 버튼 
         video#sample-video.video-js(controls='', preload='auto', data-setup='{}, ', autoplay)
           // src에 내가 넣고싶은 영상 위치 넣고
-          source(src='/sample.mp4', type='video/mp4')
+          source(src='/sample1.mp4', type='video/mp4')
       .right_container
         #index_bar
           select#class_index_selector
-            option(selected='1') 1강 - OT
-            option(selected='2') 2강 - 강의 제목
+            option(value='1' selected='') 1강 - OT
+            option(value='1') 2강 - 강의 제목
           button#goto_IndexButton  >
         #select_Button_bar
           button.index_button 질문하기

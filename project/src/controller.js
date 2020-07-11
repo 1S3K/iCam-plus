@@ -32,7 +32,7 @@ export const question = async (req, res) => {
         content,
         author:author
     });
-    res.redirect("/prototype");
+    res.redirect("/prototype/1");
 };
 
 export const comment = async (req, res) => {
