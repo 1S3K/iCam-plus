@@ -9,7 +9,11 @@ $(document).ready(function() {
     videojs('sample-video').currentTime(parseInt(localStorage.getItem('time')));
     videojs('sample-video').pause();
   }
-  
+
+  if (localStorage.getItem('selectedQuestion') != null) {
+    console.log(localStorage.getItem('selectedQuestion'));
+  }
+
   var selected = document.getElementById('class_index_selector');
   var curUrl = window.location.href;
   var lec = curUrl.substring(curUrl.length-1, curUrl.length);
@@ -45,12 +49,22 @@ $(document).on("click", ".extend_tab_button", function () {
 
 $(document).on("click", ".expand_button", function () {
   localStorage.setItem("time", videojs('sample-video').currentTime());
+  
   if ($(this).parent().attr("id") == "question_bar") {
     $(this).parent().attr("id", "question_bar_opened");
   } else {
     $(this).parent().attr("id", "question_bar");
   }
+})
+
+$(document).on("click", "#comment_upload_button", function () {
+  var ques = $(this).parent('form').children('input#questionIdValue').val();
+  localStorage.setItem('selectedQuestion', ques);
 });
+
+// $(document).on("click", "#edit_button", function () {
+  
+// });
 
 $(".hover").mouseleave(
   function() {

@@ -37,7 +37,6 @@ html
           select#class_index_selector
             option(value='1') 1강. 캐시 메모리 - 김재현
             option(value='2') 2강. 컴퓨터의 역사 - 강준우
-          button#goto_IndexButton  >
         #select_Button_bar
           button.index_button 질문 리스트
         #question_container
@@ -48,9 +47,10 @@ html
             each q in questions
               if lectureId === `${q.lecture}`
                 #question_bar
-                  a.time_stamp(onclick='setTime(this);') #{parseInt(q.time/60) < 10 ? `0${parseInt(q.time/60)}` : parseInt(q.time/60)}:#{(q.time%60) < 10 ? `0${q.time%60}` : q.time%60}
-                  .question_title #{q.title}
-                  button.expand_button
+                  div(id='questionListId', style='display:none') #{q._id}
+                  a.time_stamp#queTim(onclick='setTime(this);') #{parseInt(q.time/60) < 10 ? `0${parseInt(q.time/60)}` : parseInt(q.time/60)}:#{(q.time%60) < 10 ? `0${q.time%60}` : q.time%60}
+                  .question_title#queTit #{q.title}
+                  button.expand_button#expBtn
                   .question_container
                     #question_person
                       p
@@ -76,12 +76,15 @@ html
                         input(type="hidden", name="lectureId", value=`${lectureId}`)
                         input#questionIdValue(type="hidden", name="questionId", value=`${q._id}`)
                         input#comment_container(type='text', name="text", required='true')
-                        button#comment_upload_button(type='submit')  작성하기;
-                    .btn_container
-                      form(action='' method='')
-                        button#edit_button  수정하기; 
-                      form(action='' method='')
-                        button#edit_button  삭제하기;
+                        button#comment_upload_button(type='submit')  작성하기
+                    if `${q.author}` === 'test'
+                      .btn_container
+                        form(action='' method='')
+                          button#edit_button(type='submit')  수정하기 
+                        form(action='/deleteQuestion' method='post')
+                          input(type="hidden", name="lectureId", value=`${lectureId}`)
+                          input(type="hidden", name="questionId", value=`${q._id}`)
+                          button#edit_button(type='submit', onclick="return confirm('정말 삭제하시겠습니까?')")  삭제하기
 
 
           #question_bottom
