@@ -1,4 +1,4 @@
-var is_hidden = 1;
+var is_hidden = 0;
 
 $(document).ready(function() { 
   $(".left_container").css("width", "70vw");
@@ -27,16 +27,19 @@ $('#class_index_selector').on("change", function() {
 });
 
 $(document).on("click", ".extend_tab_button", function () {
+  var etdBtn = document.getElementById('entendBtn');
   if (is_hidden == 0) {
     // 보여지고 있을 때
     $(".left_container").css("width", "97vw");
     $(".right_container").css("display", "none");
     is_hidden = 1;
+    etdBtn.innerText = '질문창 열기';
   } // 숨겨져 있을 때
   else {
     $(".left_container").css("width", "70vw");
     $(".right_container").css("display", "block");
     is_hidden = 0;
+    etdBtn.innerText = '질문창 닫기';
   }
 });
 
