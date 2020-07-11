@@ -76,13 +76,14 @@ html
                         input#questionIdValue(type="hidden", name="questionId", value=`${q._id}`)
                         input#comment_container(type='text', name="text", required='true')
                         button#comment_upload_button(type='submit')  작성하기
-                    .btn_container
-                      form(action='' method='')
-                        button#edit_button(type='submit')  수정하기 
-                      form(action='/deleteQuestion' method='post')
-                        input(type="hidden", name="lectureId", value=`${lectureId}`)
-                        input(type="hidden", name="questionId", value=`${q._id}`)
-                        button#edit_button(type='submit', onclick="return confirm('정말 삭제하시겠습니까?')")  삭제하기
+                    if `${q.author}` === 'test'
+                      .btn_container
+                        form(action='' method='')
+                          button#edit_button(type='submit')  수정하기 
+                        form(action='/deleteQuestion' method='post')
+                          input(type="hidden", name="lectureId", value=`${lectureId}`)
+                          input(type="hidden", name="questionId", value=`${q._id}`)
+                          button#edit_button(type='submit', onclick="return confirm('정말 삭제하시겠습니까?')")  삭제하기
 
 
           #question_bottom
