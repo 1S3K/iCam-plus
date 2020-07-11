@@ -9,6 +9,21 @@ $(document).ready(function() {
     videojs('sample-video').currentTime(parseInt(localStorage.getItem('time')));
     videojs('sample-video').pause();
   }
+  
+  var selected = document.getElementById('class_index_selector');
+  var curUrl = window.location.href;
+  var lec = curUrl.substring(curUrl.length-1, curUrl.length);
+  if (lec === "1") {
+    selected.selectedIndex = 0;
+  } else if (lec === "2"){
+    selected.selectedIndex = 1;
+  }
+});
+
+$('#class_index_selector').on("change", function() {
+  localStorage.clear();
+  var lec = $(this).val();
+  location.href = `/prototype/${lec}`;
 });
 
 $(document).on("click", ".extend_tab_button", function () {
