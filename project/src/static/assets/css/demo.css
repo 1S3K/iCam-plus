@@ -652,12 +652,14 @@
 
 .fixed-section{
     margin-top: 90px;
+    margin-left:60px;
 }
 .fixed-section ul li{
     list-style: none;
 }
 .fixed-section li a{
-    font-size: 14px;
+    font-size: 24px;
+    /* font-weight:bold; */
     padding: 2px;
     display: block;
     color: #666666;
@@ -668,7 +670,7 @@
 .fixed-section.float{
     position: fixed;
     top: 100px;
-    width: 200px;
+    width: 300px;
     margin-top: 0;
 }
 

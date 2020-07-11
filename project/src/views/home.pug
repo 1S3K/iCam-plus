@@ -18,6 +18,9 @@ html(lang='en')
     link(href='assets/css/pe-icon-7-stroke.css', rel='stylesheet')
     // font-family : 'Gaegu', cursive; 어딘가에 적용 예정.
     style.
+      li{
+        font-size:20px;
+      }
       pre.prettyprint {
       background-color: #eee;
       border: 0px;
@@ -106,7 +109,7 @@ html(lang='en')
         h3.text-white Components Description
       .main
         .section
-          .container
+          .container-fluid
             .row
               .col-md-2
                 .fixed-section
@@ -133,7 +136,7 @@ html(lang='en')
                     li
                       a(href='#credits') 브실골플레이어팀
                       br
-              .col-md-8.col-md-offset-1
+              .col-md-6.col-md-offset-2
                 .tim-container(style='min-height: 2000px;')
                   // 프로젝트 소개 시작
                   #intro.tim-row.tim-row-first
