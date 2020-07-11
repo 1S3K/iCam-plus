@@ -28,7 +28,7 @@ html
             p.player_header_title(style="font-size:x-large; font-weight:bold;") 1. 캐시 메모리 - 김재현
           else
             p.player_header_title(style="font-size:x-large; font-weight:bold;") 2. 컴퓨터의 역사 - 강준우
-          button.extend_tab_button  확장 버튼 
+          button#entendBtn.extend_tab_button  질문창 닫기
         video#sample-video.video-js(controls='', preload='auto', data-setup='{}, ')
           // src에 내가 넣고싶은 영상 위치 넣고
           source(src=`/sample${lectureId}.mp4`, type='video/mp4')
@@ -39,7 +39,7 @@ html
             option(value='2') 2강. 컴퓨터의 역사 - 강준우
           button#goto_IndexButton  >
         #select_Button_bar
-          button.index_button 질문하기
+          button.index_button 질문 리스트
           button.index_button 과제 및 평가
         #question_container
           #main_question
