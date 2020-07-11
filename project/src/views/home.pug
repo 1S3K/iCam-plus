@@ -136,34 +136,14 @@ html(lang='en')
                     li
                       a(href='#credits') 브실골플레이어팀
                       br
-              .col-md-6.col-md-offset-2
-                .tim-container(style='min-height: 2000px;')
+              .col-md-6.col-md-offset-1
+                .tim-container(style='min-height: 2000px; margin-left:50px;')
                   // 프로젝트 소개 시작
                   #intro.tim-row.tim-row-first
                     h2 프로젝트 소개
                     legend
-                    // img를 넣는다면?
-                      <img src="assets/img/online_edu.png" alt="online edu" class="rounded"
-                      style="width:auto;height:auto;max-width:150px;max-height: 150px;float: right;">
-
-                    // collapse기능을 넣는다면?
-                      #accordionExample.accordion
-                      #headingOne
-                        button.btn.btn-danger.collapsed(type='button', data-toggle='collapse', data-target='#collapseOne', aria-expanded='false', aria-controls='collapseOne')
-                          | headingOne
-                        #collapseOne.collapse(aria-labelledby='headingOne', data-parent='#accordionExample')
-                          | collapseOne
-                      #headingTwo
-                        button.btn.btn-success.collapsed(type='button', data-toggle='collapse', data-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
-                          | headingTwo
-                        #collapseTwo.collapse(aria-labelledby='headingTwo', data-parent='#accordionExample')
-                          | collapseTwo
-                      #headingThree
-                        button.btn.btn-warning.collapsed(type='button', data-toggle='collapse', data-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
-                          | headingThree
-                        #collapseThree.collapse(aria-labelledby='headingThree', data-parent='#accordionExample')
-                          | collapseThree
-                    h4 포스트 코로나 🙄
+                    h4 포스트 코로나
+                    img.img-rounded(src='https://cdn.pixabay.com/photo/2020/04/03/19/02/virus-4999857_960_720.png' style='max-width:200px;height:auto;')
                     p
                       | 최근 코로나19 바이러스 사태로 인해, 우리 학교를 포함한 모든 교육기관은
                       | 현재 온라인 강의를 진행하고 있습니다.
