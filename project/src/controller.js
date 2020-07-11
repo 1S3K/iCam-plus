@@ -15,8 +15,8 @@ export const prototype = async (req, res) => {
     } = req;
 
     try {
-        const questions = await Question.find({}).sort({time : 1});
-        const comments = await Comment.find({});
+        const questions = await Question.find({available:1}).sort({time : 1});
+        const comments = await Comment.find({available:1});
         res.render("prototype", {lectureId, questions, comments});
     } catch (error) {
         res.render("prototype", {lectureId, questions : [], comments : []});
@@ -35,7 +35,8 @@ export const question = async (req, res) => {
         time:time,
         title,
         content,
-        author:author
+        author:author,
+        available:1
     });
     res.redirect(`prototype/${lectureId}`);
 };
@@ -49,8 +50,37 @@ export const comment = async (req, res) => {
     const newComment = await Comment.create({
         question: questionId,
         text,
-        author:author
+        author:author,
+        available:1
     });
 
+    res.redirect(`prototype/${lectureId}`);
+};
+
+export const deleteQuestion = async (req, res) => {
+    const {
+        body: { lectureId, questionId }
+    } = req;
+
+    const question = await Question.find({_id : questionId}).update({available:0});
+
+    res.redirect(`prototype/${lectureId}`);
+};
+
+export const deleteComment = async (req, res) => {
+    const {
+        body: { lectureId, minute, second, title, content }
+    } = req;
+    var author = "test";
+    var time = parseInt(minute*60)+parseInt(second);
+
+    const newQuestion = await Question.create({
+        lecture:lectureId,
+        time:time,
+        title,
+        content,
+        author:author,
+        available:1
+    });
     res.redirect(`prototype/${lectureId}`);
 };
