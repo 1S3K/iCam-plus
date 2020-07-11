@@ -69,18 +69,10 @@ export const deleteQuestion = async (req, res) => {
 
 export const deleteComment = async (req, res) => {
     const {
-        body: { lectureId, minute, second, title, content }
+        body: { lectureId, commentId }
     } = req;
-    var author = "test";
-    var time = parseInt(minute*60)+parseInt(second);
 
-    const newQuestion = await Question.create({
-        lecture:lectureId,
-        time:time,
-        title,
-        content,
-        author:author,
-        available:1
-    });
+    const comment = await Comment.find({_id : commentId}).update({available:0});
+
     res.redirect(`prototype/${lectureId}`);
 };
