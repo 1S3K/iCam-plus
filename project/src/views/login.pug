@@ -38,6 +38,7 @@ html(lang='ko')
             a#withdrawal.banner(onclick="alert('아직 홈페이지와 연동 되어 있지 않습니다.');") 회원 탈퇴
     script.
       function login() {
+        localStorage.clear();
         if (document.getElementById('userid').value === 'test' && document.getElementById('password').value === 'test123')
           location.href='/prototype/1';
         else
