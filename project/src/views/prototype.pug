@@ -28,7 +28,7 @@ html
           button.extend_tab_button  확장 버튼 
         video#sample-video.video-js(controls='', preload='auto', data-setup='{}, ')
           // src에 내가 넣고싶은 영상 위치 넣고
-          source(src='/sample1.mp4', type='video/mp4')
+          source(src=`/sample${lectureId}.mp4`, type='video/mp4')
       .right_container
         #index_bar
           select#class_index_selector
@@ -44,35 +44,37 @@ html
             //-   #demo.collapse
             //-     | collpase 가능하지 않을까
             each q in questions
-              #question_bar
-                a.time_stamp(onclick='setTime(this);') #{parseInt(q.time/60) < 10 ? `0${parseInt(q.time/60)}` : parseInt(q.time/60)}:#{(q.time%60) < 10 ? `0${q.time%60}` : q.time%60}
-                .question_title #{q.title}
-                button.expand_button
-                .question_container
-                  #question_person
-                    p
-                      br
-                      |  작성자 : #{q.author}
-                  #question_text
-                    p(style='word-break:break-all')
-                      br
-                      |                 #{q.content}
-                  each c in comments
-                    if `${c.question}` === `${q._id}`
-                      #question_professor
-                        p
-                          br
-                          br
-                          |  답변자 : #{c.author}
-                      #answer_text
-                        p(style='word-break:break-all')
-                          br
-                          |                 #{c.text}
-                  #comment_container
-                    form(action='/comment' method='post')
-                      input#questionIdValue(type="hidden", name="questionId", value=`${q._id}`)
-                      input#comment_container(type='text', name="text", required='true')
-                      button#comment_upload_button(type='submit')  작성하기;
+              if lectureId === `${q.lecture}`
+                #question_bar
+                  a.time_stamp(onclick='setTime(this);') #{parseInt(q.time/60) < 10 ? `0${parseInt(q.time/60)}` : parseInt(q.time/60)}:#{(q.time%60) < 10 ? `0${q.time%60}` : q.time%60}
+                  .question_title #{q.title}
+                  button.expand_button
+                  .question_container
+                    #question_person
+                      p
+                        br
+                        |  작성자 : #{q.author}
+                    #question_text
+                      p(style='word-break:break-all')
+                        br
+                        |                 #{q.content}
+                    each c in comments
+                      if `${c.question}` === `${q._id}`
+                        #question_professor
+                          p
+                            br
+                            br
+                            |  답변자 : #{c.author}
+                        #answer_text
+                          p(style='word-break:break-all')
+                            br
+                            |                 #{c.text}
+                    #comment_container
+                      form(action='/comment' method='post')
+                        input(type="hidden", name="lectureId", value=`${lectureId}`)
+                        input#questionIdValue(type="hidden", name="questionId", value=`${q._id}`)
+                        input#comment_container(type='text', name="text", required='true')
+                        button#comment_upload_button(type='submit')  작성하기;
 
           #question_bottom
             button.question_button(onclick="loadQuestionForm();") 질문하기
@@ -91,6 +93,7 @@ html
             .modal__title
               .title__time
                 span.time__label 시간
+                input(type='hidden', name='lectureId', value=`${lectureId}`)
                 input#questionFormMin(type='text', name='minute', required='true')
                 label.minute__label(for='questionFormMin') 분
                 input#questionFormSec(type='text', name='second', required='true')
