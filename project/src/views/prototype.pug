@@ -24,7 +24,10 @@ html
     .main_container
       .left_container
         #player_header
-          p.player_header_title(style="font-size:x-large;background-color:rgb(7, 58, 4);") 영어회화기초 (토머스존 교수님) 1강
+          if (`${lectureId}` === '1')
+            p.player_header_title(style="font-size:x-large; font-weight:bold;") 1. 캐시 메모리 - 김재현
+          else
+            p.player_header_title(style="font-size:x-large; font-weight:bold;") 2. 컴퓨터의 역사 - 강준우
           button.extend_tab_button  확장 버튼 
         video#sample-video.video-js(controls='', preload='auto', data-setup='{}, ')
           // src에 내가 넣고싶은 영상 위치 넣고
@@ -32,8 +35,8 @@ html
       .right_container
         #index_bar
           select#class_index_selector
-            option(value='1') 1강 - OT
-            option(value='2') 2강 - 강의 제목
+            option(value='1') 1강. 캐시 메모리 - 김재현
+            option(value='2') 2강. 컴퓨터의 역사 - 강준우
           button#goto_IndexButton  >
         #select_Button_bar
           button.index_button 질문하기
