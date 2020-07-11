@@ -142,7 +142,7 @@ select::-ms-expand {
   .index_button
   {
     background-color: rgba(64, 67, 74, 0.75);
-    width:49.55%;
+    width:100%;
 
     border:none;
     height:100%;
@@ -265,7 +265,7 @@ select::-ms-expand {
               {
 
                 width: 20vw;
-                height: 30vh;
+                height: 45vh;
                 padding: .8em .5em;
                 font-family: inherit;
                 background-color : white;
@@ -428,6 +428,77 @@ select::-ms-expand {
                         }
 
 
+
+
+
+
+
+                        #edit_button
+                        {
+
+                          background-color:#0f2b62;
+                          color: #ffffff;
+                          cursor: pointer;
+      ;
+                          float:right;
+
+
+                          font-size: 6px;
+                          line-height: 1em;
+                          margin-top:20px;
+                          margin-left:60%;
+                          outline: none;
+                          padding: 12px 40px 10px;
+                          position: relative;
+                          text-transform: uppercase;
+                          font-weight: 700;
+                        }
+                        #edit_button:before,
+                        #edit_button::after
+                        {
+                          border-color: transparent;
+                          -webkit-transition: all 0.25s;
+                          transition: all 0.25s;
+                          border-style: solid;
+                          border-width: 0;
+                          content: "";
+                          height: 24px;
+                          position: absolute;
+                          width: 24px;
+                        }
+
+                        #edit_button:before
+                        {
+                          border-color: #0f2b62;
+                          border-right-width: 2px;
+                          border-top-width: 2px;
+                          right: -5px;
+                          top: -5px;
+                        }
+                        #edit_button:after
+                        {
+                          border-bottom-width: 2px;
+                          border-color: #0f2b62;
+                          border-left-width: 2px;
+                          bottom: -5px;
+                          left: -5px;
+                        }
+                        #edit_button:hover,
+                        #edit_button.hover
+                        {
+                          background-color:  #0f2b62;
+                        }
+
+                        #edit_button:hover:before,
+                        #edit_button.hover:before,
+                        #edit_button:hover:after,
+                        #edit_button.hover:after
+                        {
+                          height: 100%;
+                          width: 100%;
+                        }
+
+
         #question_bottom
         {
 
@@ -452,10 +523,6 @@ select::-ms-expand {
               color: #ffffff;
             }
 
-  margin-top: 12px;
-  margin-left: 20px;
-  border: none;
-}
 
 #select_Button_bar {
   height: 5%;
@@ -464,7 +531,7 @@ select::-ms-expand {
 
 .index_button {
   background-color: rgba(64, 67, 74, 0.75);
-  width: 49.55%;
+  width: 100%;
 
   border: none;
   height: 100%;
@@ -562,7 +629,7 @@ select::-ms-expand {
 
 #question_bar_opened {
   width: 20vw;
-  height: 30vh;
+  height: 60vh;
   padding: 0.8em 0.5em;
   font-family: inherit;
   background-color: white;
@@ -649,7 +716,7 @@ select::-ms-expand {
 .comment_button {
   border: solid 1px #707070;
   background-color: #0f2b62;
-  width: 49.5%;
+  width: 49%;
   height: 100%;
   font-family: JejuGothicOTF;
   font-size: 16px;
@@ -660,4 +727,44 @@ select::-ms-expand {
   letter-spacing: normal;
   text-align: center;
   color: #ffffff;
+}
+
+
+
+.button_container
+{
+  width:100%;
+
+
+}
+
+.button_container *
+{
+  display:inline;
+}
+
+
+#modify_button
+{
+
+  border: none;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+#delete_button
+{
+  background: url( "image/delete.png" ) no-repeat;
+  border: none;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.btn_container{
+
+  width:300px;
+  height:40px;
+  border :1px border black;
 }
