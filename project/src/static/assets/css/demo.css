@@ -670,7 +670,7 @@
 .fixed-section.float{
     position: fixed;
     top: 100px;
-    width: 300px;
+    width: 200px;
     margin-top: 0;
 }
 
