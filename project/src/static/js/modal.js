@@ -1,17 +1,19 @@
-const modal = document.querySelector(".modal");
+const modal1 = document.querySelector(".modal1");
+const modal2 = document.querySelector(".modal2");
 const answer = document.querySelector("#answer");
 
 const question_button = document.querySelector(".question_button");
 const comment_button = document.querySelector(".comment_button");
+const edit_button = document.querySelector(".editBtn");
 
 const close = document.querySelectorAll(".close");
 
 question_button.onclick = function () {
-  modal.style.display = "block";
+  modal1.style.display = "block";
   var player = videojs('sample-video');
   
   player.pause();
-  localStorage.setItem("time", videojs('sample-video').currentTime());
+  localStorage.setItem("time", );
 
   var min = parseInt(player.currentTime()/60);
   var sec = parseInt(player.currentTime()%60);
@@ -20,17 +22,29 @@ question_button.onclick = function () {
   document.getElementById('questionFormSec').value = sec;
 };
 
-// comment_button.onclick = function () {
+edit_button.onclick = function () {
+  modal2.style.display = "block";
 
-//   localStorage.setItem("time", videojs('sample-video').currentTime());
+  var question = $(this).parents('div#question_bar_opened');
+  var questionId = question.children('div#questionListId').text();
+  var time = question.children('a#queTim').text();
+  var min = time.substring(0,2);
+  var sec = time.substring(3,5);
+  var title = question.children('div#queTit').text();
+  var content = question.children('div.question_container').children('div#question_text').children('p').text();
+  content = content.replace(/^\s*/,"");
 
-//   answer.style.display = "block";
-// };
+  document.getElementById('questionIdForEdit').value = questionId;
+  document.getElementById('editFormMin').value = min;
+  document.getElementById('editFormSec').value = sec;
+  document.getElementById('e__title').value = title;
+  document.getElementById('e_textarea__contents').innerText = content;
+};
 
 close[0].onclick = function () {
-  modal.style.display = "none";
+  modal1.style.display = "none";
 };
 
 close[1].onclick = function () {
-  answer.style.display = "none";
+  modal2.style.display = "none";
 };

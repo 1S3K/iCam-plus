@@ -57,6 +57,38 @@ export const comment = async (req, res) => {
     res.redirect(`prototype/${lectureId}`);
 };
 
+export const editQuestion = async (req, res) => {
+    const {
+        body: { questionId, lectureId, minute, second, title, content }
+    } = req;
+
+    var time = parseInt(minute*60)+parseInt(second);
+
+    await Question.findOneAndUpdate({ _id: questionId }, {
+        time,
+        title,
+        content,
+    });
+
+    res.redirect(`prototype/${lectureId}`);
+};
+
+// export const editComment = async (req, res) => {
+//     const {
+//         body: { lectureId, questionId, text }
+//     } = req;
+//     var author = "test";
+
+//     const newComment = await Comment.create({
+//         question: questionId,
+//         text,
+//         author:author,
+//         available:1
+//     });
+
+//     res.redirect(`prototype/${lectureId}`);
+// };
+
 export const deleteQuestion = async (req, res) => {
     const {
         body: { lectureId, questionId }

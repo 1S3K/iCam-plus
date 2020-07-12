@@ -62,10 +62,6 @@ $(document).on("click", "#comment_upload_button", function () {
   localStorage.setItem('selectedQuestion', ques);
 });
 
-// $(document).on("click", "#edit_button", function () {
-  
-// });
-
 $(".hover").mouseleave(
   function() {
     $(this).removeClass("hover");
