@@ -119,10 +119,19 @@ html(lang='en')
                 .fixed-section
                   ul
                     li
-                      a(href='#intro') 프로젝트 소개
+                      a(href='#intro') 프로젝트 배경
                       br
                     li
-                      a(href='#originalicampus') 기존 아이캠퍼스?
+                      a(href='#student') 학생의 입장
+                      br
+                    li
+                      a(href='#professor') 교수자의 입장
+                      br
+                    li
+                      a(href='#university') 학교의 입장
+                      br
+                    li
+                      a(href='#improvement') 개선 방향
                       br
                     li
                       a(href='#functions') 기능 설명
@@ -131,19 +140,19 @@ html(lang='en')
                       a(href='#prototype') 데모 시연
                       br
                     li
-                      a(href='#effect') 기대효과
+                      a(href='#effect') 기대 효과
                       br
                     li
-                      a(href='#tech') 기술스택
+                      a(href='#tech') 사용 기술
                       br
                     li
                       a(href='#credits') credits
                       br
               .col-md-6.col-md-offset-1
                 .tim-container(style='min-height: 2000px; margin-left:50px;')
-                  // 프로젝트 소개 시작
+                  // 프로젝트 배경 시작
                   #intro.tim-row.tim-row-first
-                    h2 프로젝트 소개
+                    h2 프로젝트 배경
                     legend
                     h4 포스트 코로나
                     img.img-rounded(src='https://cdn.pixabay.com/photo/2020/04/03/19/02/virus-4999857_960_720.png' style='max-width:200px;height:auto;')
@@ -197,13 +206,12 @@ html(lang='en')
                         | 대면강의의 장점인 실시간 Q&A와 동료학습을 포함한다면 
                       | 교수자와 학습자 모두의 만족도를 보다 향상시킬 수 있을 것으로 보고 프로젝트를 시작했습니다.
                     br
-                  // 프로젝트 소개 끝
-                  // 기존 아이캠퍼스 분석 시작
-                  #originalicampus.tim-row
-                    h2  기존 아이캠퍼스 분석 
+                  // 프로젝트 배경 끝
+
+                  // 학생입장 시작
+                  #student.tim-row
+                    h2 학생의 입장
                     legend
-                    //- h2(style='color:red') 내가 볼 땐 뭔가 좀 어설픈데.. 좋은 의견 있으면 알려줘
-                    
                     .row
                       .col-md-7
                         .img-container
@@ -271,10 +279,47 @@ html(lang='en')
                           strong(style='color:red') 이렇게 복잡할 수가! 🙀
                           hr
                           p 이는 너무나 비효율적이라고 판단하여, iCam-plus에서는 이 과정을 획기적으로 줄였습니다.
-                    br
-                  // TODO : 교수자 측면 : 문의게시판과 이메일에 글이 많이 쌓인 상황. 어디에 해당하는지 알기 어렵다.
+                  // 학생입장 끝
 
-                  // 기존 아이캠퍼스 분석 끝
+                  // 교수자입장 시작
+                  #professor.tim-row
+                    h2 교수자의 입장
+                    legend
+                    button.btn.btn-primary(onclick="location.href = '/login' ") iCam-plus 데모 시연
+                  // 교수자입장 끝
+
+                  // 학교입장 시작
+                  #university.tim-row
+                    h2 학교의 입장
+                    legend
+                    button.btn.btn-primary(onclick="location.href = '/login' ") iCam-plus 데모 시연
+                  // 학교입장 끝
+                  
+                  // 개선방향 시작
+                  #improvement.tim-row
+                    h2 개선 방향 
+                    legend
+                    //- h2(style='color: red;') 프론트 완성되는대로 여기에 캡처와 함께 사용법까지 넣을 예정
+                    h4 1. 질문 작성
+                    ul
+                      li 플레이어 자체에서 질문하기 버튼을 누르면, 질문 모달이 띄워집니다.
+                      li 질문 모달에는 강의정보, 시간정보가 자동으로 들어갑니다.
+                      li 이에 학습자는 본인이 궁금한 내용 위주로만 입력하면 됩니다.
+                      li 질문을 입력하고 확인을 누르면, 해당 강의에 질문이 등록됩니다.
+                    br
+                    h4 2. 질문 검색
+                    ul
+                      li 강의에 따른 질문 목록이 오른편에 출력됩니다.
+                      li 타임스탬프를 누르면 해당 강의 부분으로 이동합니다.
+                      li 교수자는 어떤 부분에서 궁금증이 생겼는지 바로 찾아볼 수 있고
+                      li 학습자는 다른 학우가 올린 질문과 답변을 확인하며 동료학습을 할 수 있습니다.
+                    br
+                    h4 3. 질문 답변
+                    ul
+                      li 교수자가 답변을 달게 되면, 실시간으로 반영됩니다.
+                      li 학습자는 답변을 읽어보며 해당 강의내용을 다시 들어볼 수 있어, 효율적인 학습이 가능합니다.
+                  // 개선방향 끝
+                  
                   // 기능설명 시작
                   #functions.tim-row
                     h2 기능 설명 
@@ -299,12 +344,14 @@ html(lang='en')
                       li 교수자가 답변을 달게 되면, 실시간으로 반영됩니다.
                       li 학습자는 답변을 읽어보며 해당 강의내용을 다시 들어볼 수 있어, 효율적인 학습이 가능합니다.
                   // 기능설명 끝
+
                   // 데모시연 시작
                   #prototype.tim-row
                     h2  데모 시연 
                     legend
                     button.btn.btn-primary(onclick="location.href = '/login' ") iCam-plus 데모 시연
                   // 데모시연 끝
+
                   // 기대 효과 시작
                   #effect.tim-row
                     h2  기대효과 
@@ -319,11 +366,11 @@ html(lang='en')
                       li 학생들에게 들어온 다양한 질문들에 대해, 어느 강의의 어느 부분에 해당하는 부분인지 일목요연하게 정리해줍니다.
                       li 이메일, 문의게시판 등 여러 채널들을 돌아다닐 필요 없이, iCam-plus 플랫폼 내에서 답변을 편리하게 해줍니다.
                   // 기대효과 끝
-                  // 기술스택 시작
+
+                  // 사용 기술 시작
                   #tech.tim-row
-                    h2  기술스택 
+                    h2 사용기술 
                     legend
-                    // TODO : 세부구현표
                     .card.card-product
                       .image
                         img(src='assets/img/tech.png', alt='')
@@ -372,7 +419,8 @@ html(lang='en')
                                   li 따라서 우리의 서비스는 전 세계에서 접속 가능합니다 😉
 
                   // 기술스택 끝
-                  // 브실골플레이어팀 시작
+
+                  // credits 시작
                   #credits.tim-row
                     h2 credits
                     legend
@@ -435,13 +483,15 @@ html(lang='en')
                           small.subtitle 지도교수
                         hr
                         p 팀이 좋은 결과물을 낼 수 있도록 다방면의 피드백을 제공했습니다.
-                  // 브실골플레이어팀 끝
+                  // credits 끝
+
                   // cards row : 진짜 왜그런진 모르겠는데 얘를 없애면 js가 작동되지 않는다. display:none으로 해놓았으나 없애진 말것.
                   #cards-row.tim-row
                     .card.card-background
                       #map.map(style='display:none')
                   // end row
                   // end container
+                  
     footer.footer.footer-transparent
       .container
         nav.pull-left
