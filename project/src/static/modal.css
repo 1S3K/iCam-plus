@@ -1,4 +1,4 @@
-.modal {
+.modal1, .modal2 {
   display: none;
   position: fixed;
   z-index: 1;
@@ -75,7 +75,7 @@
   padding-right: 20px;
 }
 
-#questionFormMin {
+#questionFormMin, #editFormMin {
   width: 60px;
   height: 30px;
 }
@@ -89,7 +89,7 @@
   font-size: 16px;
 }
 
-#questionFormSec {
+#questionFormSec, #editFormSec {
   width: 60px;
   height: 30px;
 }
@@ -103,6 +103,11 @@
   height: 30px;
 }
 
+.title__title #e__title {
+  width: 90%;
+  height: 30px;
+}
+
 .modal__contents {
   /* background-color: #666; */
   font-size: 20px;
@@ -110,7 +115,7 @@
   height: 400px;
 }
 
-#textarea__contents {
+#textarea__contents, #e_textarea__contents {
   /* font-size: 20px; */
   resize: none;
   border: 0;

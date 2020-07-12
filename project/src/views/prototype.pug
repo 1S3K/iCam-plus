@@ -57,8 +57,8 @@ html
                         br
                         |  작성자 : #{q.author}
                     #question_text
+                      br
                       p(style='word-break:break-all')
-                        br
                         |                 #{q.content}
                     each c in comments
                       if `${c.question}` === `${q._id}`
@@ -68,30 +68,29 @@ html
                             br
                             |  답변자 : #{c.author}
                         #answer_text
+                          br
                           p(style='word-break:break-all')
-                            br
                             |                 #{c.text}
                     #comment_container
                       form(action='/comment' method='post')
                         input(type="hidden", name="lectureId", value=`${lectureId}`)
                         input#questionIdValue(type="hidden", name="questionId", value=`${q._id}`)
                         input#comment_container(type='text', name="text", required='true')
-                        button#comment_upload_button(type='submit')  작성하기
+                        button#comment_upload_button(type='submit')  답변 작성하기
                     if `${q.author}` === 'test'
                       .btn_container
-                        form(action='' method='')
-                          button#edit_button(type='submit')  수정하기 
+                        button.editBtn#edit_button(name=`${q._id}`)  질문 수정하기
                         form(action='/deleteQuestion' method='post')
                           input(type="hidden", name="lectureId", value=`${lectureId}`)
                           input(type="hidden", name="questionId", value=`${q._id}`)
-                          button#edit_button(type='submit', onclick="return confirm('정말 삭제하시겠습니까?')")  삭제하기
+                          button#edit_button(type='submit', onclick="return confirm('정말 삭제하시겠습니까?')")  질문 삭제하기
 
 
           #question_bottom
-            button.question_button(onclick="loadQuestionForm();") 질문하기
+            button.question_button 질문하기
 
       // 질문하기
-      .modal
+      .modal1
         .modal__container
           form(action='/question' method='post')
             .modal__header
@@ -116,7 +115,35 @@ html
             .modal__footer
               button.submitBtn(type='submit' value='작성하기')
                 | 작성하기
-    
+      
+      // 수정하기
+      .modal2
+        .modal__container
+          form(action='/editQuestion' method='post')
+            .modal__header
+              .header__logo
+                i.fas.fa-pencil-alt
+                .modal__header__title
+                  | 질문 수정하기
+              span.close &times;
+            .modal__title
+              .title__time
+                span.time__label 시간
+                input#questionIdForEdit(type='hidden', name='questionId' value='1')
+                input(type='hidden', name='lectureId', value=`${lectureId}`)
+                input#editFormMin(type='text', name='minute', required='true')
+                label.minute__label(for='editFormMin') 분
+                input#editFormSec(type='text', name='second', required='true')
+                label.second__label(for='editFormSec') 초
+              .title__title
+                label.title__label(for='e__title') 제목
+                input#e__title(type='text', name='title', required='true')
+            .modal__contents
+              textarea#e_textarea__contents(name='content', required='true')
+            .modal__footer
+              button.submitBtn(type='submit' value='수정하기')
+                | 수정하기
+
       // 답변하기
       .modal#answer
         .modal__container
