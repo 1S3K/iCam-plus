@@ -18,6 +18,10 @@ html(lang='en')
     link(href='assets/css/pe-icon-7-stroke.css', rel='stylesheet')
     // font-family : 'Gaegu', cursive; 어딘가에 적용 예정.
     style.
+      a:hover{
+        background-color:rgb(135, 180, 23);
+        transition: background-color 0.1s;
+      }
       li{
         font-size:20px;
       }
@@ -111,9 +115,8 @@ html(lang='en')
         .section
           .container-fluid
             .row
-              .col-md-2
+              .col-md-3
                 .fixed-section
-                  // TODO : 스크롤 효과는 구현했는데 해당 html마다 토글되게 하는건 방법을 잘 모르겠다.
                   ul
                     li
                       a(href='#intro') 프로젝트 소개
