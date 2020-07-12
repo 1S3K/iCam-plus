@@ -24,10 +24,17 @@ html
     .main_container
       .left_container
         #player_header
+          
           if (`${lectureId}` === '1')
-            p.player_header_title(style="font-size:x-large; font-weight:bold;") 1. 캐시 메모리 - 김재현
+            p.player_header_title(style="font-size:x-large; font-weight:bold;") 
+              a(href='/#prototype')
+                img(src='/assets/img/skku.png' title="홈으로 돌아가기" height="70%")
+              | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. 캐시 메모리 - 김재현
           else
-            p.player_header_title(style="font-size:x-large; font-weight:bold;") 2. 컴퓨터의 역사 - 강준우
+            p.player_header_title(style="font-size:x-large; font-weight:bold;") 
+              a(href='/#prototype')
+                img(src='/assets/img/skku.png' title="홈으로 돌아가기" height="70%")
+              | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. 컴퓨터의 역사 - 강준우
           button#entendBtn.extend_tab_button  질문창 닫기
         video#sample-video.video-js(controls='', preload='auto', data-setup='{}, ')
           // src에 내가 넣고싶은 영상 위치 넣고
