@@ -1,19 +1,16 @@
-const modal1 = document.querySelector(".modal1");
-const modal2 = document.querySelector(".modal2");
-const answer = document.querySelector("#answer");
+const modal1 = document.getElementById('modal1');
+const modal2 = document.getElementById('modal2');
 
 const question_button = document.querySelector(".question_button");
 const comment_button = document.querySelector(".comment_button");
 const edit_button = document.querySelector(".editBtn");
-
-const close = document.querySelectorAll(".close");
 
 question_button.onclick = function () {
   modal1.style.display = "block";
   var player = videojs('sample-video');
   
   player.pause();
-  localStorage.setItem("time", );
+  localStorage.setItem("time", player.currentTime());
 
   var min = parseInt(player.currentTime()/60);
   var sec = parseInt(player.currentTime()%60);
@@ -39,12 +36,4 @@ edit_button.onclick = function () {
   document.getElementById('editFormSec').value = sec;
   document.getElementById('e__title').value = title;
   document.getElementById('e_textarea__contents').innerText = content;
-};
-
-close[0].onclick = function () {
-  modal1.style.display = "none";
-};
-
-close[1].onclick = function () {
-  modal2.style.display = "none";
 };

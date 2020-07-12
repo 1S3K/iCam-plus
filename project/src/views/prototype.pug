@@ -90,7 +90,7 @@ html
             button.question_button 질문하기
 
       // 질문하기
-      .modal1
+      #modal1
         .modal__container
           form(action='/question' method='post')
             .modal__header
@@ -98,7 +98,7 @@ html
                 i.fas.fa-pencil-alt
                 .modal__header__title
                   | 질문 작성
-              span.close &times;
+              span.close#questionClose(onclick="exitModal1();") &times;
             .modal__title
               .title__time
                 span.time__label 시간
@@ -117,7 +117,7 @@ html
                 | 작성하기
       
       // 수정하기
-      .modal2
+      #modal2
         .modal__container
           form(action='/editQuestion' method='post')
             .modal__header
@@ -125,7 +125,7 @@ html
                 i.fas.fa-pencil-alt
                 .modal__header__title
                   | 질문 수정하기
-              span.close &times;
+              span.close#editClose(onclick="exitModal2();") &times;
             .modal__title
               .title__time
                 span.time__label 시간
@@ -144,31 +144,6 @@ html
               button.submitBtn(type='submit' value='수정하기')
                 | 수정하기
 
-      // 답변하기
-      .modal#answer
-        .modal__container
-          form(action='#' method='post')
-            .modal__header
-              .header__logo
-                i.fas.fa-pencil-alt
-                .modal__header__title
-                  | 답변 작성
-              span.close &times;
-            .modal__title
-              .title__time
-                span.time__label 시간
-                input#questionFormMin(type='text', name='minute', required='true')
-                label.minute__label(for='questionFormMin') 분
-                input#questionFormSec(type='text', name='second', required='true')
-                label.second__label(for='questionFormSec') 초
-              .title__title
-                label.title__label(for='q__title') 제목
-                span#answer_title | 답변할 질문 제목
-            .modal__contents 질문 내용
-            .modal__footer
-              button.submitBtn(type='submit' value='답변하기')
-                | 답변하기
-
     script.
       function setTime(obj) {
         var value = obj.innerText;
@@ -177,6 +152,12 @@ html
         var player = videojs('sample-video');
         player.currentTime(time);
         player.pause();
+      }
+      function exitModal1() {
+        document.getElementById('modal1').style.display = 'none';
+      }
+      function exitModal2() {
+        document.getElementById('modal2').style.display = 'none';
       }
     // 기본 js 먼저 불러오고
     script(src='https://vjs.zencdn.net/7.7.6/video.js')
