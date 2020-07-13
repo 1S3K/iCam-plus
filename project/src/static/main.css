@@ -190,6 +190,7 @@ select::-ms-expand {
 
             #question_bar
             {
+              position: relative;
               width: 20vw;
               height: 4vh;
               padding: .8em .5em;
@@ -268,7 +269,7 @@ select::-ms-expand {
 
               #question_bar_opened
               {
-
+                position: relative;
                 width: 20vw;
                 height: 30vh;
                 padding: .8em .5em;
@@ -763,8 +764,20 @@ select::-ms-expand {
 
 
 .btn_container{
-
   width:300px;
   height:40px;
   border :1px border black;
+}
+
+#cmt_delete_btn{
+  position: absolute;
+  right: 0;
+  margin-right: 8px;
+  font-size: 30px;
+}
+
+#cmt_delete_btn:focus,
+#cmt_delete_btn:hover{
+  color: red;
+  cursor: pointer;
 }
