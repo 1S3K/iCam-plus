@@ -119,7 +119,8 @@ html
                               br
                               br
                               |  답변자 : #{c.author}
-                            #cmt_delete_btn(onclick="return confirm('정말 삭제하시겠습니까?')") &times
+                            if c.author === 'test'
+                              #cmt_delete_btn(onclick="return confirm('정말 삭제하시겠습니까?')") &times
                           #answer_text
                             br
                             p(style='word-break:break-all')
