@@ -50,10 +50,22 @@ html
           button.index_button.video_chat_button 화상 질문
         #question_container
           #video_chat_container
-            | 화상 질문 공간입니다.
-            p#datedate 월
-            p#stst 8
-            p#enen 9
+            //- | 화상 질문 공간입니다.
+            //- p#datedate 월
+            //- p#stst 8
+            //- p#enen 9
+            .office_hour
+              div#office_title Office Hour
+              form(action='/' method='post')
+                label.office_day_title(for='office_day') 요일
+                input#office_day(type="text", name="office_day" placeholder="ex.월" required="true")
+                label.office_sh_title(for='office_start_hour') 시작시간
+                input#office_start_hour(type="text", name="office_start_hour" placeholder="ex.13" required="true")
+                label.office_eh_title(for='office_end_hour') 종료시간
+                input#office_end_hour(type="text", name="office_end_hour" placeholder="ex.15" required="true")
+                button#comment_upload_button(type='submit') 설정
+            .chat_comment
+
           #main_question
             //- a.btn.btn-info(href='#demo', data-toggle='collapse') 이 코드 잘 적용하면
             //-   #demo.collapse

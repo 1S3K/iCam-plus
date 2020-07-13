@@ -1,0 +1,33 @@
+.office_hour {
+  width: 97%;
+  height: 25%;
+  border: 1px solid #000;
+  background-color: #fff;
+  margin: 5px;
+}
+
+#office_title {
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 40px;
+  color: #000;
+}
+
+#video_chat_container {
+  text-align: center;
+}
+
+#office_day,
+#office_start_hour,
+#office_end_hour {
+  margin: 0 1%;
+  width: 15%;
+}
+
+.chat_comment {
+  width: 97%;
+  height: 69%;
+  border: 1px solid #000;
+  background-color: #fff;
+  margin: 5px;
+}
