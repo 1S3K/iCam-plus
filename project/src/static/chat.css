@@ -13,7 +13,7 @@
   color: #000;
 }
 
-#video_chat_container {
+.office_hour {
   text-align: center;
 }
 
@@ -30,4 +30,65 @@
   border: 1px solid #000;
   background-color: #fff;
   margin: 5px;
+}
+
+#chat_title {
+  text-align: center;
+  width: 100%;
+  height: 10%;
+  /* background-color: #444; */
+  font-size: 20px;
+  padding-top: 8px;
+}
+#chat_middle_container {
+  width: 100%;
+  height: 77%;
+  /* background-color: #555; */
+  overflow-x: scroll;
+}
+
+.prequestion_container {
+  padding: 3px;
+  margin: 0 auto;
+  border: 1px solid #000;
+  width: 95%;
+}
+#preq_writer {
+  font-size: 14px;
+  font-weight: bold;
+}
+#pre_contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#preq_text {
+  word-break: break-all;
+}
+
+#preq_del_btn {
+  margin-top: -5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#preq_del_btn:hover,
+#preq_del_btn:focus {
+  cursor: pointer;
+  color: red;
+}
+
+#chat_submit {
+  padding-top: 5%;
+  width: 100%;
+  height: 13%;
+  /* background-color: #666; */
+}
+
+#chat_comment {
+  width: 80%;
+}
+#chat_comment_btn {
+  width: 20%;
 }
