@@ -119,13 +119,11 @@ export const deleteQuestion = async (req, res) => {
 };
 
 export const deleteComment = async (req, res) => {
-    const {
-        body: { lectureId, commentId }
-    } = req;
+    var commentId = req.body.data;
 
     const comment = await Comment.find({_id : commentId}).update({available:0});
 
-    res.redirect(`prototype/${lectureId}`);
+    res.send();
 };
 
 export const officeHour = async (req, res) => {

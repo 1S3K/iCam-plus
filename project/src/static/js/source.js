@@ -136,3 +136,30 @@ $(".video_chat_button").on("click", function () {
   localStorage.clear();
   localStorage.setItem('type', 'cam');
 });
+
+$("#cmt_delete_btn").on("click", function () {
+
+  if (confirm('정말 삭제하시겠습니까?')) {
+    var commentId = $(this).parent('div#question_professor').children("div#commentId").text();
+  
+    $.ajax({
+      url: `/deleteComment`,
+      dataType: 'text',
+      type: 'POST',
+      data: {data:commentId},
+      // error:function(request,status,error){
+      //   alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+      // },
+      error: function(){
+        alert("에러가 발생했습니다. 다시 시도해주세요.");
+      },
+      success : function() {
+        alert($(this).parent('#question_professor').text());
+        $(this).parent('#question_professor').css('display', 'none');
+      }
+    });
+
+  } else {
+    return false;
+  }
+});
