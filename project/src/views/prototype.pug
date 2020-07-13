@@ -79,15 +79,20 @@ html
             .chat_comment
               #chat_title 
                 div.chat_title webex 사전 질문 목록
-              #chat_middle_container
-                .prequestion_container
-                  #pre_contents
-                    #preq_writer 1. 강준우(학생1)
-                    #preq_del_btn(onclick="return confirm('정말 삭제하시겠습니까?')") &times
-                  #preq_text 1강에 나오는 캐시 일관성에 관한 질문입니다.줄을 바꾸어도 정상적으로 출력이 잘 되죠. 이것입니다. 흐ㅏ알ㅇㄹ아ㅏㅁㄴ세줄도 잘나옵니다.
-                br
+              each c in comments
+                if c.available === 1
+                  if c.commentType === 2
+                    #chat_middle_container
+                      .prequestion_container
+                        #pre_contents
+                          #preq_writer #{c.author}
+                          if c.author === "test"
+                            div(id='commentId', style='display:none') #{c._id}
+                            .preq_del_btn &times
+                        #preq_text #{c.text}
+                      br
               #chat_submit
-                form(action='/' method='post')
+                form(action='/deleteComment' method='post')
                   input#chat_comment(type='text', name="text", required='true')
                   button#chat_comment_btn(type='submit') 질문
 
@@ -115,18 +120,19 @@ html
                       if c.available === 1
                         if c.commentType === 1
                           if `${c.question}` === `${q._id}`
-                            #question_professor
-                              p
+                            #commentList
+                              #question_professor
+                                p
+                                  br
+                                  br
+                                  |  답변자 : #{c.author}
+                                if c.author === 'test'
+                                  div(id='commentId', style='display:none') #{c._id}
+                                  .cmt_delete_btn &times
+                              #answer_text
                                 br
-                                br
-                                |  답변자 : #{c.author}
-                              if c.author === 'test'
-                                div(id='commentId', style='display:none') #{c._id}
-                                #cmt_delete_btn &times
-                            #answer_text
-                              br
-                              p(style='word-break:break-all')
-                                |                 #{c.text}
+                                p(style='word-break:break-all')
+                                  |                 #{c.text}
                     #comment_container
                       form(action='/comment' method='post')
                         input(type="hidden", name="lectureId", value=`${lectureId}`)

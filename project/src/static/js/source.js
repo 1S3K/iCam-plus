@@ -137,11 +137,14 @@ $(".video_chat_button").on("click", function () {
   localStorage.setItem('type', 'cam');
 });
 
-$("#cmt_delete_btn").on("click", function () {
+$(".cmt_delete_btn").on("click", function () {
 
   if (confirm('정말 삭제하시겠습니까?')) {
     var commentId = $(this).parent('div#question_professor').children("div#commentId").text();
-  
+    
+    var url = window.location.href;
+    var lec = url.charAt(url.length-1);
+
     $.ajax({
       url: `/deleteComment`,
       dataType: 'text',
@@ -154,8 +157,44 @@ $("#cmt_delete_btn").on("click", function () {
         alert("에러가 발생했습니다. 다시 시도해주세요.");
       },
       success : function() {
-        alert($(this).parent('#question_professor').text());
-        $(this).parent('#question_professor').css('display', 'none');
+        // var cmtBox = $(this).parents('#commentList')
+        
+        // if (cmtBox.css('display') === 'inline')
+        //   cmtBox.css('display', 'none');
+        location.href = `/prototype/${lec}`;
+      }
+    });
+
+  } else {
+    return false;
+  }
+});
+
+$(".preq_del_btn").on("click", function () {
+
+  if (confirm('정말 삭제하시겠습니까?')) {
+    var commentId = $(this).parent('div').children("div#commentId").text();
+    
+    var url = window.location.href;
+    var lec = url.charAt(url.length-1);
+
+    $.ajax({
+      url: `/deleteComment`,
+      dataType: 'text',
+      type: 'POST',
+      data: {data:commentId},
+      // error:function(request,status,error){
+      //   alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+      // },
+      error: function(){
+        alert("에러가 발생했습니다. 다시 시도해주세요.");
+      },
+      success : function() {
+        // var cmtBox = $(this).parents('#commentList')
+        
+        // if (cmtBox.css('display') === 'inline')
+        //   cmtBox.css('display', 'none');
+        location.href = `/prototype/${lec}`;
       }
     });
 

@@ -769,15 +769,15 @@ select::-ms-expand {
   border :1px border black;
 }
 
-#cmt_delete_btn{
+.cmt_delete_btn{
   position: absolute;
   right: 0;
   margin-right: 8px;
   font-size: 30px;
 }
 
-#cmt_delete_btn:focus,
-#cmt_delete_btn:hover{
+.cmt_delete_btn:focus,
+.cmt_delete_btn:hover{
   color: red;
   cursor: pointer;
 }
