@@ -49,6 +49,24 @@ export const comment = async (req, res) => {
 
     const newComment = await Comment.create({
         question: questionId,
+        commentType:1,
+        text,
+        author:author,
+        available:1
+        
+    });
+
+    res.redirect(`prototype/${lectureId}`);
+};
+
+export const commentCam = async (req, res) => {
+    const {
+        body: { lectureId, text }
+    } = req;
+    var author = "test";
+
+    const newComment = await Comment.create({
+        commentType:2,
         text,
         author:author,
         available:1

@@ -5,6 +5,7 @@ import {
     prototype,
     question,
     comment,
+    commentCam,
     editQuestion,
     deleteQuestion,
     deleteComment
@@ -21,6 +22,8 @@ router.get(`/prototype/:lectureId`, prototype);
 router.post('/question', question);
 
 router.post('/comment', comment);
+
+router.post('/commentCam', commentCam);
 
 router.post('/editQuestion', editQuestion);
 

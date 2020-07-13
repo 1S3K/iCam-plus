@@ -74,16 +74,17 @@ html
                       p(style='word-break:break-all')
                         |                 #{q.content}
                     each c in comments
-                      if `${c.question}` === `${q._id}`
-                        #question_professor
-                          p
+                      if c.commentType === 1
+                        if `${c.question}` === `${q._id}`
+                          #question_professor
+                            p
+                              br
+                              br
+                              |  답변자 : #{c.author}
+                          #answer_text
                             br
-                            br
-                            |  답변자 : #{c.author}
-                        #answer_text
-                          br
-                          p(style='word-break:break-all')
-                            |                 #{c.text}
+                            p(style='word-break:break-all')
+                              |                 #{c.text}
                     #comment_container
                       form(action='/comment' method='post')
                         input(type="hidden", name="lectureId", value=`${lectureId}`)
