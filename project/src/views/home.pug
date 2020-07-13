@@ -226,7 +226,9 @@ html(lang='en')
                       .image
                         img(src='/daemun/q.png')
                   // 문제점분석 끝
-                  
+                  br
+                  br
+                  br
                   // 개선방향 시작
                   #improvement.tim-row
                     h2 개선 방향
@@ -250,45 +252,110 @@ html(lang='en')
                           li 교수자는 같은 강의의 질문들이 한번에 보여지므로 답변이 수월할 것이며
                           li 학교는 교육이 잘 이뤄지고 있는지 파악이 더욱 쉬울 것.
                     br
+                    br
                     .card.card-product
-                      .content
-                        h4 저희 팀 프로젝트 iCam-plus는 이러한 개선점을 담아 만든 강의 플레이어입니다.
                       .image
                         img.img-rounded(src='/daemun/icamplus.png')
+                      .content
+                        h4 저희 팀 프로젝트 iCam-plus는 이러한 개선점을 담아 만든 강의 플레이어입니다.
                   // 개선방향 끝
-                  
+                  br
+                  br
+                  br
                   // 기능설명 시작
                   #functions.tim-row
-                    h2 기능 설명 : 스크린샷과 함께 ㄱㄱ.
+                    h2 기능 설명
                     legend
-                    //- h2(style='color: red;') 프론트 완성되는대로 여기에 캡처와 함께 사용법까지 넣을 예정
-                    h4 1. 질문 작성
-                    ul
-                      li 플레이어 자체에서 질문하기 버튼을 누르면, 질문 모달이 띄워집니다.
-                      li 질문 모달에는 강의정보, 시간정보가 자동으로 들어갑니다.
-                      li 이에 학습자는 본인이 궁금한 내용 위주로만 입력하면 됩니다.
-                      li 질문을 입력하고 확인을 누르면, 해당 강의에 질문이 등록됩니다.
+                    .row
+                      .col-md-8
+                        .img-container
+                          img.img-rounded(src='/daemun/f0.png')
+                        .space-50
+                      .col-md-4
+                        h4.text-center
+                          strong 로그인 페이지
+                          hr
+                        p 처음 데모로 들어가면 보이는 로그인 페이지입니다. 본인의 아이디와 비밀번호를 입력하면 로그인되는 구조이지만, 시연을 위해 ID와 PW는 test / test123으로 세팅해놓았습니다.
                     br
-                    h4 2. 질문 검색
-                    ul
-                      li 강의에 따른 질문 목록이 오른편에 출력됩니다.
-                      li 타임스탬프를 누르면 해당 강의 부분으로 이동합니다.
-                      li 교수자는 어떤 부분에서 궁금증이 생겼는지 바로 찾아볼 수 있고
-                      li 학습자는 다른 학우가 올린 질문과 답변을 확인하며 동료학습을 할 수 있습니다.
                     br
-                    h4 3. 질문 답변
-                    ul
-                      li 교수자가 답변을 달게 되면, 실시간으로 반영됩니다.
-                      li 학습자는 답변을 읽어보며 해당 강의내용을 다시 들어볼 수 있어, 효율적인 학습이 가능합니다.
-                  // 기능설명 끝
 
+                    .row
+                      .col-md-8
+                        .img-container
+                          img.img-rounded(src='/daemun/f1.png')
+                        .space-50
+                      .col-md-4
+                        h4.text-center
+                          strong 플레이어 개관
+                          hr
+                        p 로그인에 성공하면 보여지는 강의 플레이어입니다. 버튼으로 질문탭을 열거나 닫을 수 있고, 질문탭 상단의 메뉴로 주차별 강의를 전환할 수 있습니다.
+                    br
+                    br
+
+                    .row
+                      .col-md-8
+                        .img-container
+                          img.img-rounded(src='/daemun/f2.png')
+                        .space-50
+                      .col-md-4
+                        h4.text-center
+                          strong 질문 작성
+                          hr
+                        p 만약 궁금한 내용이 있는데 관련 질문이 올라와있지 않다면, 밑의 질문작성 버튼을 눌러 질문을 작성할 수 있습니다. 이 때 시간정보는 현재 시청하고 있는 강의 시간대에 따라 자동으로 입력됩니다.
+                    br
+                    br
+
+                    .row
+                      .col-md-8
+                        .img-container
+                          img.img-rounded(src='/daemun/f3.png')
+                        .space-50
+                      .col-md-4
+                        h4.text-center
+                          strong 질문 등록
+                          hr
+                        p 질문 작성을 완료했다면, 질문 리스트에 등록한 질문이 나타나게 됩니다. 이 질문엔 교수자나 다른 학습자가 자유롭게 댓글을 달 수 있습니다.
+                    br
+                    br
+
+                    .row
+                      .col-md-8
+                        .img-container
+                          img.img-rounded(src='/daemun/f4.png')
+                        .space-50
+                      .col-md-4
+                        h4.text-center
+                          strong (교수자 계정) 답변 등록
+                          hr
+                        p 교수자에게 보이는 화면도 기본적으로 위와 동일합니다. 질문들을 볼 수 있고, 답변을 달 수 있습니다.
+                    br
+                    br
+
+                    .row
+                      .col-md-8
+                        .img-container
+                          img.img-rounded(src='/daemun/f5.png')
+                        .space-50
+                      .col-md-4
+                        h4.text-center
+                          strong 답변 등록 완료
+                          hr
+                        p 답변이 등록되면, 해당 질문에 답변이 달린 것을 볼 수 있습니다. 이는 다른 학습자들도 볼 수 있어, 좀 더 효율적인 학습을 가능하게 합니다.
+                    br
+                    br
+                  // 기능설명 끝
+                  br
+                  br
+                  br
                   // 데모시연 시작
                   #prototype.tim-row
                     h2  데모 시연 
                     legend
-                    button.btn.btn-primary(onclick="location.href = '/login' ") iCam-plus 데모 시연
+                    button.btn.btn-success.btn-lg(onclick="location.href = '/login' ") iCam-plus 데모 시연
                   // 데모시연 끝
-
+                  br
+                  br
+                  br
                   // 기대 효과 시작
                   #effect.tim-row
                     h2 기대효과 : 그림 넣을 것.
