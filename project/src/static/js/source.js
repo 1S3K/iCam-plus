@@ -190,10 +190,8 @@ $(".preq_del_btn").on("click", function () {
         alert("에러가 발생했습니다. 다시 시도해주세요.");
       },
       success : function() {
-        // var cmtBox = $(this).parents('#commentList')
-        
-        // if (cmtBox.css('display') === 'inline')
-        //   cmtBox.css('display', 'none');
+        localStorage.clear();
+        localStorage.setItem('type', 'cam');
         location.href = `/prototype/${lec}`;
       }
     });

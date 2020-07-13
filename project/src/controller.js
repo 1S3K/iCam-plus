@@ -45,13 +45,13 @@ export const question = async (req, res) => {
 
 export const comment = async (req, res) => {
     const {
-        body: { lectureId, questionId, text }
+        body: { lectureId, commentType, questionId, text }
     } = req;
     var author = "test";
 
     const newComment = await Comment.create({
         question: questionId,
-        commentType:1,
+        commentType,
         text,
         author:author,
         available:1
