@@ -46,7 +46,10 @@ html
             option(value='2') 2강. 컴퓨터의 역사 - 강준우
         #select_Button_bar
           button.index_button 질문 리스트
+          button.index_button.video_chat_button 화상 질문
         #question_container
+          #video_chat_container
+            | 화상 질문 공간입니다.
           #main_question
             //- a.btn.btn-info(href='#demo', data-toggle='collapse') 이 코드 잘 적용하면
             //-   #demo.collapse
@@ -95,6 +98,7 @@ html
 
           #question_bottom
             button.question_button 질문하기
+            
 
       // 질문하기
       #modal1
