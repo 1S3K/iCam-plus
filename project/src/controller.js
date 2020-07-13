@@ -133,18 +133,41 @@ export const officeHour = async (req, res) => {
         body: { lectureId, office_day, office_start_hour, office_end_hour }
     } = req;
 
-    if (!await Officehour.findOneAndUpdate({ lecture: lectureId }, {
-        day:office_day,
-        begin:office_start_hour,
-        end:office_end_hour
-    })) {
-        await Officehour.create({
-            lecture: lectureId,
-            day:office_day,
-            begin:office_start_hour,
-            end:office_end_hour
-        });
-    } 
+    if (office_day === '일' ||
+        office_day === '월' ||
+        office_day === '화' ||
+        office_day === '수' ||
+        office_day === '목' ||
+        office_day === '금' ||
+        office_day === '토') {
+            if (parseInt(office_start_hour) < parseInt(office_end_hour)) {
+                
+                if (!await Officehour.findOneAndUpdate({ lecture: lectureId }, {
+                    day:office_day,
+                    begin:office_start_hour,
+                    end:office_end_hour
+                })) {
+                    await Officehour.create({
+                        lecture: lectureId,
+                        day:office_day,
+                        begin:office_start_hour,
+                        end:office_end_hour
+                    });
+                } 
+            
+                res.redirect(`prototype/${lectureId}`);
+            }else {
+                res.redirect(`error/${lectureId}`);
+            }
+        } else {
+            res.redirect(`error/${lectureId}`);
+        }
+}
 
-    res.redirect(`prototype/${lectureId}`);
+export const errorHandle = (req, res) => {
+    const {
+        params: { lectureId }
+    } = req;
+
+    res.render('error');
 }

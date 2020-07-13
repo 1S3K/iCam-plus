@@ -9,7 +9,8 @@ import {
     editQuestion,
     deleteQuestion,
     deleteComment,
-    officeHour
+    officeHour,
+    errorHandle
 } from "./controller";
 
 export const router = express.Router();
@@ -33,3 +34,5 @@ router.post('/deleteQuestion', deleteQuestion);
 router.post('/deleteComment', deleteComment);
 
 router.post('/officehour', officeHour);
+
+router.get('/error/:lectureId', errorHandle);
