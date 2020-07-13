@@ -5,6 +5,16 @@ $(document).ready(function () {
   $(".right_container").css("display", "block");
   is_hidden = 0;
 
+  if (localStorage.getItem("type") === 'cam') {
+    var main_question = document.getElementById("main_question");
+    var video_chat_container = document.getElementById("video_chat_container");
+    var question_button = document.querySelector(".question_button");
+
+    main_question.style.display = "none";
+    video_chat_container.style.display = "block";
+    question_button.innerHTML = "화상채팅 연결하기";
+  }
+
   if (localStorage.getItem("time") != null) {
     videojs("sample-video").currentTime(parseInt(localStorage.getItem("time")));
     videojs("sample-video").pause();
@@ -110,6 +120,8 @@ $(".index_button:first-child").on("click", function () {
   main_question.style.display = "block";
   video_chat_container.style.display = "none";
   question_button.innerHTML = "질문하기";
+
+  localStorage.clear();
 });
 
 $(".video_chat_button").on("click", function () {
@@ -120,4 +132,7 @@ $(".video_chat_button").on("click", function () {
   main_question.style.display = "none";
   video_chat_container.style.display = "block";
   question_button.innerHTML = "화상채팅 연결하기";
+
+  localStorage.clear();
+  localStorage.setItem('type', 'cam');
 });
