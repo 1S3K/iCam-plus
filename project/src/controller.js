@@ -1,5 +1,6 @@
 import Question from "./models/question"
 import Comment from "./models/comment"
+import Officehour from "./models/officehour"
 
 export const home = (req, res) => {
     res.render("home");
@@ -17,9 +18,10 @@ export const prototype = async (req, res) => {
     try {
         const questions = await Question.find({available:1}).sort({time : 1});
         const comments = await Comment.find({available:1});
-        res.render("prototype", {lectureId, questions, comments});
+        const officehour = await Officehour.find({lecture:lectureId})
+        res.render("prototype", {lectureId, questions, comments, officehour});
     } catch (error) {
-        res.render("prototype", {lectureId, questions : [], comments : []});
+        res.render("prototype", {lectureId, questions : [], comments : [], officehour:[]});
     }
 };
 
@@ -126,3 +128,17 @@ export const deleteComment = async (req, res) => {
 
     res.redirect(`prototype/${lectureId}`);
 };
+
+export const officeHour = async (req, res) => {
+    const {
+        body: { lectureId, office_day, office_start_hour, office_end_hour }
+    } = req;
+
+    await Officehour.findOneAndUpdate({ lecture: lectureId }, {
+        day:office_day,
+        begin:office_start_hour,
+        end:office_end_hour
+    });
+
+    res.redirect(`prototype/${lectureId}`);
+}
