@@ -18,7 +18,7 @@ export const prototype = async (req, res) => {
     try {
         const questions = await Question.find({available:1}).sort({time : 1});
         const comments = await Comment.find({available:1});
-        const officehour = await Officehour.find({lecture:lectureId})
+        const officehour = await Officehour.findOne({lecture:lectureId});
         res.render("prototype", {lectureId, questions, comments, officehour});
     } catch (error) {
         res.render("prototype", {lectureId, questions : [], comments : [], officehour:[]});
@@ -55,7 +55,6 @@ export const comment = async (req, res) => {
         text,
         author:author,
         available:1
-        
     });
 
     res.redirect(`prototype/${lectureId}`);
@@ -134,11 +133,18 @@ export const officeHour = async (req, res) => {
         body: { lectureId, office_day, office_start_hour, office_end_hour }
     } = req;
 
-    await Officehour.findOneAndUpdate({ lecture: lectureId }, {
+    if (!await Officehour.findOneAndUpdate({ lecture: lectureId }, {
         day:office_day,
         begin:office_start_hour,
         end:office_end_hour
-    });
+    })) {
+        await Officehour.create({
+            lecture: lectureId,
+            day:office_day,
+            begin:office_start_hour,
+            end:office_end_hour
+        });
+    } 
 
     res.redirect(`prototype/${lectureId}`);
 }

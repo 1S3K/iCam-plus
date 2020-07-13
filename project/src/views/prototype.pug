@@ -56,14 +56,26 @@ html
             //- p#enen 9
             .office_hour
               div#office_title Office Hour
-              form(action='/' method='post')
-                label.office_day_title(for='office_day') 요일
-                input#office_day(type="text", name="office_day" placeholder="ex.월" required="true")
-                label.office_sh_title(for='office_start_hour') 시작시간
-                input#office_start_hour(type="text", name="office_start_hour" placeholder="ex.13" required="true")
-                label.office_eh_title(for='office_end_hour') 종료시간
-                input#office_end_hour(type="text", name="office_end_hour" placeholder="ex.15" required="true")
-                button#comment_upload_button(type='submit') 설정
+              if officehour === null
+                form(action='/officehour' method='post')
+                  input(type="hidden", name="lectureId", value=`${lectureId}`)
+                  label.office_day_title(for='office_day') 요일
+                  input#office_day(type="text", name="office_day" placeholder="ex.월" required="true")
+                  label.office_sh_title(for='office_start_hour') 시작시간
+                  input#office_start_hour(type="text", name="office_start_hour" placeholder="ex.13" required="true" )
+                  label.office_eh_title(for='office_end_hour') 종료시간
+                  input#office_end_hour(type="text", name="office_end_hour" placeholder="ex.15" required="true")
+                  button#comment_upload_button(type='submit') 설정
+              else 
+                form(action='/officehour' method='post')
+                  input(type="hidden", name="lectureId", value=`${lectureId}`)
+                  label.office_day_title(for='office_day') 요일
+                  input#office_day(type="text", name="office_day" placeholder="ex.월" required="true" value=`${officehour.day}`)
+                  label.office_sh_title(for='office_start_hour') 시작시간
+                  input#office_start_hour(type="text", name="office_start_hour" placeholder="ex.13" required="true" value=`${officehour.begin}`)
+                  label.office_eh_title(for='office_end_hour') 종료시간
+                  input#office_end_hour(type="text", name="office_end_hour" placeholder="ex.15" required="true" value=`${officehour.end}`)
+                  button#comment_upload_button(type='submit') 설정
             .chat_comment
               #chat_title 
                 div.chat_title webex 사전 질문 목록
