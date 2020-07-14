@@ -62,7 +62,7 @@ html
                   input#office_start_hour(type="text", name="office_start_hour" placeholder="ex.13" required="true" )
                   label.office_eh_title(for='office_end_hour') 종료시간
                   input#office_end_hour(type="text", name="office_end_hour" placeholder="ex.15" required="true")
-                  button#comment_upload_button(type='submit') 설정
+                  button#comment_upload_button_original(type='submit') 설정
               else 
                 form(action='/officehour' method='post')
                   input(type="hidden", name="lectureId", value=`${lectureId}`)
@@ -72,7 +72,7 @@ html
                   input#office_start_hour(type="text", name="office_start_hour" placeholder="ex.13" required="true" value=`${officehour.begin}`)
                   label.office_eh_title(for='office_end_hour') 종료시간
                   input#office_end_hour(type="text", name="office_end_hour" placeholder="ex.15" required="true" value=`${officehour.end}`)
-                  button#comment_upload_button(type='submit') 설정
+                  button#comment_upload_button_original(type='submit') 설정
             .chat_comment
               #chat_title 
                 div.chat_title webex 사전 질문 목록
