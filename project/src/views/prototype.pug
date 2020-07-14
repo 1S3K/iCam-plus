@@ -92,7 +92,7 @@ html
               #chat_submit
                 form(action='/comment' method='post')
                   input(type="hidden", name="lectureId", value=`${lectureId}`)
-                  input(type="hidden", name="commentType", value="2")
+                  1
                   input#chat_comment(type='text', name="text", required='true')
                   button#chat_comment_btn(type='submit') 질문
 
@@ -137,7 +137,7 @@ html
                     #comment_container
                       form(action='/comment' method='post')
                         input(type="hidden", name="lectureId", value=`${lectureId}`)
-                        input(type="hidden", name="commentType", value="2")
+                        input(type="hidden", name="commentType", value="1")
                         input#questionIdValue(type="hidden", name="questionId", value=`${q._id}`)
                         input#comment_container(type='text', name="text", required='true')
                         button#comment_upload_button(type='submit')  답변 작성하기
