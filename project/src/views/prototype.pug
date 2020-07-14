@@ -75,10 +75,10 @@ html
             .chat_comment
               #chat_title 
                 div.chat_title webex 사전 질문 목록
-              each c in comments
-                if c.available === 1
-                  if c.commentType === 2
-                    #chat_middle_container
+              #chat_middle_container
+                each c in comments
+                  if c.available === 1
+                    if c.commentType === 2
                       .prequestion_container
                         #pre_contents
                           #preq_writer 작성자 : #{c.author}
