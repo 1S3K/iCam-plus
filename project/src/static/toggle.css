@@ -1,7 +1,7 @@
 .toggleButton {
   position: absolute;
-  top: 35%;
-  right: 5%;
+  top: 20px;
+  right: 20px;
   font-size: 14px;
   border: none;
   color: #fff;
