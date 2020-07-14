@@ -139,12 +139,13 @@ html
                               p(style='word-break:break-all')
                                 |                 #{c.text}
                     #comment_container
-                      form(action='/comment' method='post')
-                        input(type="hidden", name="lectureId", value=`${lectureId}`)
-                        input(type="hidden", name="commentType", value="1")
-                        input#questionIdValue(type="hidden", name="questionId", value=`${q._id}`)
-                        input#comment_container(type='text', name="text", required='true')
-                        button#comment_upload_button(type='submit')  답변 작성하기
+                      .btn-container
+                        form(action='/comment' method='post')
+                          input(type="hidden", name="lectureId", value=`${lectureId}`)
+                          input(type="hidden", name="commentType", value="1")
+                          input#questionIdValue(type="hidden", name="questionId", value=`${q._id}`)
+                          input#comment_container(type='text', name="text", required='true')
+                          button#comment_upload_button(type='submit')  답변 작성하기
                     if `${q.author}` === 'test'
                       .btn_container
                         button.editBtn#edit_button(name=`${q._id}`)  질문 수정하기
