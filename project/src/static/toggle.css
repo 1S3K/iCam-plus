@@ -1,4 +1,4 @@
-#toggleButton {
+.toggleButton {
   position: absolute;
   top: 35%;
   right: 5%;
@@ -8,6 +8,6 @@
   background-color: #ade498;
 }
 
-#openNotOpen {
+.openNotOpen {
   background-color: #ff847c;
 }
