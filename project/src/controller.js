@@ -38,7 +38,8 @@ export const question = async (req, res) => {
         title,
         content,
         author:author,
-        available:1
+        available:1,
+        hide:0
     });
     res.redirect(`prototype/${lectureId}`);
 };
@@ -76,6 +77,19 @@ export const commentCam = async (req, res) => {
     res.redirect(`prototype/${lectureId}`);
 };
 
+export const hideQuestion = async (req, res) => {
+    var questionId = req.body.data;
+    var question = await Question.findOne({_id : questionId});
+    
+    if (question['hide'] === 0) {
+        await question.update({hide:1});
+    } else {
+        await question.update({hide:0});
+    }
+
+    res.send();
+};
+
 export const editQuestion = async (req, res) => {
     const {
         body: { questionId, lectureId, minute, second, title, content }
@@ -91,22 +105,6 @@ export const editQuestion = async (req, res) => {
 
     res.redirect(`prototype/${lectureId}`);
 };
-
-// export const editComment = async (req, res) => {
-//     const {
-//         body: { lectureId, questionId, text }
-//     } = req;
-//     var author = "test";
-
-//     const newComment = await Comment.create({
-//         question: questionId,
-//         text,
-//         author:author,
-//         available:1
-//     });
-
-//     res.redirect(`prototype/${lectureId}`);
-// };
 
 export const deleteQuestion = async (req, res) => {
     const {

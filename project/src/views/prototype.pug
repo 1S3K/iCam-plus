@@ -106,9 +106,13 @@ html
                   a.time_stamp#queTim(onclick='setTime(this);') #{parseInt(q.time/60) < 10 ? `0${parseInt(q.time/60)}` : parseInt(q.time/60)}:#{(q.time%60) < 10 ? `0${q.time%60}` : q.time%60}
                   .question_title#queTit #{q.title}
                   button.expand_button#expBtn
+                  //- 공개/비공개 토글
                   if q.author === "test"
-                    //- 공개/비공개 토글
-                    button.toggleButton 공개
+                    if q.hide === 0
+                      button.toggleButton 공개
+                    else if q.hide === 1
+                      button.openNotOpen 비공개
+                    div#questionHide(style='display:none') #{q._id}
                   .question_container
                     #question_person
                       p
@@ -143,7 +147,7 @@ html
                         button#comment_upload_button(type='submit')  답변 작성하기
                     if `${q.author}` === 'test'
                       .btn_container
-                        //button.editBtn#edit_button(name=`${q._id}`)  질문 수정하기
+                        button.editBtn#edit_button(name=`${q._id}`)  질문 수정하기
                         form(action='/deleteQuestion' method='post')
                           input(type="hidden", name="lectureId", value=`${lectureId}`)
                           input(type="hidden", name="questionId", value=`${q._id}`)

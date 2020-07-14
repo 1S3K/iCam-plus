@@ -6,6 +6,7 @@ import {
     question,
     comment,
     commentCam,
+    hideQuestion,
     editQuestion,
     deleteQuestion,
     deleteComment,
@@ -26,6 +27,8 @@ router.post('/question', question);
 router.post('/comment', comment);
 
 router.post('/commentCam', commentCam);
+
+router.post('/hide', hideQuestion);
 
 router.post('/editQuestion', editQuestion);
 

@@ -21,6 +21,9 @@ const questionSchema = new mongoose.Schema({
     },
     available: {
         type:Number
+    },
+    hide:{
+        type: Number
     }
 });
 
