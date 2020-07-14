@@ -140,7 +140,7 @@ html
                         button#comment_upload_button(type='submit')  답변 작성하기
                     if `${q.author}` === 'test'
                       .btn_container
-                        button.editBtn#edit_button(name=`${q._id}`)  질문 수정하기
+                        //button.editBtn#edit_button(name=`${q._id}`)  질문 수정하기
                         form(action='/deleteQuestion' method='post')
                           input(type="hidden", name="lectureId", value=`${lectureId}`)
                           input(type="hidden", name="questionId", value=`${q._id}`)
