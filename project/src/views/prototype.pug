@@ -79,7 +79,6 @@ html
               #chat_middle_container
                 each c in comments
                   if c.available === 1
-                    // FIXME : 픽스부탁!!! commentType 1, 2는 1강과 2강의 질문리스트를 나타내야함.
                     if c.commentType === 2
                       .prequestion_container
                         #pre_contents
@@ -92,7 +91,7 @@ html
               #chat_submit
                 form(action='/comment' method='post')
                   input(type="hidden", name="lectureId", value=`${lectureId}`)
-                  1
+                  input(type="hidden", name="commentType", value="2")
                   input#chat_comment(type='text', name="text", required='true')
                   button#chat_comment_btn(type='submit') 질문
 
@@ -107,8 +106,9 @@ html
                   a.time_stamp#queTim(onclick='setTime(this);') #{parseInt(q.time/60) < 10 ? `0${parseInt(q.time/60)}` : parseInt(q.time/60)}:#{(q.time%60) < 10 ? `0${q.time%60}` : q.time%60}
                   .question_title#queTit #{q.title}
                   button.expand_button#expBtn
-                  //- 공개/비공개 토글
-                  button.toggleButton 공개
+                  if q.author === "test"
+                    //- 공개/비공개 토글
+                    button.toggleButton 공개
                   .question_container
                     #question_person
                       p
