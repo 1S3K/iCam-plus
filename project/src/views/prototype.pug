@@ -116,21 +116,20 @@ html
                         |                 #{q.content}
                     each c in comments
                       if c.available === 1
-                        if c.commentType === 1
-                          if `${c.question}` === `${q._id}`
-                            #commentList
-                              #question_professor
-                                p
-                                  br
-                                  br
-                                  |  답변자 : #{c.author}
-                                if c.author === 'test'
-                                  div(id='commentId', style='display:none') #{c._id}
-                                  .cmt_delete_btn &times
-                              #answer_text
+                        if `${c.question}` === `${q._id}`
+                          #commentList
+                            #question_professor
+                              p
                                 br
-                                p(style='word-break:break-all')
-                                  |                 #{c.text}
+                                br
+                                |  답변자 : #{c.author}
+                              if c.author === 'test'
+                                div(id='commentId', style='display:none') #{c._id}
+                                .cmt_delete_btn &times
+                            #answer_text
+                              br
+                              p(style='word-break:break-all')
+                                |                 #{c.text}
                     #comment_container
                       form(action='/comment' method='post')
                         input(type="hidden", name="lectureId", value=`${lectureId}`)
