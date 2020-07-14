@@ -1,0 +1,56 @@
+.openToggleContainer {
+  float: left;
+  position: absolute;
+  right: 0;
+  transform: translate(-50%, -50%);
+}
+
+.openToggleButton {
+  display: flex;
+  position: relative;
+  background: gray;
+  width: 80px;
+  height: 30px;
+  border-radius: 30px;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.none {
+  display: none;
+}
+
+.openToggleButton > .left-text {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  font-size: 15px;
+  line-height: 15px;
+  color: #000;
+}
+
+.openToggleButton > .right-text {
+  position: absolute;
+  top: 30%;
+  right: 8%;
+  font-size: 15px;
+  line-height: 15px;
+  color: #000;
+}
+
+.openToggleButton > .inner-circle {
+  background: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: all 300ms ease-in-out;
+}
+
+.openToggleButton.active {
+  background: #f9d56e;
+}
+
+.openToggleButton.active > .inner-circle {
+  margin-left: 50px;
+}

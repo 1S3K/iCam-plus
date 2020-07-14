@@ -20,6 +20,7 @@ html
     link(href='/main.css', rel='stylesheet')
     link(href='/modal.css', rel='stylesheet')
     link(href='/chat.css', rel='stylesheet')
+    link(href='/toggle.css', rel='stylesheet')
     title iCam-plus prototype
   body
     .main_container
@@ -106,6 +107,12 @@ html
                   a.time_stamp#queTim(onclick='setTime(this);') #{parseInt(q.time/60) < 10 ? `0${parseInt(q.time/60)}` : parseInt(q.time/60)}:#{(q.time%60) < 10 ? `0${q.time%60}` : q.time%60}
                   .question_title#queTit #{q.title}
                   button.expand_button#expBtn
+                  //- 공개/비공개 토글
+                  .openToggleContainer
+                    .openToggleButton
+                      .left-text.none 공개
+                      .inner-circle
+                      .right-text 비공개
                   .question_container
                     #question_person
                       p
@@ -229,6 +236,7 @@ html
     script(src='/js/source.js')
     script(src="https://kit.fontawesome.com/f1edfc6fcb.js" crossorigin="anonymous")
     script(src='/js/modal.js')
+    script(src='/js/toggle.js')
     // jQuery and Bootstrap core files
     script(src='/assets/js/jquery.js', type='text/javascript')
     script(src='/assets/js/jquery-ui.custom.min.js', type='text/javascript')
