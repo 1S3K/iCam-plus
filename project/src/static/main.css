@@ -368,7 +368,7 @@ select::-ms-expand {
                           height: 10%;
                         }
 
-                        /* #comment_upload_button
+                        #comment_upload_button
                         {
 
                           background-color:  rgb(135,180,23);
@@ -431,9 +431,9 @@ select::-ms-expand {
                         {
                           height: 100%;
                           width: 100%;
-                        } */
+                        }
 
-                        #comment_upload_button
+                        /* #comment_upload_button
                         {
 
                           background-color:rgb(135,180,23);
@@ -496,7 +496,7 @@ select::-ms-expand {
                         {
                           height: 100%;
                           width: 100%;
-                        }
+                        } */
 
                         #edit_button
                         {
