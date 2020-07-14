@@ -78,6 +78,7 @@ html
               #chat_middle_container
                 each c in comments
                   if c.available === 1
+                    // FIXME : 픽스부탁!!! commentType 1, 2는 1강과 2강의 질문리스트를 나타내야함.
                     if c.commentType === 2
                       .prequestion_container
                         #pre_contents
