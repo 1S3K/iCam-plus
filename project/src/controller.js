@@ -18,7 +18,7 @@ export const prototype = async (req, res) => {
     try {
         const questions = await Question.find({available:1}).sort({time : 1});
         const comments = await Comment.find({available:1});
-        const officehour = await Officehour.findOne({lecture:lectureId});
+        const officehour = await Officehour.findOne({});
         res.render("prototype", {lectureId, questions, comments, officehour});
     } catch (error) {
         res.render("prototype", {lectureId, questions : [], comments : [], officehour:[]});
