@@ -4,7 +4,7 @@
   color:#00ff00;
 }
 */
-
+/* https://icampus.skku.edu/customs/main/ic_skku.svg */
 /*
 이런 식으로 각각의 element에 대해
 색상 등의 스타일을 적용할 수 있다.
@@ -38,9 +38,10 @@ body {
   display: inline-block;
   width: 100%;
   height: 6%;
-  background-color: rgb(244, 244, 244);
+  background-color: #fff;
   border: 1px rgb(135, 180, 23) solid;
   background: rgb(135, 180, 23);
+  /* background: #2da44e; */
 }
 
 .player_header_title {
@@ -48,9 +49,10 @@ body {
   margin-left: 30;
   margin-top: 14;
   float: left;
-  color: white;
+  color: #fff;
   font-size: 1.2em;
   background-color: rgb(135, 180, 23);
+  /* background: #2da44e; */
   opacity: 0.7;
 }
 .extend_tab_button {
