@@ -9,11 +9,5 @@
 }
 
 .openNotOpen {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 14px;
-  border: none;
-  color: #fff;
   background-color: #ff847c;
 }

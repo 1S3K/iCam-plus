@@ -111,7 +111,7 @@ html
                     if q.hide === 0
                       button.toggleButton 공개
                     else if q.hide === 1
-                      button.openNotOpen 비공개
+                      button.toggleButton.openNotOpen 비공개
                     div#questionHide(style='display:none') #{q._id}
                   .question_container
                     #question_person
