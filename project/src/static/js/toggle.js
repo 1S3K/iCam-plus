@@ -1,10 +1,11 @@
-const toggle = document.querySelector(".toggle-openToggleButton");
+const toggleButton = document.querySelectorAll("#toggleButton");
 
-const lText = document.querySelector(".left-text");
-const rText = document.querySelector(".right-text");
-
-toggle.addEventListener("click", () => {
-  toggle.classList.toggle("active");
-  lText.classList.toggle("none");
-  rText.classList.toggle("none");
+toggleButton.addEventListener("click", () => {
+  if (this.innerText == "공개") {
+    this.innerHTML = "비공개";
+    this.classList.toggle(openNotOpen);
+  } else if (this.innerText == "비공개") {
+    this.innerHTML = "비공개";
+    this.classList.toggle(openNotOpen);
+  }
 });
