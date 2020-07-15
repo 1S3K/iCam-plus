@@ -274,6 +274,9 @@ html(lang='en')
                   #functions.tim-row
                     h2 기능 설명
                     legend
+                    br
+                    h3 1) 기본 도입부 기능
+                    br
                     .row
                       .col-md-8
                         .img-container
@@ -290,16 +293,32 @@ html(lang='en')
                     .row
                       .col-md-8
                         .img-container
-                          img.img-rounded(src='/daemun/f1.png')
+                          img.img-rounded(src='/daemun/f1-1.png')
                         .space-50
                       .col-md-4
                         h4.text-center
-                          strong 플레이어 개관
+                          strong 플레이어 기본기능
                           hr
-                        p 로그인에 성공하면 보여지는 강의 플레이어입니다. 버튼으로 질문탭을 열거나 닫을 수 있고, 질문탭 상단의 메뉴로 주차별 강의를 전환할 수 있습니다.
+                        p 로그인에 성공하면 보여지는 강의 플레이어입니다. 질문창 여닫기 버튼으로 질문탭을 열거나 닫을 수 있고, 질문탭 상단을 이용해 주차별 강의를 전환할 수 있습니다.
                     br
                     br
 
+                    .row
+                      .col-md-8
+                        .img-container
+                          img.img-rounded(src='/daemun/f1-2.png') 
+                        .space-50
+                      .col-md-4
+                        h4.text-center
+                          strong 질문 탭 기능
+                          hr
+                        p 오른쪽 탭에선 일반질문과 화상질문을 전환할 수 있고, 해당 메뉴에 따라 아래쪽 버튼으로는 질문을 올릴 수 있는 버튼이 보여집니다.
+                    br
+                    br
+                    legend
+                    br
+                    h3 2) 질문 리스트 기능
+                    br
                     .row
                       .col-md-8
                         .img-container
@@ -309,7 +328,7 @@ html(lang='en')
                         h4.text-center
                           strong 질문 작성
                           hr
-                        p 만약 궁금한 내용이 있는데 관련 질문이 올라와있지 않다면, 밑의 질문작성 버튼을 눌러 질문을 작성할 수 있습니다. 이 때 시간정보는 현재 시청하고 있는 강의 시간대에 따라 자동으로 입력됩니다.
+                        p 만약 궁금한 내용이 있는데 관련 질문이 올라와있지 않다면, 질문작성 버튼을 눌러 질문을 업로드할 수 있습니다. 이 때 시간정보는 현재 시청하고 있는 강의 시간대에 따라 자동으로 입력됩니다.
                     br
                     br
 
@@ -333,9 +352,9 @@ html(lang='en')
                         .space-50
                       .col-md-4
                         h4.text-center
-                          strong (교수자 계정) 답변 등록
+                          strong (교수자) 답변 등록
                           hr
-                        p 교수자에게 보이는 화면도 기본적으로 위와 동일합니다. 질문들을 볼 수 있고, 답변을 달 수 있습니다.
+                        p 교수자에게 보이는 화면도 기본적으로 위와 동일합니다. 학생들의 질문을 볼 수 있고, 각각에 답변을 달 수 있습니다. 타임스탬프를 클릭하면 바로 해당 강의로 이동하게 됩니다.
                     br
                     br
 
@@ -350,6 +369,24 @@ html(lang='en')
                           hr
                         p 답변이 등록되면, 해당 질문에 답변이 달린 것을 볼 수 있습니다. 이는 다른 학습자들도 볼 수 있어, 좀 더 효율적인 학습을 가능하게 합니다.
                     br
+                    br
+
+                    .row
+                      .col-md-8
+                        .img-container
+                          img.img-rounded(src='/daemun/f6.png')
+                        .space-50
+                      .col-md-4
+                        h4.text-center
+                          strong 비공개 설정
+                          hr
+                        p 만약 교수자와 1:1로 나누고 싶은 질문이라면, 공개 버튼을 클릭해 비공개 질문으로 전환할 수 있습니다. 이 경우 다른 학생들에게 열람이 되지 않고, 오직 교수자에게만 열람됩니다.
+                    br
+                    br
+
+                    legend
+                    br
+                    h3 3) 화상질문 기능
                     br
                   // 기능설명 끝
                   br
