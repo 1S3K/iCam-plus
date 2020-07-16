@@ -24,7 +24,7 @@ question_button.onclick = function () {
     var date = new Date();
     var week = ["일", "월", "화", "수", "목", "금", "토"];
     var curDay = date.getDay();
-    var curHour = date.getHours() % 12;
+    var curHour = date.getHours();
 
     if (document.getElementById("office_day").value === week[curDay]) {
       if (
