@@ -137,7 +137,7 @@ html(lang='en')
                       a(href='#effect') 기대 효과
                       br
                     li
-                      a(href='#tech') 사용 기술
+                      a(href='#tech') 기술 구조도
                       br
                     li
                       a(href='#credits') credits
@@ -467,9 +467,9 @@ html(lang='en')
                         img(src='/daemun/effect.png', alt='')
                   // 기대효과 끝
 
-                  // 사용 기술 시작
+                  // 기술 구조도 시작
                   #tech.tim-row
-                    h2 사용기술 
+                    h2 기술 구조도
                     legend
                     .card.card-product
                       .image
@@ -478,46 +478,28 @@ html(lang='en')
                         table.table
                           thead                          
                             tr
-                              th(colspan='2').text-center 1단계 : 플레이어 만들기
+                              th(colspan='2').text-center &nbsp;
                             tr
-                              td HTML + CSS + JS
-                              td 
-                                ul
-                                  li HTML : 플레이어에 들어갈 내용의 뼈대
-                                  li CSS : 배치와 색 등 디자인
-                                  li JS : 창을 띄우는 등의 동적 기능
-                            tr
-                              td Node.js + Express
+                              td(style='width:20%;')
+                                p 사용 언어
                               td
-                                ul
-                                  li Node.js : 플레이어를 서비스할 수 있는 서버 구축.
-                                  li Express : 대문부터 플레이어까지 각각의 페이지를 나눌 수 있게 해줌.
+                                p HTML, CSS, JS
                             tr
-                              td MongoDB
                               td
-                                ul
-                                  li 질의응답 데이터를 담은 데이터베이스.
-                        br
-                        table.table
-                          thead
-                            tr
-                              th(colspan='2').text-center 2단계 : 플레이어를 전 세계로 서비스하기
-                            tr
-                              td AWS EC2
+                                p 서버 프레임워크
                               td
-                                ul
-                                  li 아마존 서버컴퓨터 사용해 코드 삽입 & 실행
+                                p Node.js, Express
                             tr
-                              td MongoDB Atlas
                               td
-                                ul
-                                  li MongoDB의 클라우드 서비스
+                                p 데이터 저장소
+                              td
+                                p MongoDB
                             tr
-                              td comedu.org
                               td
-                                ul
-                                  li www.comedu.org 도메인 구입, 서버에 등록.
-                  // 기술스택 끝
+                                p 클라우드
+                              td
+                                p AWS EC2, MongoDB Atlas
+                  // 기술 구조도 끝
 
                   // credits 시작
                   #credits.tim-row
