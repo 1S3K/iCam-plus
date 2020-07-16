@@ -140,7 +140,7 @@ html(lang='en')
                       a(href='#tech') 기술 구조도
                       br
                     li
-                      a(href='#credits') credits
+                      a(href='#credits') 개발자
                       br
               .col-md-6.col-md-offset-1
                 .tim-container(style='min-height: 2000px;')
@@ -501,70 +501,73 @@ html(lang='en')
                                 p AWS EC2, MongoDB Atlas
                   // 기술 구조도 끝
 
-                  // credits 시작
+                  // 개발자 시작
                   #credits.tim-row
-                    h2 credits
+                    h2 개발자
                     legend
                     .row
-                      .col-md-5
-                        .img-container
-                          img.img-rounded(src='/daemun/kjw.jpg')
-                        .space-50
-                      .col-md-5.col-md-offset-1
-                        h1.text-center
-                          | 강준우
-                          small.subtitle 팀장
-                        hr
-                        p 플레이어 설명 페이지 구현과 프로젝트 배포를 담당했습니다.
+                      .col-md-4
+                        .card
+                          .img
+                            img.img-rounded(src='/daemun/credits.png')
+                      .col-md-4
+                        .card
+                          .img-container
+                            img.img-rounded(src='/daemun/kjw.jpg')
+                            .filter.filter-white
+                              h1.text-center
+                                | 강준우
+                                small.subtitle 팀장
+                              hr
+                              p 대문페이지 디자인 & 구현
+                              p 프로젝트 배포
+                        
+                      .col-md-4
+                        .card
+                          .img-container
+                            img.img-rounded(src='https://avatars0.githubusercontent.com/u/59307414?s=400&u=17aa102a5fabc27c120755ccec0983cde69fb1fe&v=4')
+                            .filter.filter-white
+                              h1.text-center
+                                | 김희동
+                                small.subtitle 백엔드
+                              hr
+                              p 플레이어 서버 설계 & 구현
+                              p DB 연동
                     br
                     .row
-                      .col-md-5
-                        .img-container
-                          img.img-rounded(src='https://avatars0.githubusercontent.com/u/59307414?s=400&u=17aa102a5fabc27c120755ccec0983cde69fb1fe&v=4')
-                        .space-50
-                      .col-md-5.col-md-offset-1
-                        h1.text-center
-                          | 김희동
-                          small.subtitle 백엔드
-                        hr
-                        p 플레이어의 백엔드 파트와 DB연동을 담당했습니다.
-                    .row
-                      .col-md-5
-                        .img-container
-                          img.img-rounded(src='https://avatars3.githubusercontent.com/u/61109660?s=400&u=ec8fe509b882073575edca6f849c4b5f2bb602eb&v=4')
-                        .space-50
-                      .col-md-5.col-md-offset-1
-                        h1.text-center
-                          | 김태현
-                          small.subtitle 프론트엔드
-                        hr
-                        p 플레이어의 각 기능들에 대한 디자인 + 프론트 구현을 담당했습니다.
-                    br
-                    .row
-                      .col-md-5
-                        .img-container
-                          img.img-rounded(src='/daemun/sjh.jpg')
-                        .space-50
-                      br
-                      .col-md-5.col-md-offset-1
-                        h1.text-center
-                          | 송지훈
-                          small.subtitle 프론트엔드
-                        hr
-                        p 플레이어의 전체적인 디자인 + 프론트 구현을 담당했습니다.
-                    br
-                    .row
-                      .col-md-5
-                        .img-container
-                          img.img-rounded(src='https://canvas.skku.edu/images/thumbnails/60812/XmyrYskv4vQSkHhHx5KFFF9fxyUKiz1tQBxBa5vj')
-                        .space-50
-                      .col-md-5.col-md-offset-1
-                        h1.text-center
-                          | 한옥영
-                          small.subtitle 지도교수
-                        hr
-                        p 팀이 좋은 결과물을 낼 수 있도록 다방면의 피드백을 제공했습니다.
-                  // credits 끝
+                      .col-md-4
+                        .card
+                          .img-container
+                            img.img-rounded(src='https://avatars3.githubusercontent.com/u/61109660?s=400&u=ec8fe509b882073575edca6f849c4b5f2bb602eb&v=4')
+                            .filter.filter-white
+                              h1.text-center
+                                | 김태현
+                                small.subtitle 프론트엔드
+                              hr
+                              p 플레이어 기능 디자인
+                              p 프론트 구현
+                      .col-md-4
+                        .card
+                          .img-container
+                            img.img-rounded(src='/daemun/sjh.jpg')
+                            .filter.filter-white
+                              h1.text-center
+                                | 송지훈
+                                small.subtitle 프론트엔드
+                              hr
+                              p 플레이어 디자인
+                              p 프론트 구현
+                      .col-md-4
+                        .card
+                          .img-container
+                            img.img-rounded(src='https://canvas.skku.edu/images/thumbnails/60812/XmyrYskv4vQSkHhHx5KFFF9fxyUKiz1tQBxBa5vj')
+                            .filter.filter-white
+                              h1.text-center
+                                | 한옥영
+                                small.subtitle 지도교수
+                              hr
+                              p 피드백 제공
+                  // 개발자 끝
 
                   // cards row : 진짜 왜그런진 모르겠는데 얘를 없애면 js가 작동되지 않는다. display:none으로 해놓았으나 없애진 말것.
                   #cards-row.tim-row
