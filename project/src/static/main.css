@@ -95,8 +95,9 @@ body {
 
 select {
   width: 200px;
-  padding: 0.8em 0.5em;
+  /* padding: 0.8em 0.5em; */
   font-family: inherit;
+  font-size: 20px;
   background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg)
     no-repeat 95% 50%;
   -webkit-appearance: none;
@@ -112,14 +113,15 @@ select::-ms-expand {
 }
 
 #class_index_selector {
-  width: 381px;
+  /* width: 381px; */
+  width: 87%;
   height: 42px;
   border: solid 1px #a8a8a8;
   background-color: #ffffff;
   margin-left: 34px;
   margin-top: 9px;
 
-  font-size: 12px;
+  /* font-size: 12px; */
 }
 
 #goto_IndexButton {
