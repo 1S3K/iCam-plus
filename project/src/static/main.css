@@ -257,7 +257,7 @@ select::-ms-expand {
 
                 .expand_button
                 {
-
+                  position: absolute;
                   background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg) no-repeat;
                   border: none;
                   width: 32px;
@@ -265,7 +265,7 @@ select::-ms-expand {
                   cursor: pointer;
                   margin-left:20px;
                   margin-bottom:20px;
-                  
+                  right: 16px;
                   
                 }
 
@@ -699,6 +699,7 @@ select::-ms-expand {
 }
 
 .expand_button {
+  position: absolute;
   background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg)
     no-repeat;
   border: none;
@@ -707,6 +708,7 @@ select::-ms-expand {
   cursor: pointer;
   margin-left: 20px;
   margin-bottom: 20px;
+  right: 16px;
 }
 
 #question_bar_opened {
