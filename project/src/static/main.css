@@ -231,7 +231,7 @@ select::-ms-expand {
                   text-align: center;
                   color: #385fcb;
                   margin-left : 5px;
-             
+                  cursor: pointer;
                   
 
 
@@ -679,6 +679,7 @@ select::-ms-expand {
   text-align: center;
   color: #385fcb;
   margin-left: 5px;
+  cursor: pointer;
 }
 
 .question_title {
