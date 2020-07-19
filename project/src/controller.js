@@ -27,7 +27,7 @@ export const prototype = async (req, res) => {
 
 export const question = async (req, res) => {
     const {
-        body: { lectureId, minute, second, title, content }
+        body: { lectureId, minute, second, title, content, oc }
     } = req;
     var author = "test";
     var time = parseInt(minute*60)+parseInt(second);
@@ -39,7 +39,7 @@ export const question = async (req, res) => {
         content,
         author:author,
         available:1,
-        hide:0
+        hide:oc=='공개'?0:1
     });
     res.redirect(`prototype/${lectureId}`);
 };
