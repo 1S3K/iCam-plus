@@ -236,7 +236,7 @@ html(lang='en')
                     br
                     br
 
-                    h3 해결책?
+                    h3 해결책
                     br
                     .card.card-product
                       .image
@@ -286,174 +286,186 @@ html(lang='en')
                   #functions.tim-row
                     h2 기능 설명
                     legend
+                    p 버튼을 눌러 각 기능들을 확인해보세요.
+                    button.btn.btn-primary.btn-fill#b1 1) 기본 도입부 기능
+                    button.btn.btn-primary#b2 2) 질문 리스트 기능
+                    button.btn.btn-primary#b3 3) 화상질문 기능
                     br
-                    h3 1) 기본 도입부 기능
-                    br
-                    .row
-                      .col-md-8
-                        .img-container
-                          img.img-rounded(src='/daemun/f0.png')
-                        .space-50
-                      .col-md-4
-                        h4.text-center
-                          strong 로그인 페이지
-                          hr
-                        p 처음 데모로 들어가면 보이는 로그인 페이지입니다. 본인의 아이디와 비밀번호를 입력하면 로그인되는 구조이지만, 시연을 위해 ID와 PW는 test / test123으로 세팅해놓았습니다.
-                    br
-                    br
+                    #c1(style='display:block;')
+                      legend
+                      br
+                      h3
+                        strong 1) 기본 도입부 기능
+                      br
+                      .row
+                        .col-md-8
+                          .img-container
+                            img.img-rounded(src='/daemun/f0.png')
+                          .space-50
+                        .col-md-4
+                          h4.text-center
+                            strong 로그인 페이지
+                            hr
+                          p 처음 데모로 들어가면 보이는 로그인 페이지입니다. 본인의 아이디와 비밀번호를 입력하면 로그인되는 구조이지만, 시연을 위해 ID와 PW는 test / test123으로 세팅해놓았습니다.
+                      br
+                      br
 
-                    .row
-                      .col-md-8
-                        .img-container
-                          img.img-rounded(src='/daemun/f1-1.png')
-                        .space-50
-                      .col-md-4
-                        h4.text-center
-                          strong 플레이어 기본기능
-                          hr
-                        p 로그인에 성공하면 보여지는 강의 플레이어입니다. 질문창 여닫기 버튼으로 질문탭을 열거나 닫을 수 있고, 질문탭 상단을 이용해 주차별 강의를 전환할 수 있습니다.
-                    br
-                    br
+                      .row
+                        .col-md-8
+                          .img-container
+                            img.img-rounded(src='/daemun/f1-1.png')
+                          .space-50
+                        .col-md-4
+                          h4.text-center
+                            strong 플레이어 기본기능
+                            hr
+                          p 로그인에 성공하면 보여지는 강의 플레이어입니다. 질문창 여닫기 버튼으로 질문탭을 열거나 닫을 수 있고, 질문탭 상단을 이용해 주차별 강의를 전환할 수 있습니다.
+                      br
+                      br
 
-                    .row
-                      .col-md-8
-                        .img-container
-                          img.img-rounded(src='/daemun/f1-2.png') 
-                        .space-50
-                      .col-md-4
-                        h4.text-center
-                          strong 질문 탭 기능
-                          hr
-                        p 오른쪽 탭에선 일반질문과 화상질문을 전환할 수 있고, 해당 메뉴에 따라 아래쪽 버튼으로는 질문을 올릴 수 있는 버튼이 보여집니다.
-                    br
-                    br
+                      .row
+                        .col-md-8
+                          .img-container
+                            img.img-rounded(src='/daemun/f1-2.png') 
+                          .space-50
+                        .col-md-4
+                          h4.text-center
+                            strong 질문 탭 기능
+                            hr
+                          p 오른쪽 탭에선 일반질문과 화상질문을 전환할 수 있고, 해당 메뉴에 따라 아래쪽 버튼으로는 질문을 올릴 수 있는 버튼이 보여집니다.
+                      br
+                      br
 
-                    .row
-                      .col-md-8
-                        .img-container
-                          img.img-rounded(src='/daemun/bye.png') 
-                        .space-50
-                      .col-md-4
-                        h4.text-center
-                          strong 종료 기능
-                          hr
-                        p 플레이어를 종료하고 싶을 때 왼쪽 위 성균관대학교 로고를 눌러, 현재 이 페이지로 돌아올 수 있습니다.
-                    br
-                    br
-
-                    legend
-                    br
-                    h3 2) 질문 리스트 기능
-                    br
-                    .row
-                      .col-md-8
-                        .space-50
-                        .img-container
-                          img.img-rounded(src='/daemun/f2.png')
+                      .row
+                        .col-md-8
+                          .img-container
+                            img.img-rounded(src='/daemun/bye.png') 
+                          .space-50
+                        .col-md-4
+                          h4.text-center
+                            strong 종료 기능
+                            hr
+                          p 플레이어를 종료하고 싶을 때 왼쪽 위 성균관대학교 로고를 눌러, 현재 이 페이지로 돌아올 수 있습니다.
+                      br
+                      br
                     
-                      .col-md-4
-                        h4.text-center
-                          strong 질문 작성
-                          hr
-                        p 만약 궁금한 내용이 있는데 관련 질문이 올라와있지 않다면, 질문작성 버튼을 눌러 질문을 업로드할 수 있습니다. 이 때 시간정보는 현재 시청하고 있는 강의 시간대에 따라 자동으로 입력됩니다.
-                    br
-                    br
-                    br
-                    br
-                    .row
-                      .col-md-8
-                        .img-container
-                          img.img-rounded(src='/daemun/f3.png')
-                        .space-50
-                      .col-md-4
-                        h4.text-center
-                          strong 질문 등록
-                          hr
-                        p 질문 작성을 완료했다면, 질문 리스트에 등록한 질문이 나타나게 됩니다. 이 질문엔 교수자나 다른 학습자가 자유롭게 댓글을 달 수 있습니다.
-                    br
-                    br
+                    #c2(style='display:none;')
+                      legend
+                      br
+                      h3
+                        strong 2) 질문 리스트 기능
+                      br
+                      .row
+                        .col-md-8
+                          .space-50
+                          .img-container
+                            img.img-rounded(src='/daemun/f2.png')
+                      
+                        .col-md-4
+                          h4.text-center
+                            strong 질문 작성
+                            hr
+                          p 만약 궁금한 내용이 있는데 관련 질문이 올라와있지 않다면, 질문작성 버튼을 눌러 질문을 업로드할 수 있습니다. 이 때 시간정보는 현재 시청하고 있는 강의 시간대에 따라 자동으로 입력됩니다.
+                      br
+                      br
+                      br
+                      br
+                      .row
+                        .col-md-8
+                          .img-container
+                            img.img-rounded(src='/daemun/f3.png')
+                          .space-50
+                        .col-md-4
+                          h4.text-center
+                            strong 질문 등록
+                            hr
+                          p 질문 작성을 완료했다면, 질문 리스트에 등록한 질문이 나타나게 됩니다. 이 질문엔 교수자나 다른 학습자가 자유롭게 댓글을 달 수 있습니다.
+                      br
+                      br
 
-                    .row
-                      .col-md-8
-                        .img-container
-                          img.img-rounded(src='/daemun/f4.png')
-                        .space-50
-                      .col-md-4
-                        h4.text-center
-                          strong (교수자) 답변 등록
-                          hr
-                        p 교수자에게 보이는 화면도 기본적으로 위와 동일합니다. 학생들의 질문을 볼 수 있고, 각각에 답변을 달 수 있습니다. 타임스탬프를 클릭하면 바로 해당 강의로 이동하게 됩니다.
-                    br
-                    br
+                      .row
+                        .col-md-8
+                          .img-container
+                            img.img-rounded(src='/daemun/f4.png')
+                          .space-50
+                        .col-md-4
+                          h4.text-center
+                            strong (교수자) 답변 등록
+                            hr
+                          p 교수자에게 보이는 화면도 기본적으로 위와 동일합니다. 학생들의 질문을 볼 수 있고, 각각에 답변을 달 수 있습니다. 타임스탬프를 클릭하면 바로 해당 강의로 이동하게 됩니다.
+                      br
+                      br
 
-                    .row
-                      .col-md-8
-                        .img-container
-                          img.img-rounded(src='/daemun/f5.png')
-                        .space-50
-                      .col-md-4
-                        h4.text-center
-                          strong 답변 등록 완료
-                          hr
-                        p 답변이 등록되면, 해당 질문에 답변이 달린 것을 볼 수 있습니다. 이는 다른 학습자들도 볼 수 있어, 좀 더 효율적인 학습을 가능하게 합니다.
-                    br
-                    br
+                      .row
+                        .col-md-8
+                          .img-container
+                            img.img-rounded(src='/daemun/f5.png')
+                          .space-50
+                        .col-md-4
+                          h4.text-center
+                            strong 답변 등록 완료
+                            hr
+                          p 답변이 등록되면, 해당 질문에 답변이 달린 것을 볼 수 있습니다. 이는 다른 학습자들도 볼 수 있어, 좀 더 효율적인 학습을 가능하게 합니다.
+                      br
+                      br
 
-                    .row
-                      .col-md-8
-                        .img-container
-                          img.img-rounded(src='/daemun/f6.png')
-                        .space-50
-                      .col-md-4
-                        h4.text-center
-                          strong 비공개 설정
-                          hr
-                        p 만약 교수자와 1:1로 나누고 싶은 질문이라면, 공개 버튼을 클릭해 비공개 질문으로 전환할 수 있습니다. 이 경우 다른 학생들에게 열람이 되지 않고, 오직 교수자에게만 열람됩니다.
-                    br
-                    br
+                      .row
+                        .col-md-8
+                          .img-container
+                            img.img-rounded(src='/daemun/f6.png')
+                          .space-50
+                        .col-md-4
+                          h4.text-center
+                            strong 비공개 설정
+                            hr
+                          p 만약 교수자와 1:1로 나누고 싶은 질문이라면, 공개 버튼을 클릭해 비공개 질문으로 전환할 수 있습니다. 이 경우 다른 학생들에게 열람이 되지 않고, 오직 교수자에게만 열람됩니다.
+                      br
+                      br
 
-                    legend
-                    br
-                    h3 3) 화상질문 기능
-                    br
-                    .row
-                      .col-md-8
-                        .img-container
-                          img.img-rounded(src='/daemun/w1.png')
-                        .space-50
-                      .col-md-4
-                        h4.text-center
-                          strong (교수자) Office Hour 설정
-                          hr
-                        p 일주일 중 1시간을 Office Hour로 설정할 수 있습니다.
-                    br
-                    br
+                    #c3(style='display:none;')
+                      legend
+                      br
+                      h3
+                        strong 3) 화상질문 기능
+                      br
+                      .row
+                        .col-md-8
+                          .img-container
+                            img.img-rounded(src='/daemun/w1.png')
+                          .space-50
+                        .col-md-4
+                          h4.text-center
+                            strong (교수자) Office Hour 설정
+                            hr
+                          p 일주일 중 1시간을 Office Hour로 설정할 수 있습니다.
+                      br
+                      br
 
-                    .row
-                      .col-md-8
-                        .img-container
-                          img.img-rounded(src='/daemun/w2.png')
-                        .space-50
-                      .col-md-4
-                        h4.text-center
-                          strong 화상회의 사전질문 등록
-                          hr
-                        p 학생들은 교수자의 화상 Office Hour때 나누고 싶은 질문을 업로드할 수 있습니다.
-                    br
-                    br
+                      .row
+                        .col-md-8
+                          .img-container
+                            img.img-rounded(src='/daemun/w2.png')
+                          .space-50
+                        .col-md-4
+                          h4.text-center
+                            strong 화상회의 사전질문 등록
+                            hr
+                          p 학생들은 교수자의 화상 Office Hour때 나누고 싶은 질문을 업로드할 수 있습니다.
+                      br
+                      br
 
-                    .row
-                      .col-md-8
-                        .img-container
-                          img.img-rounded(src='/daemun/w3.png')
-                        .space-50
-                      .col-md-4
-                        h4.text-center
-                          strong 화상채팅 연결하기
-                          hr
-                        p 아랫쪽 화상채팅 연결하기 버튼을 눌러, 교수자의 미팅룸으로 연결할 수 있습니다. Office Hour가 아닌 경우엔 연결되지 않습니다.
-                    br
-                    br
+                      .row
+                        .col-md-8
+                          .img-container
+                            img.img-rounded(src='/daemun/w3.png')
+                          .space-50
+                        .col-md-4
+                          h4.text-center
+                            strong 화상채팅 연결하기
+                            hr
+                          p 아랫쪽 화상채팅 연결하기 버튼을 눌러, 교수자의 미팅룸으로 연결할 수 있습니다. Office Hour가 아닌 경우엔 연결되지 않습니다.
+                      br
+                      br
                   // 기능설명 끝
                   br
                   br
@@ -462,7 +474,7 @@ html(lang='en')
                   #prototype.tim-row
                     h2  데모 시연 
                     legend
-                    button.btn.btn-success.btn-lg(onclick="location.href = '/login' ") iCam-plus 데모 시연
+                    button.btn.btn-success.btn-fill(onclick="location.href = '/login' ") iCam-plus 데모 시연
                   // 데모시연 끝
                   br
                   br
@@ -635,8 +647,10 @@ html(lang='en')
     script(src='assets/js/get-shit-done.js')
     // Get Shit Done Kit PRO methods used for demo purpose
     script(src='assets/js/demo.js')
-    script(src='assets/js/smooth_scroll.js')
     script(src='https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js')
+    // 직접 추가한 JS
+    script(src='/assets/js/smooth_scroll.js')
+    script(src='/js/toggleButton.js')
     script.
       var transparent = true;
       var header_height;
