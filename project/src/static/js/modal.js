@@ -26,22 +26,22 @@ question_button.onclick = function () {
     var curDay = date.getDay();
     var curHour = date.getHours();
 
-    if (document.getElementById("office_day").value === week[curDay]) {
-      if (
-        parseInt(document.getElementById("office_start_hour").value) <=
-          curHour &&
-        parseInt(document.getElementById("office_end_hour").value) > curHour
-      ) {
+    if (document.getElementById("office_day").value === week[curDay] &&
+      parseInt(document.getElementById("office_start_hour").value) <= curHour &&
+      parseInt(document.getElementById("office_end_hour").value) > curHour) {
+      window.open(
+        "https://skku-ict.webex.com/meet/smallkong",
+        "webex meeting"
+      );
+    } else {
+      if(confirm('현재는 정해진 시간이 아닙니다. 그래도 연결하시겠습니까?')){
         window.open(
           "https://skku-ict.webex.com/meet/smallkong",
           "webex meeting"
         );
-      } else {
-        alert("현재는 정해진 시간이 아닙니다.");
       }
-    } else {
-      alert("현재는 정해진 시간이 아닙니다.");
     }
+
 
     localStorage.clear();
     localStorage.setItem("type", "cam");
