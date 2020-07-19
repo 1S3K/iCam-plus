@@ -34,7 +34,7 @@ question_button.onclick = function () {
         "webex meeting"
       );
     } else {
-      if(confirm('현재는 정해진 시간이 아닙니다. 그래도 연결하시겠습니까?')){
+      if(confirm('현재는 Office Hour가 아닙니다. 그래도 연결하시겠습니까?')){
         window.open(
           "https://skku-ict.webex.com/meet/smallkong",
           "webex meeting"
