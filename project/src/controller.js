@@ -26,12 +26,12 @@ export const prototype = async (req, res) => {
 };
 
 export const question = async (req, res) => {
-    const {
+    let {
         body: { lectureId, minute, second, title, content, oc }
     } = req;
     var author = "test";
     var time = parseInt(minute*60)+parseInt(second);
-
+    if(title=='') title='관련 질문이 있습니다.';
     const newQuestion = await Question.create({
         lecture:lectureId,
         time:time,
