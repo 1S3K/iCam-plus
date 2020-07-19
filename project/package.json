@@ -16,8 +16,8 @@
   },
   "homepage": "https://github.com/KangJunewoo/iCam-plus#readme",
   "dependencies": {
-    "@babel/core": "^7.10.4",
-    "@babel/node": "^7.10.4",
+    "@babel/core": "^7.10.5",
+    "@babel/node": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "babel-cli": "^6.26.0",
     "babel-core": "^7.0.0-bridge.0",
