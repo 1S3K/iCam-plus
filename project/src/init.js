@@ -4,8 +4,8 @@ import "./models/question";
 import "./models/comment";
 import "./models/officehour";
 
-const PORT = 80;
+const PORT = 3000;
 
-const handleListening = () => console.log(`✅ Listening on: http://www.comedu.org in port ${PORT}`);
+const handleListening = () => console.log(`✅ Listening on: http://localhost in port ${PORT}`);
 
 app.listen(PORT, handleListening);
