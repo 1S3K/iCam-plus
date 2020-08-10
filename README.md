@@ -1,8 +1,18 @@
 # iCam-plus
-### 교수자 - 학습자 상호참여형 스트리밍 플레이어
-### (2020-1 성균관대학교 코딥러닝 출품작)
 
+## 교수자 - 학습자 상호참여형 스트리밍 플레이어 (2020-1 성균관대학교 Co-Deep Learning 출품작)
+
+### 🔔 플레이어 화면
 ![icamplus](https://github.com/KangJunewoo/iCam-plus/blob/master/project/src/static/daemun/icamplus.png)
+![image](https://user-images.githubusercontent.com/59307414/89763717-09589400-db2e-11ea-928d-2def17ad8817.png)
+
+### 🔔 질문 작성
+![image](https://user-images.githubusercontent.com/59307414/89763538-b2eb5580-db2d-11ea-94d2-9eabb5549684.png)
+
+### 🔔 화상 질문 연결
+![image](https://user-images.githubusercontent.com/59307414/89763583-cb5b7000-db2d-11ea-9039-f09777d27c94.png)
+![image](https://user-images.githubusercontent.com/59307414/89763655-eded8900-db2d-11ea-8e26-dfb1b470746e.png)
+
 
 ---
 
