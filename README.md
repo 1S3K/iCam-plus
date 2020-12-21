@@ -1,5 +1,5 @@
 # 교수자 - 학습자 상호참여형 스트리밍 플레이어 : iCam-plus
-## 2020-1 성균관대학교 Co-Deep Learning 출품작  
+## 2020년도 4차 산업혁명 인재양성 festival 공보전 코딩부문 대상 수상작
 
 `배포링크` <www.comedu.org>
 
